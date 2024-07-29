@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="marktext 破解typora怎么说都不是一件值得推广的事，在寻找typora替代软件的过程中，发现了 marktext，外观类似typora，有些方面可能更美观。神奇的是目前（2024-06-15）已经45k star了，但是已经很久没有更新发行版了，最新的版本还停留在2022年3月，Issuse已经积累到1.1k，pull requests42各没有处理。仓库的develop分支还在小幅度不定时更新，也一直没合并到主分支。 地址：https://github.com/marktext/marktext 安装后主界面长这样 整体默认的样式看上去就很舒服，细心的同学可以看到，代码块有复制按钮，同obsibian一样，但是obsibian太丑了。 目前有几个影响写作体验感的方面： 无法识别picgo，也无法设置命令行，这对写文章需要图片上传的时候是个很严重的影响。 可以看到左侧显示没有picgo，右边全局变量设置后其实已经可以用了，切换到命令行脚本，实际上却无法保存。 当然了，这也不知道是不是和我的环境有关。 typora 剪贴板有超链接，使用ctrl+k后自动补全，光标自动跳转到链接标题，输入即可，这点体验感很好。但是marktext还是在链接末尾，需要手动调整光标到标题框。 另一个是marktext粘贴超链接到文档中有明显的卡顿。 这两点对于我写作就有相当大的考验，总观全文，你就知道我为了方便查看跳转设置了多个带标题的超链接，而不是直接粘贴链接，那样太影响阅读体验了。 marktext连续的两个代码块之间新增一行，~~变得很困难，~~比如我有时侯会修改内容，现在有两个代码块，我在后面的代码块前面新增说明而不是写入代码块中，typora只需要通过键盘将光标定位到前面的代码块最后一行的最后位置，按ctrl+enter，即可新建一行不包含代码块的内容。 在marktext中则是需要移动鼠标到代码块前面，在弹出的框选择New Paragraph。 使用少，经验不足，原来有个内置的快捷键ctrl+shift+n即可新建一行，不管光标在代码哪个位置，即可新建一行，反转！比typora更好用，typora要么使用上述使用的方案，要么使用菜单-段落-在下方插入段落。而这个操作typora自定义快捷键更麻烦。 最后，如果在众多软件中选择一个替代品，我优先推荐 marktext。 Obsibian 它并不能算一个纯粹的Markdown编辑器，而是一个markdown仓库管理软件，网络上已经有很多人介绍过了，我这就不献丑了。 推荐和typora或marktext一起使用，obsibian管理仓库，不好编辑的时候交给typora或者marktext。 它很强大，但是默认有点点丑，需要自己摸索。我一般用来管理markdown文章。 下面是我定制obsibian过后的界面：">
+<title>Markdown软件推荐，Typora下位替代品marktext</title>
+
+<link rel='canonical' href='https://blog.seektao.cc/p/2406013/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Markdown软件推荐，Typora下位替代品marktext">
+<meta property='og:description' content="marktext 破解typora怎么说都不是一件值得推广的事，在寻找typora替代软件的过程中，发现了 marktext，外观类似typora，有些方面可能更美观。神奇的是目前（2024-06-15）已经45k star了，但是已经很久没有更新发行版了，最新的版本还停留在2022年3月，Issuse已经积累到1.1k，pull requests42各没有处理。仓库的develop分支还在小幅度不定时更新，也一直没合并到主分支。 地址：https://github.com/marktext/marktext 安装后主界面长这样 整体默认的样式看上去就很舒服，细心的同学可以看到，代码块有复制按钮，同obsibian一样，但是obsibian太丑了。 目前有几个影响写作体验感的方面： 无法识别picgo，也无法设置命令行，这对写文章需要图片上传的时候是个很严重的影响。 可以看到左侧显示没有picgo，右边全局变量设置后其实已经可以用了，切换到命令行脚本，实际上却无法保存。 当然了，这也不知道是不是和我的环境有关。 typora 剪贴板有超链接，使用ctrl+k后自动补全，光标自动跳转到链接标题，输入即可，这点体验感很好。但是marktext还是在链接末尾，需要手动调整光标到标题框。 另一个是marktext粘贴超链接到文档中有明显的卡顿。 这两点对于我写作就有相当大的考验，总观全文，你就知道我为了方便查看跳转设置了多个带标题的超链接，而不是直接粘贴链接，那样太影响阅读体验了。 marktext连续的两个代码块之间新增一行，~~变得很困难，~~比如我有时侯会修改内容，现在有两个代码块，我在后面的代码块前面新增说明而不是写入代码块中，typora只需要通过键盘将光标定位到前面的代码块最后一行的最后位置，按ctrl+enter，即可新建一行不包含代码块的内容。 在marktext中则是需要移动鼠标到代码块前面，在弹出的框选择New Paragraph。 使用少，经验不足，原来有个内置的快捷键ctrl+shift+n即可新建一行，不管光标在代码哪个位置，即可新建一行，反转！比typora更好用，typora要么使用上述使用的方案，要么使用菜单-段落-在下方插入段落。而这个操作typora自定义快捷键更麻烦。 最后，如果在众多软件中选择一个替代品，我优先推荐 marktext。 Obsibian 它并不能算一个纯粹的Markdown编辑器，而是一个markdown仓库管理软件，网络上已经有很多人介绍过了，我这就不献丑了。 推荐和typora或marktext一起使用，obsibian管理仓库，不好编辑的时候交给typora或者marktext。 它很强大，但是默认有点点丑，需要自己摸索。我一般用来管理markdown文章。 下面是我定制obsibian过后的界面：">
+<meta property='og:url' content='https://blog.seektao.cc/p/2406013/'>
+<meta property='og:site_name' content='Seektao | 寻道之旅'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:published_time' content='2024-06-13T16:06:01&#43;08:00'/><meta property='article:modified_time' content='2024-06-13T16:06:01&#43;08:00'/>
+<meta name="twitter:title" content="Markdown软件推荐，Typora下位替代品marktext">
+<meta name="twitter:description" content="marktext 破解typora怎么说都不是一件值得推广的事，在寻找typora替代软件的过程中，发现了 marktext，外观类似typora，有些方面可能更美观。神奇的是目前（2024-06-15）已经45k star了，但是已经很久没有更新发行版了，最新的版本还停留在2022年3月，Issuse已经积累到1.1k，pull requests42各没有处理。仓库的develop分支还在小幅度不定时更新，也一直没合并到主分支。 地址：https://github.com/marktext/marktext 安装后主界面长这样 整体默认的样式看上去就很舒服，细心的同学可以看到，代码块有复制按钮，同obsibian一样，但是obsibian太丑了。 目前有几个影响写作体验感的方面： 无法识别picgo，也无法设置命令行，这对写文章需要图片上传的时候是个很严重的影响。 可以看到左侧显示没有picgo，右边全局变量设置后其实已经可以用了，切换到命令行脚本，实际上却无法保存。 当然了，这也不知道是不是和我的环境有关。 typora 剪贴板有超链接，使用ctrl+k后自动补全，光标自动跳转到链接标题，输入即可，这点体验感很好。但是marktext还是在链接末尾，需要手动调整光标到标题框。 另一个是marktext粘贴超链接到文档中有明显的卡顿。 这两点对于我写作就有相当大的考验，总观全文，你就知道我为了方便查看跳转设置了多个带标题的超链接，而不是直接粘贴链接，那样太影响阅读体验了。 marktext连续的两个代码块之间新增一行，~~变得很困难，~~比如我有时侯会修改内容，现在有两个代码块，我在后面的代码块前面新增说明而不是写入代码块中，typora只需要通过键盘将光标定位到前面的代码块最后一行的最后位置，按ctrl+enter，即可新建一行不包含代码块的内容。 在marktext中则是需要移动鼠标到代码块前面，在弹出的框选择New Paragraph。 使用少，经验不足，原来有个内置的快捷键ctrl+shift+n即可新建一行，不管光标在代码哪个位置，即可新建一行，反转！比typora更好用，typora要么使用上述使用的方案，要么使用菜单-段落-在下方插入段落。而这个操作typora自定义快捷键更麻烦。 最后，如果在众多软件中选择一个替代品，我优先推荐 marktext。 Obsibian 它并不能算一个纯粹的Markdown编辑器，而是一个markdown仓库管理软件，网络上已经有很多人介绍过了，我这就不献丑了。 推荐和typora或marktext一起使用，obsibian管理仓库，不好编辑的时候交给typora或者marktext。 它很强大，但是默认有点点丑，需要自己摸索。我一般用来管理markdown文章。 下面是我定制obsibian过后的界面：">
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hua656ab6dfe1fc382193f550011041410_6344_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Seektao | 寻道之旅</a></h1>
+            <h2 class="site-description">欢迎来到我的主页</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/muyiacc'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#marktext">marktext</a></li>
+    <li><a href="#obsibian">Obsibian</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" >
+                默认分类
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/2406013/">Markdown软件推荐，Typora下位替代品marktext</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 13, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="marktext">marktext
+</h2><p>破解typora怎么说都不是一件值得推广的事，在寻找typora替代软件的过程中，发现了 marktext，外观类似typora，有些方面可能更美观。神奇的是目前（2024-06-15）已经45k star了，但是已经很久没有更新发行版了，最新的版本还停留在2022年3月，Issuse已经积累到1.1k，pull requests42各没有处理。仓库的develop分支还在小幅度不定时更新，也一直没合并到主分支。</p>
+<blockquote>
+<p>地址：<a class="link" href="https://github.com/marktext/marktext"  target="_blank" rel="noopener"
+    >https://github.com/marktext/marktext</a></p>
+</blockquote>
+<p><img src="https://s2.loli.net/2024/06/15/cAPfu7MxSOaknj8.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240615160637754"
+	
+	
+></p>
+<p>安装后主界面长这样</p>
+<p><img src="https://s2.loli.net/2024/06/15/L7H5XD8lGYnt6mR.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240615160838872"
+	
+	
+></p>
+<p>整体默认的样式看上去就很舒服，细心的同学可以看到，代码块有复制按钮，同obsibian一样，但是obsibian太丑了。</p>
+<p>目前有几个影响写作体验感的方面：</p>
+<ol>
+<li>无法识别picgo，也无法设置命令行，这对写文章需要图片上传的时候是个很严重的影响。</li>
+</ol>
+<p><img src="https://s2.loli.net/2024/06/15/MFqmaxGDXSrJW5g.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240615161507701"
+	
+	
+></p>
+<p>可以看到左侧显示没有picgo，右边全局变量设置后其实已经可以用了，切换到命令行脚本，实际上却无法保存。</p>
+<p>当然了，这也不知道是不是和我的环境有关。</p>
+<ol start="2">
+<li>
+<p>typora 剪贴板有超链接，使用ctrl+k后自动补全，光标自动跳转到链接标题，输入即可，这点体验感很好。但是marktext还是在链接末尾，需要手动调整光标到标题框。</p>
+<p>另一个是marktext粘贴超链接到文档中有明显的卡顿。</p>
+</li>
+</ol>
+<p>这两点对于我写作就有相当大的考验，总观全文，你就知道我为了方便查看跳转设置了多个带标题的超链接，而不是直接粘贴链接，那样太影响阅读体验了。</p>
+<ol start="3">
+<li>
+<p>marktext连续的两个代码块之间新增一行，~~变得很困难，~~比如我有时侯会修改内容，现在有两个代码块，我在后面的代码块前面新增说明而不是写入代码块中，typora只需要通过键盘将光标定位到前面的代码块最后一行的最后位置，按ctrl+enter，即可新建一行不包含代码块的内容。</p>
+<p><del>在marktext中则是需要移动鼠标到代码块前面，在弹出的框选择<code>New Paragraph</code>。</del></p>
+<p>使用少，经验不足，原来有个内置的快捷键<code>ctrl+shift+n</code>即可新建一行，不管光标在代码哪个位置，即可新建一行，反转！比typora更好用，typora要么使用上述使用的方案，要么使用菜单-段落-在下方插入段落。而这个操作typora自定义快捷键更麻烦。</p>
+</li>
+</ol>
+<p><strong>最后，如果在众多软件中选择一个替代品，我优先推荐 marktext。</strong></p>
+<h2 id="obsibian">Obsibian
+</h2><p>它并不能算一个纯粹的Markdown编辑器，而是一个markdown仓库管理软件，网络上已经有很多人介绍过了，我这就不献丑了。</p>
+<p>推荐和typora或marktext一起使用，obsibian管理仓库，不好编辑的时候交给typora或者marktext。</p>
+<p>它很强大，但是默认有点点丑，需要自己摸索。我一般用来管理markdown文章。</p>
+<p>下面是我定制obsibian过后的界面：</p>
+<p><img src="https://s2.loli.net/2024/06/15/rxifpA6WVkQZNEC.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240615164759697"
+	
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/markdown/">Markdown</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>CC BY-NC-ND</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/2407025/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">小白羊盘下载文件出现aria2c错误解决办法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407024/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">各平台影视观看指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407023/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">可用的短链系统</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407021/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Sublime配置SFTP</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407020/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RClone，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2024 Seektao | 寻道之旅
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

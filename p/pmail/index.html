@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写的域名邮箱Pmail。 官方介绍：PMail是一个追求极简部署流程、极致资源占用的个人域名邮箱服务器。单文件运行，包含完整的收发邮件服务和Web端邮件管理功能。只需一台服务器、一个域名、一行代码、一分钟部署时间，你就能够搭建出一个自己的域名邮箱。 GitHub地址：https://github.com/Jinnrry/PMail/ 以下为界面截图： 准备工作 服务器，开放了25号端口的服务器，没有开放则无法发信。 域名 nginx 反代服务器 nginx proxy manager（可选，但建议），与nginx二选一 docker或者docker-compose 部署 提示：文章篇幅较长 docker-compose 如果服务器80，443端口没有被占用，搭建过程则较为简单。如果80，443端口被其他应用占用，搭建过程则较为繁琐。 本次80，443端口被nginx proxy manager占用，所以采用映射其他端口搭建 本次教程采用docker-compose方式安装，方便管理配置文件和升级。其余方式请参考官方教程 在你喜欢的目录下，新建 pamail 文件夹，在 pamil文件夹下，新建 docker-compose.yml文件，如： 1 2 3 mkdir -r ~/opt/pmail &amp;&amp; cd ~/opt/pmail docker network create pmail_network vim docker-compose.yml 文件内容如下 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 version: &#39;3.">
+<title>强烈推荐，一个内存占用极低的自建域名邮箱Pmail</title>
+
+<link rel='canonical' href='https://blog.seektao.cc/p/pmail/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="强烈推荐，一个内存占用极低的自建域名邮箱Pmail">
+<meta property='og:description' content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写的域名邮箱Pmail。 官方介绍：PMail是一个追求极简部署流程、极致资源占用的个人域名邮箱服务器。单文件运行，包含完整的收发邮件服务和Web端邮件管理功能。只需一台服务器、一个域名、一行代码、一分钟部署时间，你就能够搭建出一个自己的域名邮箱。 GitHub地址：https://github.com/Jinnrry/PMail/ 以下为界面截图： 准备工作 服务器，开放了25号端口的服务器，没有开放则无法发信。 域名 nginx 反代服务器 nginx proxy manager（可选，但建议），与nginx二选一 docker或者docker-compose 部署 提示：文章篇幅较长 docker-compose 如果服务器80，443端口没有被占用，搭建过程则较为简单。如果80，443端口被其他应用占用，搭建过程则较为繁琐。 本次80，443端口被nginx proxy manager占用，所以采用映射其他端口搭建 本次教程采用docker-compose方式安装，方便管理配置文件和升级。其余方式请参考官方教程 在你喜欢的目录下，新建 pamail 文件夹，在 pamil文件夹下，新建 docker-compose.yml文件，如： 1 2 3 mkdir -r ~/opt/pmail &amp;&amp; cd ~/opt/pmail docker network create pmail_network vim docker-compose.yml 文件内容如下 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 version: &#39;3.">
+<meta property='og:url' content='https://blog.seektao.cc/p/pmail/'>
+<meta property='og:site_name' content='Seektao | 寻道之旅'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='mail' /><meta property='article:tag' content='pmail' /><meta property='article:published_time' content='2023-10-23T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-10-23T14:07:10&#43;08:00'/>
+<meta name="twitter:title" content="强烈推荐，一个内存占用极低的自建域名邮箱Pmail">
+<meta name="twitter:description" content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写的域名邮箱Pmail。 官方介绍：PMail是一个追求极简部署流程、极致资源占用的个人域名邮箱服务器。单文件运行，包含完整的收发邮件服务和Web端邮件管理功能。只需一台服务器、一个域名、一行代码、一分钟部署时间，你就能够搭建出一个自己的域名邮箱。 GitHub地址：https://github.com/Jinnrry/PMail/ 以下为界面截图： 准备工作 服务器，开放了25号端口的服务器，没有开放则无法发信。 域名 nginx 反代服务器 nginx proxy manager（可选，但建议），与nginx二选一 docker或者docker-compose 部署 提示：文章篇幅较长 docker-compose 如果服务器80，443端口没有被占用，搭建过程则较为简单。如果80，443端口被其他应用占用，搭建过程则较为繁琐。 本次80，443端口被nginx proxy manager占用，所以采用映射其他端口搭建 本次教程采用docker-compose方式安装，方便管理配置文件和升级。其余方式请参考官方教程 在你喜欢的目录下，新建 pamail 文件夹，在 pamil文件夹下，新建 docker-compose.yml文件，如： 1 2 3 mkdir -r ~/opt/pmail &amp;&amp; cd ~/opt/pmail docker network create pmail_network vim docker-compose.yml 文件内容如下 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 version: &#39;3.">
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hua656ab6dfe1fc382193f550011041410_6344_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Seektao | 寻道之旅</a></h1>
+            <h2 class="site-description">欢迎来到我的主页</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/muyiacc'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#部署">部署</a></li>
+    <li><a href="#反向代理">反向代理</a></li>
+    <li><a href="#启动测试">启动测试</a></li>
+    <li><a href="#附录">附录</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" >
+                默认分类
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/pmail/">强烈推荐，一个内存占用极低的自建域名邮箱Pmail</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 23, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<p>由于 PMail  后续更新，本文也将修改，适应最新版本</p>
+<hr>
+<h2 id="前言">前言
+</h2><p>最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写的域名邮箱Pmail。</p>
+<p>官方介绍：PMail是一个追求极简部署流程、极致资源占用的个人域名邮箱服务器。单文件运行，包含完整的收发邮件服务和Web端邮件管理功能。只需一台服务器、一个域名、一行代码、一分钟部署时间，你就能够搭建出一个自己的域名邮箱。</p>
+<p>GitHub地址：https://github.com/Jinnrry/PMail/</p>
+<p>以下为界面截图：</p>
+<p><img src="https://s2.loli.net/2024/07/27/xAFLG3DrST2VBJw.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_75320"
+	
+	
+></p>
+<h2 id="准备工作">准备工作
+</h2><ul>
+<li>服务器，开放了25号端口的服务器，没有开放则无法发信。</li>
+<li>域名</li>
+<li>nginx 反代服务器</li>
+<li>nginx proxy manager（<del>可选，但建议</del>），与nginx二选一</li>
+<li>docker或者docker-compose</li>
+</ul>
+<h2 id="部署">部署
+</h2><p><font color=red>提示：文章篇幅较长</font></p>
+<p><strong>docker-compose</strong></p>
+<blockquote>
+<p><font color=red>如果服务器80，443端口没有被占用，搭建过程则较为简单。如果80，443端口被其他应用占用，搭建过程则较为繁琐。</font></p>
+<p><font color=red>本次80，443端口被nginx proxy manager占用，所以采用映射其他端口搭建</font></p>
+</blockquote>
+<p>本次教程采用docker-compose方式安装，方便管理配置文件和升级。其余方式请参考<a class="link" href="https://github.com/Jinnrry/PMail#how-to-run"  target="_blank" rel="noopener"
+    >官方教程</a></p>
+<p>在你喜欢的目录下，新建 pamail 文件夹，在 pamil文件夹下，新建 docker-compose.yml文件，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir -r ~/opt/pmail <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/opt/pmail
+</span></span><span class="line"><span class="cl">docker network create pmail_network
+</span></span><span class="line"><span class="cl">vim docker-compose.yml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>文件内容如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.9&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">pmail</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">pmail</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;ghcr.io/jinnrry/pmail:latest&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s1">&#39;./config:/work/config&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c"># pop</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s1">&#39;110:110&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s1">&#39;995:995&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c"># smtp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s1">&#39;25:25&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s1">&#39;465:465&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c"># web访问</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s1">&#39;8780:80&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="s1">&#39;8781:443&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">pmail_network</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">pmail_network</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置文件编写完成之后，在 docker-compose.yml 所在目录下，运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo docker compose up
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接着会开启一个阻塞的前台进程，会打印日志信息，没有报错的话，服务则已经启动。</p>
+<p>开放端口，因为使用的云服务器，所以需要在云服务器管理面板，开放安全组，也就是端口，笔者使用的阿里云。</p>
+<p>进入 <a class="link" href="https://ecs.console.aliyun.com/home"  target="_blank" rel="noopener"
+    >ecs管理面板</a>，在左侧选择 【安全组】，选择服务器对应的安全组。</p>
+<p><img src="https://s2.loli.net/2024/07/27/btJ2XBz3OCE9PSr.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_57219"
+	
+	
+></p>
+<p>接着【手动添加】</p>
+<p><img src="https://s2.loli.net/2024/07/27/DYu5jB1ShzZ3iPo.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_42854"
+	
+	
+></p>
+<p>填写端口范围和授权对象，端口即为配置文件开放的端口，授权对象为0.0.0.0，表示所有ip都可访问，描述为备注信息。</p>
+<p>保存后，安全组配置完成。</p>
+<p>配置pmail</p>
+<p>暂停pamil的启动，修改配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo vim /config/config.json
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="s2">&#34;sslType&#34;</span>:<span class="s2">&#34;1&#34;</span>,<span class="s2">&#34;httpPort&#34;</span>:0,<span class="s2">&#34;httpsPort&#34;</span>:0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>网页访问服务器的公网ip+端口，如本次教程为 http://ip:8780，ip为服务器的公网ip，在<a class="link" href="https://ecs.console.aliyun.com/home"  target="_blank" rel="noopener"
+    >ecs管理面板</a> 可以看到。</p>
+<p>欢迎界面，初次进入的页面如下：</p>
+<p><img src="https://s2.loli.net/2024/07/27/OdVwphuEvUKJ6r4.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_34250"
+	
+	
+></p>
+<p>下一步，选择数据库，<del>建议默认即可</del>，根据自己使用的数据库安装</p>
+<p><img src="https://s2.loli.net/2024/07/27/DBtYn4dUjpuiEzf.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240727201528025"
+	
+	
+></p>
+<p>继续下一步，设置pmail管理员密码</p>
+<p><img src="https://s2.loli.net/2024/07/27/IoaL9Ne4vr7Ucsw.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240727201551748"
+	
+	
+></p>
+<p>下一步，设置域名</p>
+<p><img src="https://s2.loli.net/2024/07/27/aECeTyJm7tnrsWg.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240727201611717"
+	
+	
+></p>
+<p>下一步，设置DNS，将以下信息添加到dns解析处，</p>
+<p><img src="https://s2.loli.net/2024/07/27/BFtdPhRxICbM263.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240727201646797"
+	
+	
+></p>
+<p>DNS记录配置，在上一步，需要将DNS记录添加到对应的域名，我使用的DNSPOD，<a class="link" href="https://console.dnspod.cn/dns/"  target="_blank" rel="noopener"
+    >点此跳转DNSPOD</a> ，进入之后，按照提示添加记录即可</p>
+<p><img src="https://s2.loli.net/2024/07/27/LB35m6HGQaPiZlh.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_47044"
+	
+	
+></p>
+<p>配置ssl，dns记录添加完成之后，回到pmail配置页面，继续配置证书。</p>
+<p><img src="https://s2.loli.net/2024/07/27/jKQFyxDga9X86N4.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20240727201730157"
+	
+	
+></p>
+<p>这里选择手动配置ssl证书，如果服务器的80端口没有被占用，可以选择自动配置，当然，前面的docker-compose.yml端口信息也需要改成80，443。</p>
+<blockquote>
+<p>为什么选择不用80，443端口呢？？</p>
+<p>自动配置ssl需要用到80端口来验证服务器的所有权，所以自动配置ssl必须使用80端口。但是我的服务器安装了nginx proxy manger（简称npm） ，反代服务，一个web端的nginx工具，简化nginx配置，还可以一键生成ssl证书，我的服务器应用比较多，其他应用采用的都是子域名的方式访问。通过这种方式，简化的自己的工作、但是npm已经占用了80，443端口，所以80，443端口不可用。总不可能为了一个域名服务，让其他域名都不可用域名访问了吧。所以，将容器的80，443端口映射到了其他端口。</p>
+</blockquote>
+<p>默认的证书位置在 <code>./config/ssl/private.key、./config/ssl/public.crt</code>下，我们就把自己的ssl证书上传到 <code>./config/ssl</code>下。</p>
+<p>如果继续介绍npm申请ssl证书，这篇文章的篇幅就会过长。如果需要，到时候会另开文章介绍，这里就不多介绍了。也可自行搜索相关教程。</p>
+<p>关于ssl配置可以参考这篇博文：<a class="link" href="https://www.seektao.cc/archives/202407272022"  target="_blank" rel="noopener"
+    ><strong>Debian下的Certbot安装使用，附nginx使用</strong></a></p>
+<p>完成了这一步后，就基本完成了，不过还需要配置反向代理。</p>
+<h2 id="反向代理">反向代理
+</h2><p>dns记录</p>
+<p><a class="link" href="https://console.dnspod.cn/dns"  target="_blank" rel="noopener"
+    >进入 dnspod管理页面</a>，新增dns记录，如下</p>
+<p><img src="https://s2.loli.net/2024/07/27/g7G4RQXpA56UbO3.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_68154"
+	
+	
+></p>
+<p>新增代理</p>
+<p>进入npm管理页面，新增代理</p>
+<p><img src="https://s2.loli.net/2024/07/27/XSkRx6IndV5Ms24.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_36487"
+	
+	
+></p>
+<p>点击 <code>Add Proxy Host</code></p>
+<p><img src="https://s2.loli.net/2024/07/27/BNXiqlmM5zxFSQK.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_11375"
+	
+	
+></p>
+<p>编辑新增内容，按照如图所示编辑，打码的部分为服务的ip或者域名。</p>
+<p><img src="https://s2.loli.net/2024/07/27/qoPrGLyxH7JTjB8.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_57573"
+	
+	
+></p>
+<p>开启ssl，点击ssl，ssl证书选择已经申请的，如果没有，这里不做介绍。</p>
+<p>强制ssl开启，http2开启，如图：</p>
+<p><img src="https://s2.loli.net/2024/07/27/ePgLFRu2xK13OET.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_18886"
+	
+	
+></p>
+<p>最后点击save保存。到这反向代理也配置完成。</p>
+<p>但是访问会出现</p>
+<p><img src="https://s2.loli.net/2024/07/27/aXC3oudfiBrUKp7.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_75626"
+	
+	
+></p>
+<p>修改pmail配置文件，关闭前台进程，ctrl+c，关闭。</p>
+<p>pmail的配置文件已经挂载到本地了，在 <code>config/config.json</code>下，</p>
+<p>进入pmail文件夹，编辑 <code>config.json</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> ~/opt/pmail
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo vim config/config.json 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>httpsEnabled 配置改成2</li>
+<li>sslType	改成1</li>
+</ul>
+<h2 id="启动测试">启动测试
+</h2><p>修改配置后，重新启动docker容器。</p>
+<p>在 docker-compose.yml 所在目录下，运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo docker up -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -d 表示后台运行</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>浏览器通过域名访问或者ip+端口访问即可</p>
+<p>最终效果如下，</p>
+<p><img src="https://s2.loli.net/2024/07/28/cxjysFS8BVGMCH2.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_25419"
+	
+	
+></p>
+<p>测试，发送测试邮件给163邮箱</p>
+<p><img src="https://s2.loli.net/2024/07/28/wLYUkH9QZXWhI8B.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_40126"
+	
+	
+></p>
+<p>163邮箱 接收</p>
+<p><img src="https://s2.loli.net/2024/07/28/F2a3MLlGDnZKV9B.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="20231028T200750_15126"
+	
+	
+></p>
+<p><strong>总结：</strong></p>
+<p>搭建过程较为繁琐，需要的前置条件较多.</p>
+<p>pmail界面相较于其他邮箱要差一些，<del>没有多用户功能</del>，最新版已增加，实现了基本的收发功能。基本满足个人使用。</p>
+<p>感谢作者的开源精神。</p>
+<p>最后继续附上pmail的GitHub地址：https://github.com/Jinnrry/PMail/</p>
+<h2 id="附录">附录
+</h2><p>配置信息详解</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;logLevel&#34;</span>: <span class="s2">&#34;info&#34;</span>, //日志输出级别
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;domain&#34;</span>: <span class="s2">&#34;domain.com&#34;</span>, // 你的域名
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;webDomain&#34;</span>: <span class="s2">&#34;mail.domain.com&#34;</span>, // web域名
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;dkimPrivateKeyPath&#34;</span>: <span class="s2">&#34;config/dkim/dkim.priv&#34;</span>, // dkim 私钥地址
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;sslType&#34;</span>: <span class="s2">&#34;0&#34;</span>, // ssl证书更新模式，0自动，1手动
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;SSLPrivateKeyPath&#34;</span>: <span class="s2">&#34;config/ssl/private.key&#34;</span>, // ssl 证书地址
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;SSLPublicKeyPath&#34;</span>: <span class="s2">&#34;config/ssl/public.crt&#34;</span>, // ssl 证书地址
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;dbDSN&#34;</span>: <span class="s2">&#34;./config/pmail.db&#34;</span>, // 数据库连接DSN
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;dbType&#34;</span>: <span class="s2">&#34;sqlite&#34;</span>, //数据库类型，支持sqlite 和 mysql
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;httpsEnabled&#34;</span>: 0, // web后台是否启用https 0默认（启用），1启用，2不启用
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;spamFilterLevel&#34;</span>: 0,// 垃圾邮件过滤级别，0不过滤、1 spf dkim 校验均失败时过滤，2 spf校验不通过时过滤
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;httpPort&#34;</span>: 80, // http 端口 . 默认 <span class="m">80</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;httpsPort&#34;</span>: 443, // https 端口 . 默认 <span class="m">443</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;weChatPushAppId&#34;</span>: <span class="s2">&#34;&#34;</span>, // 微信推送appid
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;weChatPushSecret&#34;</span>: <span class="s2">&#34;&#34;</span>, // 微信推送秘钥
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;weChatPushTemplateId&#34;</span>: <span class="s2">&#34;&#34;</span>, // 微信推送模板id
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;weChatPushUserId&#34;</span>: <span class="s2">&#34;&#34;</span>, // 微信推送用户id
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;tgChatId&#34;</span>: <span class="s2">&#34;&#34;</span>, // telegram 推送chatid
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;tgBotToken&#34;</span>: <span class="s2">&#34;&#34;</span>, // telegram 推送 token
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;isInit&#34;</span>: <span class="nb">true</span> // 为false的时候会进入安装引导流程
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/mail/">Mail</a>
+        
+            <a href="/tags/pmail/">Pmail</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>CC BY-NC-ND</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/2407016/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">PMail配置SMTP，POP客户端</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407025/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">小白羊盘下载文件出现aria2c错误解决办法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407024/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">各平台影视观看指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407023/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">可用的短链系统</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2407021/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Sublime配置SFTP</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2024 Seektao | 寻道之旅
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
