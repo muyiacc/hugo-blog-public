@@ -20,13 +20,13 @@
     <loc>https://blog.seektao.cc/categories/</loc>
     <lastmod>2024-07-25T15:07:52+08:00</lastmod>
   </url><url>
+    <loc>https://blog.seektao.cc/categories/default/</loc>
+    <lastmod>2024-07-25T15:07:52+08:00</lastmod>
+  </url><url>
     <loc>https://blog.seektao.cc/post/</loc>
     <lastmod>2024-07-25T15:07:52+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/2407025/</loc>
-    <lastmod>2024-07-25T15:07:52+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.seektao.cc/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/</loc>
     <lastmod>2024-07-25T15:07:52+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/</loc>
@@ -347,7 +347,7 @@
     <loc>https://blog.seektao.cc/tags/domain/</loc>
     <lastmod>2024-06-01T16:06:01+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/categories/%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://blog.seektao.cc/categories/free/</loc>
     <lastmod>2024-06-01T16:06:01+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/2405012/</loc>
@@ -931,8 +931,6 @@
   </url><url>
     <loc>https://blog.seektao.cc/_index.zh-cn/</loc>
   </url><url>
-    <loc>https://blog.seektao.cc/</loc>
-  </url><url>
     <loc>https://blog.seektao.cc/p/tp.file.creation_dateyymmddhhmmss/</loc>
   </url><url>
     <loc>https://blog.seektao.cc/tags/apt/</loc>
@@ -986,8 +984,6 @@
     <loc>https://blog.seektao.cc/tags/tabby/</loc>
   </url><url>
     <loc>https://blog.seektao.cc/p/2311009/</loc>
-  </url><url>
-    <loc>https://blog.seektao.cc/categories/test/</loc>
   </url><url>
     <loc>https://blog.seektao.cc/p/xiu-xing-guo-cheng/</loc>
   </url><url>

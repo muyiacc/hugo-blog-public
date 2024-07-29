@@ -8,12 +8,12 @@
         <language>en</language>
         <copyright>Seektao | 寻道之旅</copyright>
         <lastBuildDate>Thu, 25 Jul 2024 15:07:52 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>默认分类</title>
-        <link>https://blog.seektao.cc/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/</link>
+        <title>Default</title>
+        <link>https://blog.seektao.cc/categories/default/</link>
         <pubDate>Thu, 25 Jul 2024 15:07:52 +0800</pubDate>
         
-        <guid>https://blog.seektao.cc/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/</guid>
-        <description></description>
+        <guid>https://blog.seektao.cc/categories/default/</guid>
+        <description>&lt;img src="https://blog.seektao.cc/categories/default/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Default" /&gt;</description>
         </item>
         <item>
         <title>Linux</title>
@@ -21,7 +21,7 @@
         <pubDate>Mon, 22 Jul 2024 15:07:51 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/linux/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.seektao.cc/categories/linux/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Linux" /&gt;</description>
         </item>
         <item>
         <title>Windows</title>
@@ -29,7 +29,7 @@
         <pubDate>Wed, 17 Jul 2024 15:07:48 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/windows/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.seektao.cc/categories/windows/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Windows" /&gt;</description>
         </item>
         <item>
         <title>Tao</title>
@@ -37,7 +37,7 @@
         <pubDate>Mon, 08 Jul 2024 16:07:59 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/tao/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.seektao.cc/categories/tao/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Tao" /&gt;</description>
         </item>
         <item>
         <title>Docker</title>
@@ -45,15 +45,15 @@
         <pubDate>Thu, 20 Jun 2024 16:06:01 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/docker/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.seektao.cc/categories/docker/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Docker" /&gt;</description>
         </item>
         <item>
-        <title>免费资源</title>
-        <link>https://blog.seektao.cc/categories/%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90/</link>
+        <title>Free</title>
+        <link>https://blog.seektao.cc/categories/free/</link>
         <pubDate>Sat, 01 Jun 2024 16:06:01 +0800</pubDate>
         
-        <guid>https://blog.seektao.cc/categories/%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90/</guid>
-        <description></description>
+        <guid>https://blog.seektao.cc/categories/free/</guid>
+        <description>&lt;img src="https://blog.seektao.cc/categories/free/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Free" /&gt;</description>
         </item>
         <item>
         <title>Vue</title>
@@ -61,7 +61,7 @@
         <pubDate>Fri, 15 Sep 2023 14:07:10 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/vue/</guid>
-        <description></description>
+        <description>&lt;img src="https://blog.seektao.cc/categories/vue/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Vue" /&gt;</description>
         </item>
         <item>
         <title>Golang</title>
@@ -69,15 +69,7 @@
         <pubDate>Thu, 14 Sep 2023 14:07:10 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/golang/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Test</title>
-        <link>https://blog.seektao.cc/categories/test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/categories/test/</guid>
-        <description>&lt;img src="https://blog.seektao.cc/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <description>&lt;img src="https://blog.seektao.cc/categories/golang/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Golang" /&gt;</description>
         </item>
         
     </channel>
