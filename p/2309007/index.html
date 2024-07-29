@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2309007/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Shell的基本语法-2-变量-运算符-条件判断">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Shell的基本语法-2-变量-运算符-条件判断">
 <meta property='og:description' content="1. 变量 Shell也可以设置变量，如系统默认的变量 SHELL（当前用户的解释器）、USER（当前用户）、HOME（当前用户的加目录）等 查看这些变量的值只需要 echo $变量名即可 例如： 1 2 3 4 5 echo $SHELL echo $USER echo $HOME 上述输出结果根据笔者所在的环境分别为 1 2 3 4 5 /bin/zsh ecs-user /home/ecs-user 下面开始更加详细的说明 1.1. 系统变量 系统变量，顾名思义，就是系统自带的变量 除了已经介绍过的SHELL、USER、HOME等外，还有如 1 2 3 4 5 6 7 8 9 10 11 PATH：环境变量，包含了可执行文件的搜索路径。 BASH_VERSION：Bash shell的版本信息。 PWD：当前工作目录的绝对路径。 LANG：系统的语言和字符集设置。 TERM：终端类型。 LOGNAME：当前登录的用户名。 HISTSIZE：命令历史记录的数量。 LINES：终端的行数。 USER：非root用户的用户名。 UID：用户ID（root用户为0）。 GID：组ID（root用户为0）。 额外的： 使用env命令查看当前系统定义的所有环境变量 使用set命令显示所有本地定义的Shell变量 1.2. 自定义变量 除了系统自带的系统变量以外，用户还可以自定义属于自己的变量 1） 基本语法 定义变量 变量名=变量值 等号两边不能有空格 撤销变量 unset 变量名 静态变量 readonly 变量名 静态变量不可撤销 全局变量 export 变量名 2）变量命名规则">
 <meta property='og:url' content='https://blog.seektao.cc/p/2309007/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

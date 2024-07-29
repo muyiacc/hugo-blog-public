@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403007/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Nginx篇：通过apt的nginx官方仓库安装">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Nginx篇：通过apt的nginx官方仓库安装">
 <meta property='og:description' content="介绍 为什么需要通过官方仓库安装？ 答：系统默认的软件源版本太低 Debian 参考教程 https://nginx.org/en/linux_packages.html#Debian 前提条件： 1 sudo apt install curl gnupg2 ca-certificates lsb-release debian-archive-keyring 导入密钥，验证包的正确性： 1 2 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \\ | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg &gt;/dev/null 验证下载的文件是否包含正确的密钥： 1 gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/share/keyrings/nginx-archive-keyring.gpg 输出应包含完整指纹573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62如下: pub rsa2048 2011-08-19 [SC] [expires: 2024-06-14] 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 uid nginx signing key signing-key@nginx.com 如果指纹不同，删除文件。 二选一： 要为稳定的 nginx 包设置 apt 存储库，请运行以下命令： 1 2 3 echo &#34;deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \\ http://nginx.org/packages/mainline/debian `lsb_release -cs` nginx&#34; \\ | sudo tee /etc/apt/sources.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403007/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

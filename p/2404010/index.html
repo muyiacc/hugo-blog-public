@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2404010/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="windows右键新增打开cmd">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="windows右键新增打开cmd">
 <meta property='og:description' content="方式一：手动修改注册表 打开注册表，win+s搜索注册表或者regedit打开注册表， 定位到 1 计算机\\HKEY_CLASSES_ROOT\\Directory\\Background\\shell 右键新增项，名字随意，建议有意义的名字，比如 OpenCmdHere 在 OpenCmdHere 下继续新增项，名字为 command，这个名字不可更改。 在 command 下修改默认的数据，改为 1 cmd.exe /k cd &#34;%V&#34; 在OpenCmdHere 下新增字符串值，名称为 Icon，数据为 cmd.exe 退出查看效果如何 方式二：执行reg文件 为了简化操作，方式一的注册表我已导出为 .reg文件，只需要新建文件，后缀改为 .reg，把下面的内容粘贴进去执行即可 1 2 3 4 5 6 7 8 Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\OpenCmdHere] @=&#34;Open Cmd Here&#34; &#34;Icon&#34;=&#34;cmd.exe&#34; [HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\OpenCmdHere\\command] @=&#34;cmd.exe /k cd \\&#34;%V\\&#34;&#34; ">
 <meta property='og:url' content='https://blog.seektao.cc/p/2404010/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

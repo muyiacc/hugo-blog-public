@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310007/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="debian12安装中文输入法">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="debian12安装中文输入法">
 <meta property='og:description' content="debian12 安装中文输入法 如果安装系统的时候选择是中文安装，默认就会安装好中文输入法，因为后面我安装rime,不熟悉卸载了fcitx5导致默认的中文失效，发现rime配置太麻烦，默认还不好用，所以打算又重新安装默认的中文输入法，但一直没搞对，后来终于解决了，这里介绍一下经验 在使用fcitx5的前提下，安装中文输入法。本文不涉及字体等等 如果没有安装dcitx5的按照以下安装: sudo apt update sudo apt install fcitx5 正确步骤 实际上，中文输入法有个插件的，安装正确的插件才会恢复到默认的状态。 首先建议把系统语言设置为中文，在设置中文输入法有大用！！如果需要设置为英文，再换回来。 在终端直接用apt搜索fcitx5相关的中文插件，如下所示： 1 apt list | grep fcitx5 | grep chinese 输出如下： 1 2 3 4 5 6 WARNING: apt does not have a stable CLI interface. Use with caution in scripts. fcitx5-chinese-addons-bin/stable,now 5.0.16-1 amd64 [installed,automatic] fcitx5-chinese-addons-bin/stable 5.0.16-1 i386 fcitx5-chinese-addons-data/stable,stable,now 5.0.16-1 all [installed,automatic] fcitx5-chinese-addons/stable,stable,now 5.0.16-1 all [installed] 可以看到有 fcitx5-chinese-addons这个选项，安装它 1 sduo apt install fcitx5-chinese-addons 安装完就已经安装好了中文输入法，包含一些如拼音，五笔等等。到这里在设置里选择输入法为拼音就好了，重启。就这么简单。 网上答案质量层次不齐，害人不浅，搞死我了。。。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310007/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

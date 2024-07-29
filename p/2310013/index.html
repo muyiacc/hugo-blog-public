@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310013/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Docker部署ChatGPT-Next-Web">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Docker部署ChatGPT-Next-Web">
 <meta property='og:description' content="Docker部署 ChatGPT-Next-Web 之前介绍过一个免翻使用chatgpt接口的项目 Pandora，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体验感不太好，后来发现另一个chatgpt的web项目，名字叫 ChatGPT-Next-Web，可以很方便的使用代理接口，我们可以使用一些免费的接口来提升使用感。 Github 地址：https://github.com/Yidadaa/ChatGPT-Next-Web 访问界面样式，可以看见还是很美观的： 安装 依旧使用docker compose 方式搭建。 docker-compose.yml 1 2 3 4 5 6 7 8 9 10 11 12 version: &#39;3.9&#39; services: chatgpt-next-web: image: yidadaa/chatgpt-next-web container_name: chatgpt-next-web environment: - CODE=#页面访问密码， - OPENAI_API_KEY=#你的api key - BASE_URL=#接口地址 ports: - &#39;3000:3000&#39; restart: unless-stopped 上述的docker-compose 文件是一个简洁版，免去了代理proxy，我们使用免费的api接口，后面有介绍 关于完整的内容可以去官方查看。 启动容器 1 docker compose up -d 接口 关于接口，网上也有一些免费的api 接口地址 这里提供一个Github的开源项目：GPT_API_free 快速获取api key，点击下面的连接获取api，获取的api用来替换上面配置的api，接口地址呢推荐使用下面的国内地址转发。 申请领取内测免费API Key 转发Host1: https://api.chatanywhere.com.cn (国内中转，延时更低，推荐) 转发Host2: https://api.chatanywhere.cn (国外使用,国内需要全局代理)">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310013/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

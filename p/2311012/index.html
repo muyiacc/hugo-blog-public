@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2311012/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Windows下安装Alist，并安装系统服务自启动">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Windows下安装Alist，并安装系统服务自启动">
 <meta property='og:description' content="Alist是一个网盘管理工作，可以挂在多个网盘，使用go编写，所以多平台支持，之前在服务器安装了alist，使用的Linux系统，这次在Windows下也安装一下 笔者Windows版本为 Windows10 专业工作站，我不确定家庭版是否有限制 1. 下载 下载地址： https://github.com/alist-org/alist/releases/ 点我可直接下载 下载的文件解压到一个目录，最好先手动创建一个文件夹，比如 D:\\Program Files\\alist 完整的路径如下 1 D:\\Program Files\\alist\\alist.exe 2. 运行 启动服务，在地址栏输入cmd快速进入当前目录，输入 1 alist.exe server 就会在当前目录下生成 data文件夹。包含了程序的数据。 打开浏览器：localhost:5244 即可访问，终端出现了随机密码，但是默认密码太麻烦了，建议直接重置密码。 回到 alist所在目录，看到 第一次运行的时候生成的 data 文件夹，这个是存放数据的文件夹。 生成（重置）密码：回到 alist.exe所在目录，重新打开一个 cmd 窗口 1 2 3 4 5 # 指定密码 alist.exe admin set 你的密码 --data .\\data # 随机生成密码 alist.exe admin random --data .\\data --data 表示指定数据目录。不指定可能会报错 如果出现了如下报错，表示修改密码没有生效，报错如下： 1 ERRO[2023-11-29 17:42:49] [del_user_cache_online] error: that&#39;s not even a token 回到浏览器：输入：localhost:5244 即可使用 alist了。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2311012/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/git-command/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Git命令详解">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Git命令详解">
 <meta property='og:description' content="本文持续更新 初始化仓库 本地没有项目，仓库有 git clone &lt;项目地址&gt; 本地有项目，仓库也有 确保本地已经初始化git init,先将本地提交了。 添加远程仓库地址，拉取项目，解决冲突。 1 2 3 git remote add &lt;别名&gt; &lt;仓库地址&gt; # 案例 # git remote add origin git@github.com:muyiacc/test.git 如果本地也有记录，且和远程有冲突，后面讲 拉取 pull 推送 push 将当前分支提交到远程对应分支 1 git push 将当前分支提交到特定的远程仓库，同名分支 1 git push &lt;remote&gt; 将本地分支提交到远程特定的分支 1 git push &lt;remote&gt; &lt;branch&gt; 设置上游分支：推送当前分支，并设置上游分支（tracking branch），这样之后可以使用 git push 直接推送，而不需要指定远程仓库和分支。 1 git push -u &lt;remote&gt; &lt;branch&gt; 强制推送：强制推送本地更改，即使这会导致远程仓库的更改丢失。使用此选项需要谨慎，因为它可能会覆盖远程分支上的提交。（慎用！！！） 1 git push -f 或 git push --force 删除远程分支：删除远程仓库上的指定分支。 1 git push &lt;remote&gt; --delete &lt;branch&gt; 推送标签：推送本地创建的标签到远程仓库">
 <meta property='og:url' content='https://blog.seektao.cc/p/git-command/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

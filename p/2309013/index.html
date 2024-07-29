@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2309013/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="基于Golang编写的开源博客系统sonic，内存占用极低！！替代halo">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="基于Golang编写的开源博客系统sonic，内存占用极低！！替代halo">
 <meta property='og:description' content="本文编辑于 2023-09-15 作者：muyiacc Github: https://github.com/muyiacc CSDN: https://blog.csdn.net/muyiacc Blog: https://www.seektao.cc/ 使用环境：Debian11 1. 前言 在此之前，笔者使用过 Java 编写的 halo博客，这个博客很热门，但是它内存占用很大， 关于内存占用的情况： 配合使用MySQL数据库占用大概800M，一个MySQL 服务内存将近300M。可怕~~~~~~~~。 配合使用 Porstgresql 数据库占用550M内存左右，数据库占用内存大概有40M 这里插一句，Porstgresql最近也是如日中天的发展。强~ 尽管如此，这对个人使用来说是不友好的，个人服务器资源宝贵，占用太多就不好安装其他服务了，所以需要替换。关于halo占用内存截图如下： ![image-20230915082648713](https://gitee.com/muyiacc/typora-img/raw/master/2023/2023-09-15 08-27-06_image-20230915082648713.png) 加上最近在学习Golang，这语言感觉确实强，占用内存极低，效率极高。 所以在GitHub上找到了一个开源，由Golang编写的博客系统 sonic，安装启动后查看只有50M不到的内存占用，顺道学习 Golang。 地址 https://github.com/go-sonic/sonic 这个博客系统已经有 1.7K 的star了 ，应该还不错，今天拿来安装使用使用，接下来开始安装过程吧。 2. 搭建sonic 截止到笔者安装时期，最新版为1.1.1。 2.1. 下载 1 wget https://github.com/go-sonic/sonic/releases/download/v1.1.1/sonic-linux-amd64.zip 如果网络不通，请自寻解决办法~~ 2.2. 解压 因为是zip格式，所以需要用 unzip解压，笔者一般接触的都是tar.gz格式，这里解压的时候有坑 这个坑为：unzip解压缩时会将压缩包的文件列表直接输出，不会自动创建以压缩包为名字的目录 1 2 # 解压命令为 mkdir ~/opt/sonic/ &amp;&amp; unzip -d ~/opt/sonic/ sonic-linux-amd64.zip unzip语法格式: unzip [参数] 压缩包名 参数： -d 路径 将压缩包的所有文件列表解压缩到指定路径，不会自动创建以目录">
 <meta property='og:url' content='https://blog.seektao.cc/p/2309013/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

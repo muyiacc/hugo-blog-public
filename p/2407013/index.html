@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407013/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="new-api，基于one-api">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="new-api，基于one-api">
 <meta property='og:description' content="部署 docker 1 docker run --name new-api -d --restart always -p 3000:3000 -e TZ=Asia/Shanghai -v /home/ubuntu/data/new-api:/data calciumion/new-api:latest docker-compose 1 sudo mkdir -p /opt/new-api 1 2 cd /opt/new-api sudo vim /opt/new-api/docker-compose.yml 1 2 3 4 5 6 7 8 9 10 11 12 version: &#39;3.9&#39; services: new-api: image: &#39;calciumion/new-api:latest&#39; volumes: - &#39;./data:/data&#39; environment: - TZ=Asia/Shanghai ports: - &#39;3000:3000&#39; restart: unless-stopped container_name: new-api 启动 1 sudo docker compose up 反向代理 Nginx 1 2 3 4 5 6 7 8 9 10 11 12 server { listen 80; server_name domain.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407013/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

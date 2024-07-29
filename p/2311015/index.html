@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2311015/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="修复Windows的Defender脱机版扫描点击无反应">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="修复Windows的Defender脱机版扫描点击无反应">
 <meta property='og:description' content="win+s 搜索cmd，使用管理员打开，依此执行以下的命令 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 这一步耐心等待 for %i in (%windir%\\system32\\*.dll) do regsvr32.exe /s %i for %i in (%windir%\\system32\\*.ocx) do regsvr32.exe /s %i 执行完毕后重启设备，继续执行下方命令： Dism /Online /Cleanup-Image /ScanHealth Dism /Online /Cleanup-Image /CheckHealth 这一步可能会卡住62.3%，等待太久就关掉它，重新执行，直到成功 DISM /Online /Cleanup-image /RestoreHealth 前面没有问题，到这一步结束后会显示修复成功的信息，执行完重启 sfc /SCANNOW ">
 <meta property='og:url' content='https://blog.seektao.cc/p/2311015/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

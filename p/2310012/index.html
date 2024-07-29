@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310012/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="debian更换国内镜像源">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="debian更换国内镜像源">
 <meta property='og:description' content="前言 每次装新系统都要网上搜各种换仓库镜像源的教程，有的还不一定准确，自己总结下，免得到处翻找 我一般最常用的是debian系统，centos因为变得不再稳定，所以我已不再使用，如果你用的是debian系，应该也适合你，如ubuntu。 以下教程都是在root用户使用，新用户还需要编辑sudoer文件，太麻烦了，索性直接用root用户，不过便于以后使用，以后可能普通用户也有换源的需求，有的命令也加上sudo 查看自己的debian发行版本 1 2 3 4 cat /etc/issue # 或者 cat /proc/version 本次教程发行版本是 Debian 12 (bookworm) debian的镜像源文件所在位置 /etc/apt/sources.list 修改之前先备份 1 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak 清华源 官方帮助地址：https://mirrors.tuna.tsinghua.edu.cn/help/debian/ step 1 新系统更新软件缓存包时会用到 官方安全更新软件源，国内网络问题，所以会直接卡住，所以先使用清华源更新，更新后再换回来 1 2 # 编辑 /etc/apt/sources.list sudo vi /etc/apt/sources.list 快捷键： home键：光标跳转到行首 dG：删除全部内容 在官网选择好对应的版本和内容如下： 是否使用 HTTPS：否 是否使用 sudo：是 Debian 版本：Debian 12 (bookworm) 启用源码镜像：否 使用官方安全更新软件源：否 将复制的内容粘贴到终端 1 2 3 4 5 6 7 8 9 10 11 12 13 14 deb http://mirrors.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310012/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

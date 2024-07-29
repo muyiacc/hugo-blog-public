@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310005/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian12下的Navicat-Promium安装和激活(未完成)">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian12下的Navicat-Promium安装和激活(未完成)">
 <meta property='og:description' content="安装 安装 Navicat Promium，最新版本是16，使用官网提供的下载方式 1 2 3 4 5 6 7 cd ~ wget https://www.navicat.com/download/direct-download?product=navicat16-premium-en.AppImage&amp;location=1 chmod +x navicat16-premium-en.AppImage ./navicat16-premium-en.AppImage 激活 Github开源的地址：点此跳转 以下命令你只需复制粘贴即可 提取AppImage 将下载的 AppImage 文件内容全部提取到一个文件夹中 1 2 3 4 5 6 7 8 mkdir navicat16-premium-cs mount -o loop ./navicat16-premium-cs.AppImage ./navicat16-premium-cs sudo mount -o loop ./navicat16-premium-cs.AppImage ./navicat16-premium-cs # 这一步需要等待一会 cp -r ./navicat16-premium-cs ./navicat16-premium-cs-patched 编译 前提安装了 capstone keystone rapidjson 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 sudo apt update # 安装 capstone sudo apt install libcapstone-dev # 安装 keystone sudo apt install cmake git clone https://github.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310005/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

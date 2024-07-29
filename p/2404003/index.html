@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2404003/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Linux存储空间的查询，清理">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Linux存储空间的查询，清理">
 <meta property='og:description' content="今天阿里云又发邮件和短信提醒我了，提示我的磁盘占用超过95%，好吧，晚上来看看怎么清理清理。 （1）手动查询出什么文件夹占用了大量的空间 1 du -h --max-depth=1 / 截图如下 来针对性的进一步查询 1 2 3 du -h --max-depth=1 /home | sort -hr ## 接下来依葫芦画瓢即可,找到不需要的大文件删除 （2）docker 我平时诸多服务采用的都是docker启动，借助docker自动删除一些不用的镜像，容器，网络，存储卷 1 2 3 4 5 6 7 8 9 docker image prune -a docker container prune docker volume prune docker network prune docker system prune -a 最后结果 可以看到清理了9个g个空间。有些应用知识临时测试，不打算长期用就及时删除吧，免得到时候还不好找。 阿里云的ecs，40个g对于我安装了15个应用来说，只能刚刚好了。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2404003/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

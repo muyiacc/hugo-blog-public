@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310008/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian12安装和卸载MySQL8.0">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian12安装和卸载MySQL8.0">
 <meta property='og:description' content="官网下载地址：https://downloads.mysql.com/archives/community/ 安装前准备 安装之前先确保环境的干净，查看数据库安装的情况 1 dpkg -l | grep -E &#39;(mysql|maria)&#39; 根据上述命令的输出情况卸载他们，一般debian默认安装了mariadb 1 sudo apt puege 软件包名字 删除配置文件 1 sudo rm -rf /etc/mysql /var/lib/mysql 安装 下载mysql 选择与系统最接近的版本，笔者系统版本是debian12，mysql官方还没有debain12的包，所以先尝试安装debain11的， 点击下载debain11的mysql 或者 1 2 3 mkdir mysql &amp;&amp; cd ./mysql wget https://downloads.mysql.com/archives/get/p/23/file/mysql-server_8.0.34-1debian11_amd64.deb-bundle.tar 解压mysql 1 tar -xvf mysql-server_8.0.34-1debian11_amd64.deb-bundle.tar 安装mysql !!! 由于每个人的环境都不一样，关于mysql的依赖需求，下面的教程不一定包含全部，如果没有涉及到，请自行上网搜索解决。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 安装有依赖要求，所以按照顺序安装 sudo dpkg -i mysql-community-client-plugins_8.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310008/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

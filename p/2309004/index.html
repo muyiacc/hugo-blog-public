@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2309004/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="markdown实时渲染外链图片的解决方案（未完成）">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="markdown实时渲染外链图片的解决方案（未完成）">
 <meta property='og:description' content="Markdown 本身并不支持实时渲染外链图片，但可以通过一些扩展库或工具来实现。 一种常用的方法是使用 JavaScript 库来实现。例如，可以使用 markdown-it 这个 JavaScript 库来将 Markdown 文本渲染为 HTML，并通过 markdown-it 的插件来加载外链图片。具体步骤如下： 在你的项目中引入 markdown-it 和 markdown-it 的 HTML 渲染器： 1 2 import markdownIt from &#39;markdown-it&#39;; import { MarkdownItHtml } from &#39;markdown-it-html&#39;; 创建一个 markdown-it 实例，并启用 HTML 渲染器插件： 1 2 3 4 5 const md = markdownIt({ html: true, linkify: true, typographer: true, }).use(MarkdownItHtml); 将 Markdown 文本渲染为 HTML，并将外链图片转换为 &lt;img&gt; 标签： 1 2 const markdown = &#39;![alt text](http://example.com/image.jpg)&#39;; const html = md.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2309004/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

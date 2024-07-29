@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403011/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="开源多播放源采集在线影视GoFilm">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="开源多播放源采集在线影视GoFilm">
 <meta property='og:description' content="前言 最近在看动漫，但是好多站点要么没有，要么搜不到，有些搜索还有时间限制，或者从网盘转存，太繁琐了。所以想在自己的服务器新增一个看影视的功能，毕竟有时候找资源是真的痛苦。 加上之前了解到GitHub上有一个在线采集影视的项目，正好今天上上手，自己动手部署，丰衣足食。 项目介绍 项目框架为 Go+Vue。用到了 Redis和 Mysql，经过我的测试，docker启动运行需要差不多 500M 的内存，主要是MySQL占用内存较大，感觉可以优化为 postgresql 来大大降低内存占用。 项目地址：https://github.com/ProudMuBai/GoFilm 项目提供的教程需要自己构建docker镜像，并且构建的镜像需要特别大，对此我进行了优化，并讲 docker 镜像上传到了 docker仓库，所以你可以直接使用我构建的镜像而不用自己手动构建 截至目前构建的最新版本为 1 2 3 提交编号：67097207074deffb884c2ba88c935dc35efd46f0 日期：Feb 26, 2024 前置准备 安装好 docker，如果没有，请参考 docker安装。 部署 方式一： xxxxxxxxxx\u00a0# 前台运行./cms\u200b# 后台运行nohup ./cms shell 为了简单起见，采用 root 用户，如果不是，请自己注意权限问题，加上 sudo提权。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 进入 /opt/目录 cd /opt/ # 克隆项目 git clone https://github.com/muyiacc/GoFilm.git # 复制 GoFilm的 film目录到 /opt/ cp -r GoFilm/film .">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403011/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

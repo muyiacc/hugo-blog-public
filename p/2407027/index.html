@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407027/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="短链系统yourls安装使用">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="短链系统yourls安装使用">
 <meta property='og:description' content="介绍 YOURLS 是一个强大的 PHP 脚本集，可以让您在服务器上运行自己的 URL 缩短程序。有了 YOURLS，你可以完全控制你的链接、详细的统计数据、插件支持等等，所有这些都包装在一个免费的开源软件包中。 官网：https://yourls.org 源码：https://github.com/YOURLS/YOURLS 预览： 安装 本次以serv00为例，教学安装 下载 1 wget https://github.com/YOURLS/YOURLS/archive/refs/tags/1.9.2.zip 解压 1 unzip 1.9.2.zip -d public_html/ 复制文件 1 2 3 cd public_html/ rm -rf index.html cp -r YOURLS-1.9.2/* ./ 配置 1 cp user/config-sample.php user/config.php 修改user/config.php 1 vim user/config.php serv00后台创建数据库，将数据库信息填写到 user/config.php，除了数据库外，还需要修改其他信息，按需填写 这里需要注意的是，如果你想让多个短链指向同一个站点，需要做如下操作 define( 'YOURLS_UNIQUE_URLS', 'false' ); 修改完成之后访问：域名/admin 进入到这个界面，点击 Install YOURLS 登陆后台，长这样： 主题 Sleeky https://github.com/Flynntes/Sleeky/releases/tag/v2.5.0 1 2 3 4 wget https://github.com/Flynntes/Sleeky/archive/refs/tags/v2.5.0.zip unzip v2.5.0.zip cp -r Sleeky-2.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407027/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

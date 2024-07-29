@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403001/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian通过apt安装MySQL">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian通过apt安装MySQL">
 <meta property='og:description' content="之前一直使用 下载压缩包的方式，发现并不好用，因为每次新装还要下载指定的版本，而且版本还不一定好找，之前教程安装过程的命令复用性不高， 这次直接使用apt安装，添加MySQL的apt源即可，就算是其他人也可以直接复制 先卸载 1 2 3 4 5 dpkg -l | grep -E &#39;(mysql|maria)&#39; sudo apt puege 软件包名字 sudo rm -rf /etc/mysql /var/lib/mysql 添加apt源 1 2 3 4 5 6 7 8 9 # 下载apt源 wget https://dev.mysql.com/get/mysql-apt-config_0.8.29-1_all.deb -O mysql-apt-config.deb # 执行安装 sudo dpkg -i mysql-apt-config.deb # 弹出界面，如果需要配置，回车进入，一般默认即可，所以直接键盘上下键选择ok，即可添加成功 sudo apt update 安装顺序 1 2 3 4 5 6 7 8 9 10 11 sudo apt install mysql-community-client-plugins sudo apt install mysql-community-client-core sudo apt install mysql-common sudo apt install mysql-community-client sudo apt install mysql-client sudo apt install mysql-community-server 最后一步，图形界面设置密码。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403001/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407015/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="one-api">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="one-api">
 <meta property='og:description' content="介绍 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用 源码：https://github.com/songquanpeng/one-api 部署 docker 1 2 3 4 5 # 使用 SQLite 的部署命令： docker run --name one-api -d --restart always -p 3000:3000 -e TZ=Asia/Shanghai -v /home/ubuntu/data/one-api:/data justsong/one-api # 使用 MySQL 的部署命令，在上面的基础上添加 `-e SQL_DSN=&#34;root:123456@tcp(localhost:3306)/oneapi&#34;`，请自行修改数据库连接参数，不清楚如何修改请参见下面环境变量一节。 # 例如： docker run --name one-api -d --restart always -p 3000:3000 -e SQL_DSN=&#34;root:123456@tcp(localhost:3306)/oneapi&#34; -e TZ=Asia/Shanghai -v /home/ubuntu/data/one-api:/data justsong/one-api docker-compose 1 2 3 4 5 6 7 8 9 10 11 12 version: &#39;3.9&#39; services: one-api: image: justsong/one-api volumes: - &#39;.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407015/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

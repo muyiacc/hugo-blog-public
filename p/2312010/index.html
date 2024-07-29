@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312010/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Windows搭建Jupyter-lab服务，加入系统服务，开机自启。指定端口和默认路径，开启远程访问，配合公网ip，可远程工作。(未完成)">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Windows搭建Jupyter-lab服务，加入系统服务，开机自启。指定端口和默认路径，开启远程访问，配合公网ip，可远程工作。(未完成)">
 <meta property='og:description' content="1. 概述 想在 Windows上搭建 Jupyter-lab服务，开启自启，有公网ip的同学还可以远程访问，实现远程办公。 1 conda install jupyterlab 1 2 3 4 5 6 nssm install JupyterLabService &#34;jupyter-lab&#34; &#34;--config=C:\\path\\to\\your\\jupyter_config.json&#34; nssm install JupyterLabService &#34;D:\\develop\\miniconda3\\Scripts\\jupyter-lab.exe&#34; &#34;--config=C:\\path\\to\\your\\jupyter_config.json&#34; sc create JupyterLabService binPath= &#34;\\&#34;D:\\develop\\miniconda3\\Scripts\\jupyter-lab.exe\\&#34; --config=C:\\path\\to\\your\\jupyter_config.json&#34; start= auto 使用以下命令来启动这个服务： 1 nssm start JupyterLabService 这将会启动 JupyterLab 服务，并让它使用你指定的 jupyter_server_config.json 配置文件。 1 2 3 4 nssm stop JupyterLabService nssm remove JupyterLabService ">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312010/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

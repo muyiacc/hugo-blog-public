@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2406005/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="docker镜像服务搭建">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="docker镜像服务搭建">
 <meta property='og:description' content="2024-06-06未知原因docker.com国内镜像全都被要求下架服务。 为了另求出路，采用cloudflare wokers pages搭建镜像服务。特点：免费、简单 地址：https://github.com/muyiacc/CF-Workers-docker.io 本次使用cmliu大佬提供的代码。 克隆仓库，登陆cloudflare，选择Wokers &amp; Pages create an application 选择pages-connect to git-github-github account-select a repository begin setup custom domains 设置本地镜像 修改文件 /etc/docker/daemon.json（如果不存在则创建），将 https://docker.fxxk.dedyn.io替换为自己的域名 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &#34;registry-mirrors&#34;: [&#34;https://docker.ksg.us.kg&#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker ">
 <meta property='og:url' content='https://blog.seektao.cc/p/2406005/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

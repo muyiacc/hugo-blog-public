@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310009/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian12或者Linux安装JDK17和JDK8">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian12或者Linux安装JDK17和JDK8">
 <meta property='og:description' content="apt默认只有jdk17版本了,安装了jdk17之后，再安装jdk8 jdk17 1 sudo apt install openjdk-17-jdk jdk8 jdk-8，oracle的版本 现在下载需要登陆，点此跳转页面选择版本下载 下载好了之后，解压 1 sudo tar -zxvf jdk-8u381-linux-x64.tar.gz -C /usr/lib/jvm/ 注册 1 sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_381/bin/java 1 设置环境变量 1 sudo vim /etc/profile.d/java.sh 1 2 export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_381/bin/ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_381/ 1 source /etc/profile.d/java.sh 切换版本 1 sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_381/bin/java ">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310009/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

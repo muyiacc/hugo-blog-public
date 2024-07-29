@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312005/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Flutter安装配置">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Flutter安装配置">
 <meta property='og:description' content="安装 Linux 官方教程：https://docs.flutter.cn/get-started/install/linux 查看flutter配置情况 1 2 flutter doctor -v # 简略显示：flutter doctor - 配置android sdk 1 flutter config --android-sdk=/home/taoone/development/Android/Sdk 全绿即是ok，如图： 配置镜像源 清华源 帮助文档：https://mirror.tuna.tsinghua.edu.cn/help/flutter/ 长期使用 TUNA 镜像： 1 2 echo &#39;export FLUTTER_STORAGE_BASE_URL=&#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&#34;&#39; &gt;&gt; ~/.bashrc echo &#39;export PUB_HOSTED_URL=&#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&#34;&#39; &gt;&gt; ~/.bashrc 在编译android项目时，flutter还会从 https://storage.googleapis.com/download.flutter.io 下载Java程序库，您可以在 Android 项目目录下的 build.gradle 中添加下面一行下载源，从而使用TUNA镜像。 1 2 3 4 5 6 7 allprojects { repositories { google() jcenter() maven { url &#39;https://mirrors.tuna.tsinghua.edu.cn/flutter/download.flutter.io&#39; } } } Flutter SDK 的更新会从 Github 获取，如您的开发设备访问 Github 速度慢，可以在 开发设备的 Flutter SDK 目录 运行下面的命令，将 Git 上游设置为 TUNA 镜像：">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312005/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

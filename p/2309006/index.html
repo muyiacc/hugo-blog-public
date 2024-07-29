@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2309006/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Shell的基本语法-1-概述-解释器-入门">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Shell的基本语法-1-概述-解释器-入门">
 <meta property='og:description' content="1. Shell概述 作为一个开发人员，使用Linux实在是太频繁了，无论是观看别人程序的脚本，还是自己编写脚本，都离不开Shell，所以这篇文章总结一下Shell中常见的语法 2. 解释器 Linux中，解析脚本的是命令解释器，也就是终端解释器，如 Bash、Zsh。 在脚本中常见的头部声明如 #! /bin/bash 或者 #! /bin/zsh，前者如CentOS , 后者如 Debian（得比安）。 3. 入门 3.1. 脚本的格式 以 #! 解释器 开头，如 #! /bin/bash 或者 #! /bin/zsh 一般来说默认解释器是 bash， 笔者自己所运行的解释器是 zsh，大多数情况下兼容 bash 临时进入 bash 解释器的方法为 exec /bin/bash 如需查看自己的解释器，请在终端执行echo #SHELL， 按照习惯，bash对应的脚本文件的后缀一般是 .sh 结尾，而 zsh对应的脚本文件以 .zsh 结尾，当然，这不是必须的。 以下为一个简单的示： 在家目录新建目录 bin, 继续在 bin目录新建一个文件 test1.sh vim test1.sh 1 2 3 #! /bin/sh echo &#34;我的解释器为 $SHELL&#34; 3.2 脚本执行 在新建 test1.sh 之后，如何执行呢？ 方式1 语法 解释器 + 脚本的路径">
 <meta property='og:url' content='https://blog.seektao.cc/p/2309006/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

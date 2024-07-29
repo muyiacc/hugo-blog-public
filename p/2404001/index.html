@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2404001/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Certbot申请域名的多种方式">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Certbot申请域名的多种方式">
 <meta property='og:description' content="Nginx 先写好nginx配置文件， /etc/nginx/sites-available/movie 1 2 3 4 5 6 7 8 9 10 11 12 server { listen 80; server_name domain.com; location / { proxy_pass http://127.0.0.1:80; # 替换为你的应用程序地址 proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; } } 再使用 certbot 的nginx插件申请 1 certbot --nginx -d domain.com ">
 <meta property='og:url' content='https://blog.seektao.cc/p/2404001/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

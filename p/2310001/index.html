@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310001/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="archlinux自动挂载windows的不同盘符（驱动器）">
+<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="archlinux自动挂载windows的不同盘符（驱动器）">
 <meta property='og:description' content="archlinux自动挂载windows的不同盘符（驱动器） 1. 前言 1.1. 需求 双系统windows和archlinux，有时候在windows下编写的代码，在切换成archlinux后，这时需要编辑windows下的代码，但是使用之前，需要在文件管理器中输入密码，会自动挂载到 /run/media/用户名目录下，挂载的名字是windows驱动器的命名。一般来说，编辑器默认选择打开的目录就是用户家目录。由于挂载的目录不太常用，在打开目录的时候需要手动选择，不太方便。 1.2. 解决思路 可以挂载到用户家目录下。在用户家目录创建一个以windows为名的目录，接着在windows 目录下创建驱动器的目录，将不同的驱动器挂载到相应的目录，如c盘驱动器的名字是base，d盘驱动器的名字是soft，d盘驱动器的名字是data，在windows目录下分别创建 base、soft、data三个目录。并分别挂载到它们。 2. 解决过程 2.1. 创建目录 首先在家目录下创建挂载的目录点 1 mkdir -p ~/windows/base &amp;&amp; mkdir -p ~/windows/soft &amp;&amp; mkdir -p ~/windows/data 挂载点分别为 1 2 3 4 5 /home/koko/windows/base /home/koko/windows/soft /home/koko/windows/data # 以上目录分别对应着c盘，d盘，e盘 2.2. 安装ntfs-3g 为了解决挂载需要输入密码的问题，需要额外安装一个工具，名字叫做 ntfs-3g 1 sudo pacman -S ntfs-3g 安装完成之后，编写开机自启的服务文件，放入 /etc/systemd/system/ ，文件名为 windows-mount.service 1 2 3 4 5 6 7 8 9 10 11 12 [Unit] Description=Mount Windows Partition After=network-online.target Wants=network-online.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310001/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
