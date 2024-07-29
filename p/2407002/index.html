@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407002/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="ChatGPT-Next-Web 最新部署对接new-api部署方法">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="ChatGPT-Next-Web 最新部署对接new-api部署方法">
 <meta property='og:description' content="new-api new-api基于one-api 预览： 部署 docker-compose 1 2 3 4 5 6 7 8 9 10 11 12 version: &#39;3.9&#39; services: new-api: image: &#39;calciumion/new-api:latest&#39; volumes: - &#39;./data:/data&#39; environment: - TZ=Asia/Shanghai ports: - &#39;7016:3000&#39; restart: unless-stopped container_name: new-api 反向代理 Nginx 1 2 3 4 5 6 7 8 9 10 11 12 server { listen 80; server_name xxxx.com; # 你的域名 location / { proxy_pass http://127.0.0.1:7016; # 替换为你的应用程序地址 proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; } } ChatGPT-Next-Web 预览：">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407002/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

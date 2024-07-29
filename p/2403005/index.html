@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403005/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="nginx-proxy-manager申请证书失败之缺乏zope模块【已解决】">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="nginx-proxy-manager申请证书失败之缺乏zope模块【已解决】">
 <meta property='og:description' content="nginx-proxy-manager 可以自动续期ssl证书，使用docker搭建也比较方便。 今天我的网站出现证书过期，然后我去管理端手动续期也出现了失败，但是没有报具体的错误，接着升级了镜像，新开容器也没有解决。 还好这个问题之前我也遇见过，可以通过重新申请域名ssl证书复现，让其给出真正的报错，结果和之前一样，缺乏 “zope”模块。 错误大概如下： 1 The &#39;certbot_dns_dnspod.dns_dnspod&#39; plugin errored while loading: No module named &#39;zope&#39;. You may need to remove or update this plugin. The Certbot log will contain the full error details and this should be reported to the plugin developer. 其中的 No module named &lsquo;zope&rsquo;，就是重点，解决办法就是进入容器，安装 zope 1 2 3 4 sudo docker exec -it [容器的id] /bin/bash # 进入容器之后 pip install zope -i https://pypi.tuna.tsinghua.edu.cn/simple 等待安装完成，ctrl+p，ctrl+q 退出即可。 接着再重新去手动续期下即可。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403005/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

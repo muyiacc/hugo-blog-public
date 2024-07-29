@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2405004/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian下的Certbot安装使用，附nginx使用">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian下的Certbot安装使用，附nginx使用">
 <meta property='og:description' content="介绍 Certbot 是一个由 Electronic Frontier Foundation (EFF) 开发的免费、开源的工具，用于自动化在 Web 服务器上部署 SSL/TLS 证书。SSL/TLS 证书是用于加密网站与用户之间传输的数据，确保数据传输的安全性和隐私性。 Certbot 支持大多数常见的 Web 服务器，包括 Apache、Nginx、IIS 等。 安装 certbot （1）安装snap certbot官方已经说了，各个发行版安装的certbot版本落后，功能不全，推荐我们使用snap安装，我之前就是用的是apt安装，后来一堆问题，血的教训！！ 参考文档：https://snapcraft.io/docs/installing-snap-on-debian 1 2 3 4 5 6 7 8 # 安装snap sudo apt update sudo apt install snapd # 重启系统 # 安装core sudo snap install core sudo snap refresh core （2）安装certbot 安装之前确保没有其他方式安装的certbot 如：apt，pip 可通过这条命令查看 whereis certbot 如果有，卸载它们 sudo apt remove certbot sudo pip uninstall certbot 1 2 sudo snap install --classic certbot sudo ln -s /snap/bin/certbot /usr/bin/certbot （3）查看版本">
 <meta property='og:url' content='https://blog.seektao.cc/p/2405004/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

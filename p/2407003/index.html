@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407003/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian，iptables防火墙规则">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian，iptables防火墙规则">
 <meta property='og:description' content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Chain INPUT (policy ACCEPT) target prot opt source destination Chain FORWARD (policy ACCEPT) target prot opt source destination DOCKER-USER all -- anywhere anywhere DOCKER-ISOLATION-STAGE-1 all -- anywhere anywhere ACCEPT all -- anywhere anywhere ctstate RELATED,ESTABLISHED DOCKER all -- anywhere anywhere ACCEPT all -- anywhere anywhere ACCEPT all -- anywhere anywhere Chain OUTPUT (policy ACCEPT) target prot opt source destination Chain DOCKER (1 references) target prot opt source destination Chain DOCKER-ISOLATION-STAGE-1 (1 references) target prot opt source destination DOCKER-ISOLATION-STAGE-2 all -- anywhere anywhere RETURN all -- anywhere anywhere Chain DOCKER-ISOLATION-STAGE-2 (1 references) target prot opt source destination DROP all -- anywhere anywhere RETURN all -- anywhere anywhere Chain DOCKER-USER (1 references) target prot opt source destination RETURN all -- anywhere anywhere 这是 iptables 的输出，显示了当前的防火墙规则。以下是每个部分的解释：">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407003/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

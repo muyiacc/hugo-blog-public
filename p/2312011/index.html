@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312011/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Windows搭建RustDesk-Server并使用-1">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Windows搭建RustDesk-Server并使用-1">
 <meta property='og:description' content="Windows10专业工作站版本 1. 概述 RuskDesk 是一个使用 rust语言编写的开源的远程控制，支持自行搭建服务端，本次就来介绍一下如何在 windows上搭建。 官网地址：https://rustdesk.com 2. 搭建RustDesk Server 下载两个工具：NSSM ，RuskDesk Server 解压它们，放到各自的文件夹下，把 NSSM 加入到系统的环境变量，确保可随处执行 xxxxxxxxxx\u00a0nssm stop JupyterLabService\u200b\u200bnssm remove JupyterLabServicecmd 1 2 nssm install &#34;RustDesk hbbs service&#34; &#34;C:\\Program Files\\RustDesk Server\\hbbs.exe&#34; -r 0.0.0.0 -k _ nssm install &#34;RustDesk hbbr service&#34; &#34;C:\\Program Files\\RustDesk Server\\hbbr.exe&#34; -k _ 比如我的如下 1 nssm install &#34;RustDesk hbbs service&#34; &#34;D:\\Program Files\\rustdesk-server-windows-x86_64\\hbbs.exe&#34; -r 0.0.0.0 -k _ 执行完成之后应该在 服务 能够看到这个 启动服务 1 nssm start &#34;RustDesk hbbs service&#34; 关闭服务">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312011/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

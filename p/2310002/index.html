@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310002/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="bash-it，增强的bash框架">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="bash-it，增强的bash框架">
 <meta property='og:description' content="概述 bash bash作为众多linux发行版的默认shell，和它打交道的实在太频繁了。但是它有些不足的地方，比如别名很多需要自己定制（debian12就连ll都没有），默认样式我觉得比较丑等等，所以我曾经一度换到zsh zsh zsh很强大，补全，命令历史记录等等优点，但是使用zsh过一段时间之后，我也发现也有些问题，比如，zsh下使用reboot没找到是肿么回事？也可能是我菜，最后还得自己把命令添加到.zshrc中，就是很多系统下bash换到zsh会找不到，这就违背了方便的初心，而且把环境变量放到 /etc/profile或者 /etc/profile.d文件夹下会不识别，导致一系列问题。 所以，既然bash是linux的默认shell，那么是否有它的增强工具呢，减少我们的配置，今天的主角 bash-it 就是我们需要的东西 源码：https://github.com/Bash-it/bash-it 安装 下载，这个仓库为我自己的 如果需要官方的，可以执行 git clone &ndash;depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it 1 git clone --depth=1 https://github.com/muyiacc/bash-it.git ~/.bash_it 安装 1 ~/.bash_it/install.sh 这一步会出现 Installing bash-it Would you like to keep your .bashrc and append bash-it templates at the end? [y/N] 意思就是需要你选择配置 .bashrc的策略： 选择是的话会将 bash_it 的配置进行追加 否的话，会覆盖 .bashrc，并将 .bashrc复制一份为 .bashrc.bak 的备份 我不是纯净的系统，环境中已经有一些软件的配置，选择 y 安装完成之后，新开一个终端查看是否生效 主题 默认主题是 bobby 我觉得默认主题比较花哨，包含的信息容易影响注意力，所以我换成了内置的主题 bakke，看着简洁很多又不失美感 更换主题的方式依旧在 .bashrc文件下，搜索 BASH_IT_THEME关键字，更改后面的内容就可以更换了，如下 1 export BASH_IT_THEME=&#39;bakke&#39; 关于其他主题，你可以打开这个网址进行查找和预览 https://bash-it.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310002/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312003/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian清理无用的软件包和残留文件">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian清理无用的软件包和残留文件">
 <meta property='og:description' content="在Debian系统上清理无用的软件包和残留文件，您可以执行以下步骤： 清理无用的软件包：使用apt包管理器清理无用的软件包。运行以下命令以更新软件包列表并删除不再需要的软件包： 1 2 sudo apt update sudo apt autoremove apt autoremove命令将自动删除已经不再需要的软件包及其依赖项。 清理残留的配置文件：有时，卸载软件包后会保留一些残留的配置文件。您可以使用以下命令清理这些文件： 1 sudo dpkg --purge $(dpkg -l | grep &#39;^rc&#39; | awk &#39;{print $2}&#39;) 这将删除所有已经标记为&quot;rc&quot;（已删除但仍保留配置文件）的软件包。 清理临时文件和缓存：您可以使用以下命令清理系统中的临时文件和包管理器缓存： 1 2 sudo apt clean sudo apt autoclean apt clean命令将清理已下载的软件包文件，而apt autoclean命令将清理过期的软件包缓存。 通过执行上述步骤，您可以清理Debian系统中的无用软件包和残留文件，从而释放磁盘空间并保持系统整洁。请注意，在执行命令之前，确保您具有足够的权限以使用sudo来执行它们。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312003/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

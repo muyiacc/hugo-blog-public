@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403009/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="PostgreSQL备份数据库">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="PostgreSQL备份数据库">
 <meta property='og:description' content="使用 pg_dump 命令备份整个数据库： 1 pg_dump -U username -d dbname &gt; backup.sql username 是数据库用户的用户名。 dbname 是要备份的数据库的名称。 backup.sql 是备份文件的名称，你可以根据需要自定义。 备份特定表： 如果你只想备份特定的表，可以使用以下命令： 1 pg_dump -U username -d dbname -t tablename &gt; table_backup.sql tablename 是要备份的表的名称。 备份后台数据库： 如果要备份远程数据库，可以使用以下命令： 1 pg_dump -h hostname -U username -d dbname &gt; backup.sql hostname 是数据库服务器的主机名或 IP 地址。 备份包括所有者和权限信息： 有时候你可能希望备份时包括所有者和权限信息。你可以使用以下命令： 1 pg_dump -U username -d dbname -O -x &gt; backup.sql -O 选项用于不包括所有者信息。 -x 选项用于不包括访问权限信息。 备份完成后，你会在当前目录下找到生成的备份文件。 请注意，备份数据库时，确保数据库连接是安全的，并且备份文件存储在安全的位置。备份完成后，你可以使用 psql 命令来还原数据库，命令如下： 1 psql -U username -d dbname &lt; backup.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403009/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

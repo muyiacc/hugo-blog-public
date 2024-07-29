@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312008/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Redis初始配置">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Redis初始配置">
 <meta property='og:description' content="在初次使用 Redis 时，以下是一些常见的需要修改的命令： 修改绑定地址： 1 bind 127.0.0.1 默认情况下，Redis 绑定在本地回环地址 127.0.0.1。如果您想让 Redis 可以从其他主机访问，可以将此地址修改为服务器的 IP 地址或 0.0.0.0，表示接受来自任何地址的连接。 修改监听端口： 1 port 6379 默认情况下，Redis 监听端口 6379。如果您需要使用其他端口，可以将此值修改为所需的端口号。 配置密码： 1 requirepass your_password 默认情况下，Redis 未设置密码。为了增加安全性，您可以设置密码以保护 Redis 服务器。将 your_password 替换为您自己的密码。 设置持久化选项： 1 save 60 1000 这是示例持久化选项的配置。Redis 允许您将数据持久化到磁盘，以便在重启后恢复数据。上述配置表示在 60 秒内，如果有至少 1000 个键被修改，则自动执行持久化操作。您可以根据需求调整这些值。 配置最大内存限制： 1 maxmemory 2GB 默认情况下，Redis 不设置最大内存限制。通过设置最大内存限制，您可以防止 Redis 在使用过多内存时导致服务器性能下降或崩溃。将 2GB 替换为您希望设置的内存限制值。 这些是一些常见的需要修改的 Redis 配置命令，您可以根据自己的需求进行相应的修改。修改完成后，记得重新启动 Redis 服务器使更改生效。 1 2 3 4 daemonize protected-mode bind requirepass ">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312008/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

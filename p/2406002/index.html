@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2406002/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Debian12安装字体">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian12安装字体">
 <meta property='og:description' content="要在Debian上安装字体，可以按照以下步骤进行操作： 打开终端，以管理员权限运行以下命令更新软件包列表： 1 sudo apt update 安装字体管理工具（fontconfig）： 1 sudo apt install fontconfig 将字体文件复制到系统字体目录（/usr/share/fonts/）或用户字体目录（~/.fonts/）。例如，假设你有一个名为&quot;font.ttf&quot;的字体文件，可以使用以下命令将其复制到系统字体目录： 1 sudo cp font.ttf /usr/share/fonts/ 或者，如果你想将字体文件复制到用户字体目录，可以使用以下命令： 1 cp font.ttf ~/.fonts/ 运行以下命令更新字体缓存： 1 sudo fc-cache -f -v 这将重新生成字体缓存，使系统能够识别新安装的字体文件。 完成后，你可以在应用程序中选择新安装的字体进行使用。 字体推荐 fira code https://github.com/tonsky/FiraCode/releases/tag/6.2 1 sudo mkdir -p /usr/share/fonts/fira_code &amp;&amp; sudo unzip Fira_Code_v6.2.zip -d /usr/share/fonts/fira_code/ &amp;&amp; fc-cache -f -v 简单预览">
 <meta property='og:url' content='https://blog.seektao.cc/p/2406002/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

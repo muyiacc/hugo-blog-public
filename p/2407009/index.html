@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407009/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="linux安装安卓控制工具，QtScrcpy">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="linux安装安卓控制工具，QtScrcpy">
 <meta property='og:description' content="介绍 下载地址 文档地址 安装 创建文件夹并解压 1 2 sudo mkdir /opt/QtScrcpy sudo unzip QtScrcpy-ubuntu-22.04-gcc_64.zip -d /opt/QtScrcpy/ 创建软连接 1 sudo ln -s /opt/QtScrcpy/output/x64/Release/QtScrcpy /usr/bin/qtscrcpy 创建desktop，让开始菜单图标/全局搜索/桌面图标可用 1 sudo vim /usr/share/applications/qtscrcpy.desktop 将如下内容粘贴 1 2 3 4 5 6 7 8 9 [Desktop Entry] Encoding=UTF-8 Name=QtScrcpy Exec=qtscrcpy %U Icon=qtscrcpy Keywords=qtscrcpy Categories=Network; Type=Application Terminal=false 预览 使用 使用usb连接手机，开启usb调试，QtScrcpy会自动刷新出设备，点击一键USB连接 常见问题 连接无反应 尝试在终端启动 QtScrcpy 1 qtscrcpy 启动后再次连接，查看终端报错信息 报错1： The server version (2.4) does not match the client (2.1.1) 解决：">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407009/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

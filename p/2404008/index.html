@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2404008/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="picgo自动上传图片到图床（优化版）">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="picgo自动上传图片到图床（优化版）">
 <meta property='og:description' content="此前已经写过一篇关于 picgo的文章，使用picgo-core将markdown图片上传至smms图床 本次在这基础上更改一些内容。比如安装方式。 本次采用yarn的方式安装picgo ，其他不变。 为何要换安装方式？之前使用npm安装到全局，后来使用nvm管理node版本，在切换版本后，当前的版本是没有那个包的，比如我使用node 16安装picgo，在切换成node 18就没有了，当然解决办法有很多种。 采用固定安装依赖位置，每安装切换一个新版本node，都重新设置全局依赖位置，麻烦。 直接安装 picgo app。picgo-core可以解决的问题，何必使用app图形化一直常驻占内存。 上面的方式都不该好管理，所以这次采用yarn来安装，yarn也是一个包管理工具，但是不用经常换版本，安装一次后，我们继续使用 nvm切换node版本，yarn也不受影响。 好了，该下载 yarn了，Windows版点此下载 其他版本下载地址：https://classic.yarnpkg.com/lang/en/docs/install 这里不要采用npm安装yarn，我这样使用出现过问题，建议使用 安装的方式。 下载完成之后，安装，进入安装目录，地址栏打开cmd，输入 yarn global add picgo 安装picgo，接着将 picgo 路径添加到系统环境变量。 大多数情况下，全局安装目录位于以下位置： Windows：%LOCALAPPDATA%\\Yarn\\config\\global\\node_modules Mac：/usr/local/share/.config/yarn/global/node_modules Linux：/usr/local/share/.config/yarn/global/node_modules 关于picgo安装配置信息可以参考之前的文章，使用picgo-core将markdown图片上传至smms图床，这里就不再赘述。 还有关于使用 nvm ，可以看这里，nvm，Node 多版本共存的工具 全文完。。。 2024-04-30更新">
 <meta property='og:url' content='https://blog.seektao.cc/p/2404008/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

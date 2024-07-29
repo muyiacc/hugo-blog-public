@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2404015/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="影视站点maccms搭建教程">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="影视站点maccms搭建教程">
 <meta property='og:description' content="前言 maccms的环境PHP，对于PHP配置太繁琐，且污染系统环境，所以采用docker的方式安装，docker镜像已经好心人帮忙构建了，用的最多是这个：esme518/docker-maccms10。 伪静态配置 默认运行环境是apache，按照官方的教程在根目录添加 .htaccess，接着后台开启伪静态是不成功的，因为docker这个版本没有启用rewrite组件。我们这下来介绍如何开启rewrite模块。 启用 mod_rewrite （1）进入docker容器 1 docker exec -it &lt;容器id&gt; bash （2）查看是否启用 mod_rewrite 1 apachectl -M （3）如果输出结果没有 mod_rewrite，则启用 1 a2enmod rewrite （4）重启 apache，使其生效，运行后会退出容器 1 service apache2 restart （5）再次进入容器，查看是否启用 1 apachectl -M 开启伪静态 （1）在根目录添加 .htaccess 1 vim .htaccess 1 2 3 4 5 6 7 8 &lt;IfModule mod_rewrite.c&gt; Options +FollowSymlinks -Multiviews RewriteEngine on RewriteCond %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_FILENAME} !-f RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L] &lt;/IfModule&gt; （2）登录后台，启用伪静态 路径为：系统-URL地址配置-路由伪静态设置 路由状态：开启 伪静态状态：开启 测试访问网站，查看是否成功。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2404015/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

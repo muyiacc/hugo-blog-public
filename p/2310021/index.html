@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310021/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="使用picgo-core将markdown图片上传至smms图床">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="使用picgo-core将markdown图片上传至smms图床">
 <meta property='og:description' content="前言 之前使用gitee当作图床，typora能渲染，但是博客里无法渲染，可能是有防盗链，所以换成了smms图床，换了之后就可以了。 前置条件 NodeJs https://nodejs.org/en 官网下载安装即可 Picgo-Core 1）我这里不推荐使用图形化的picgo，占用内存。建议使用nodejs安装picgo，安装nodejs之后，再安装picgo。 1 2 3 4 5 # 通过node安装picgo（前提node环境已经安装好） npm install picgo -g # 配置文件所在的位置 # 用户家目录下的.picgo/config.json 2）把picgo所在的路径添加到系统环境变量，方便使用。 3）在typora设置中，图像选择【上传图片】，上传服务选择 【costom command】,命令选择picgo所在的位置，不过需要在最后面加上 小写字母 u，如： 1 picgo u 关于picgo的更多信息请参考：https://picgo.github.io/PicGo-Core-Doc/ 图床服务 smms 1）注册账号 smms注册账户拥有5g的空间，对于文章上传图片来说，应该是够用了，如果不够大不了再注册个账户而已。 官网：https://sm.ms/ 备用地址：https://smms.app 注册账户之后，进入控制台查看api token，记下来，稍后使用。 2）配置picgo 首先确定好是否配置了环境变量，如果没有配置，请在picgo所在的路径打开终端。 1 2 3 4 5 6 7 8 9 10 11 12 # 1. 查看picgo版本 picgo -v # 2. 设置使用的图床服务 # 键盘上下键选择使用的图床服务，如smms，回车确认 picgo use # 3. 设置使用的图床配置，如上传的路径，token等 picgo set uploader # 继续选择smms，输入api token，输入的时候密码看不见。 # 接着输入smms备用域名，如smms.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310021/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

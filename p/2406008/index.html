@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2406008/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Go安装，配置">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Go安装，配置">
 <meta property='og:description' content="安装 Linux Debian 默认版本仓库可能比较旧，建议不用。 go 没有官方 apt 仓库，只有手动安装来获取所需版本，但是管理go版本比较麻烦，这里使用 gvm来管理Go版本 gvm源码：https://github.com/moovweb/gvm 安装 gvm 1 sudo apt-get install bison 1 bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) 刷新环境变量，查看gvm版本 1 2 source ~/.bashrc gvm version 安装go，使用gvm安装go之前还需要安装go 1 sudo apt install golang gvm安装新版本go还得安装一个低版本go为引导 1 gvm install go1.20.6 1 gvm use go1.20.6 再安装 go较高的版本 1 gvm install go1.22.4 1 gvm use go1.22.4 1 go version 代理 七牛云 1 2 go env -w GO111MODULE=on go env -w GOPROXY=https://goproxy.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2406008/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2406009/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="linux开机自动挂载windows磁盘">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="linux开机自动挂载windows磁盘">
 <meta property='og:description' content="以前写过一篇关于archlinux挂载windows磁盘的文章，这次教程和之前核心一样，都需要安装ntfs-3g，但是/etc/fstable文件编写的格式不一样 ntfs-3g：https://github.com/tuxera/ntfs-3g 关于/etc/fatable 文件各列的简单解释 第一列是挂载的设备（可以填写设备label或者uuid） 第二列是挂载点。（必须是已经存在的目录） 第三列是分区的格式。（如ntfs、btrfs、ext2、ext3、nfs、vfat） 第四列是mount的挂载参数，一般情况下，直接写defaults即可。 第五列的数字表示是否被dump备份，是的话为1，不是为0。 第六列是开机时是否自检磁盘。1，2都表示检测，0表示不检测。但1，2表示不同的优先级，1更高。所以/ 分区必须设为1，而且整个fstab只允许出现一个1，若有多个分区需要检测，那么都设为2。 本文章将持续更新。 debian 安装ntfs-3g 1 sudo apt install ntfs-3g 创建自动挂载服务 1 sudo vim /etc/systemd/system/windows-mount.service 1 2 3 4 5 6 7 8 9 10 11 12 [Unit] Description=Mount Windows Partition After=network-online.target Wants=network-online.target [Service] ExecStart=/usr/bin/mount -a Type=oneshot RemainAfterExit=yes [Install] WantedBy=default.target 1 2 sudo systemctl enable windows-mount.service sudo systemctl start windows-mount.service 查看/etc/fstab 1 cat /etc/fstab 得到如下结果 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 # /etc/fstab: static file system information.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2406009/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

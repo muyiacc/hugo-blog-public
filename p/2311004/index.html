@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2311004/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Grub2简单使用">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Grub2简单使用">
 <meta property='og:description' content="系统：Debian12 Grub2 是Linux众多发行版默认引导器，有必要对它简单了解一下。 比如： 默认界面还是太丑，可以换个主题 修改启动等待时间 先简单了解 Grub 配置文件 路径：/etc/default/grub GRUB_TIMEOUT： 启动等待时间，默认 5 s GRUB_THEME：主题位置 GRUB_BACKGROUND：背景 修改完配置，需要更新 Grub 配置 1 sudo update-grub 修改默认启动时间 现在我的系统只剩下 Debian12 了，默认启动的 5s 等待时间我觉得有点影响使用体验，所以打算关闭它，把 GRUB_TIMEOUT 的值改为 1 1 2 3 4 5 6 7 sudo vim /etc/default/grub # 把 GRUB_TIMEOUT 修改为 1 GRUB_TIMEOUT=1 # (可选)在等待时间结束后自动启动默认操作系统，而不显示菜单 # GRUB_TIMEOUT_STYLE=hidden 1 2 # 更新配置 sudo update-grub 主题 通过这个网址能找到很多grub主题：https://store.kde.org/browse?cat=109&amp;ord=latest tela https://github.com/muyiacc/grub2-themes-tela 克隆运行后即可">
 <meta property='og:url' content='https://blog.seektao.cc/p/2311004/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

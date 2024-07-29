@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403006/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Nginx使用，配置，模板一键生成，Certbot安装和申请免费Let's Encrypt证书">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Nginx使用，配置，模板一键生成，Certbot安装和申请免费Let's Encrypt证书">
 <meta property='og:description' content="和往常一样，系统为 debian，让我们开始吧。 1. Nginx 安装和配置 Nginx官网文档 https://nginx.org/en/docs/ Nginx（发音为&quot;engine-x&quot;）是一个高性能的开源 Web 服务器，也可以用作反向代理服务器、负载均衡器和 HTTP 缓存。 1.1 安装 （1）安装Nginx 1 2 3 4 5 6 7 # debian sudo apt update sudo apt install nginx # centos sudo yum update sudo yum install nginx 关于Nginx的一些命令和配置文件的位置介绍 在安装过程中可以看到 配置文件的位置在 /etc/nginx下 当然不同的安装方式也可能不一样，可以通过 whereis nginx来搜索 1.2 配置文件 通过包管理工具安装的Nginx一般在 /etc/nginx下 其中有一个 nginx.conf 文件，它就是Nginx的配置文件，但是为了方便管理，所以我一般不直接修改该文件，而是在 /etc/nginx/conf.d/ 下新建文件。 在默认的 nginx.conf中 http模块下，有这样一条命令 include /etc/nginx/conf.d/*.conf; 它表示包含了 /etc/nginx/conf.d/下所有文件，所以我们在/etc/nginx/conf.d/直接添加新文件即可，如果没有该命令需要手动把文件的路径添加到 nginx.conf中 关于 Nginx配置文件模块该如何书写，以下做一些简单介绍。 1.3 配置⽂件的结构 Nginx的配置⽂件是由⼀系列的指令组成的，每个指令都是由⼀个指令名和⼀个或者多个参数组成的。 指令和参数之间使⽤空格来分隔，指令以分号 ; 结尾，参数可以使⽤单引号或者双引号来包裹。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403006/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

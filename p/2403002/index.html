@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403002/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Docker容器和主机互相连接的三种情景">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Docker容器和主机互相连接的三种情景">
 <meta property='og:description' content="情景一：主机连接容器 需求：主机内的某个应用需要用到容器启动的数据库，主机的应用关于该容器数据库的host，port该如何填写？ 情景二：容器连接容器 第一种：同一配置文件 第二种：不同配置文件 新建一个网络，把容器都加入到这个网络里 1 docker network create my_network 容器1： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 version: &#39;3.3&#39; services: maccms10: image: esme518/docker-maccms10 container_name: maccms10 volumes: - ./data:/var/www/html ports: - 2419:80 networks: - my_network environment: - DB_HOST=mariadb - DB_PORT=3306 networks: my_network: external: true 容器2： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 version: &#39;3.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403002/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312006/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="Minconda迁移已经存在的环境">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Minconda迁移已经存在的环境">
 <meta property='og:description' content="Windows下默认安装的环境在 家目录\\.conda\\envs我想把它换到安装目录去 先备份环境信息，进入激活的环境 1 conda env export &gt; environment.yaml 修改 environment.yaml 1 prefix: D:\\develop\\miniconda3\\envs\\common 恢复 1 conda env create -f environment.yaml 一劳永逸： 新建 家目录\\.condarc 把 安装目录下的 envs 加入进去 ，并放在前面 1 2 3 4 envs_dirs: - D:\\develop\\miniconda3\\envs - C:\\Users\\taoone\\.conda\\envs - C:\\Users\\taoone\\AppData\\Local\\conda\\conda\\envs 使用 conda info 查看">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312006/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>

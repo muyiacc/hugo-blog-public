@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312007/'>
 
-<link rel="stylesheet" href="/scss/style.min.e8c7fca7d1c9294aa7a4f3426c225ee26540f7d94e39be0b5a4a5c8a49ca5a25.css"><meta property='og:title' content="mpv播放器，安装配置">
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="mpv播放器，安装配置">
 <meta property='og:description' content="1. MPV播放器 1.1. 概述 a free, open source, and cross-platform media player 简单来说，就是一个开源的，多平台的媒体播放器，支持视频，音频，图片等等。 托管地址：https://github.com/mpv-player/mpv 官网：https://mpv.io/ 下载地址：https://mpv.io/installation/ 文档：https://mpv.io/manual/stable/ 1.2. 下载安装 本次以Win10平台为例，下载最新稳定版：点击开始下载。 下载完成之后解压，不要解压到C盘下（权限太高），建议放到其他盘符，比如我的是解压路径是 D:\\Program Files\\mpv-x86_64-v3-20231210-git-443c248\\，双击 mpv.exe 即可运行mpv播放器。 关联格式：快速打开mpv 进入解压目录下的 installer 文件夹，有个 mpv-install.bat 管理员权限 运行，等待完成，按任意键退出。 创建属于自己配置文件夹，用于自定义配置，安装插件等 进入解压的目录，新建 portable_config文件夹，以后配置就放在这个文件夹下， 进入 portable_config文件夹， 新建 mpv.conf文件，这代表了mpv的配置文件， 新建 input.conf文件，存放自定义的快捷键配置， 新建 scripts文件夹，以后安装第三方脚本就放在这个目录下， 新建 script-opts文件夹，存放第三方脚本配置。 到此安装基本完成。 2. 脚本 为了更好的体验，自定义配置。 为了避免冗余，以下所有脚本都遵循上述规范的配置，即： scripts : 脚本文件 input.conf : 自定义快捷键 mpv.conf : mpv配置 2.1. 杜比视界 杜比视界 DV HDR 常见的播放器都不支持，mpv只需要在 mpv.conf 中添加两行代码即可让颜色正常化 不过加上之后内存占用变高，看情况开吧。 1 2 vo=gpu-next # 杜比视界颜色正常化 gpu-context=win # 杜比视界颜色正常化 2.">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312007/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
