@@ -37,7 +37,7 @@
         <pubDate>Thu, 25 Jul 2024 15:07:52 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/p/2407025/</guid>
-        <description>&lt;h2 id=&#34;linux&#34;&gt;linux
+        <description>&lt;img src="https://img.ksg.us.kg/file/e653800ebc55ad941e41f.png" alt="Featured image of post 小白羊盘下载文件出现aria2c错误解决办法" /&gt;&lt;h2 id=&#34;linux&#34;&gt;linux
 &lt;/h2&gt;&lt;p&gt;参考这个 issuse：https://github.com/gaozhangmin/aliyunpan/issues/216&lt;/p&gt;
 &lt;p&gt;进入小白杨配置，修改aria2.conf下的async-dns为true&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
