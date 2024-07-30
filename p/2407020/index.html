@@ -264,7 +264,7 @@
         <li><a href="#系统服务"><del>系统服务</del></a></li>
       </ol>
     </li>
-    <li><a href="#其他常用操作">其他常用操作</a></li>
+    <li><a href="#其他操作">其他操作</a></li>
   </ol>
 </nav>
         </div>
@@ -514,9 +514,7 @@
 </div>
 </div><p>官方文档：<a class="link" href="https://rclone.org/commands/rclone_copy/"  target="_blank" rel="noopener"
     >https://rclone.org/commands/rclone_copy/</a></p>
-<blockquote>
 <p>案例1：将本地software文件夹复制到alist下aliyunpan/software</p>
-</blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -710,14 +708,32 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo systemctl restart rclone-mount.service
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="其他常用操作">其他常用操作
-</h2><p>查看rclone挂载的信息</p>
+</div><h2 id="其他操作">其他操作
+</h2><p><strong>列出所有配置</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mount <span class="p">|</span> grep rclone
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone listremotes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>查看特定远程的配置</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone config show &lt;remote_name&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>查看所有配置的详细信息</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone config dump
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -831,12 +847,12 @@
             
                 
 <article class="">
-    <a href="/p/2407023/">
+    <a href="/p/2407021/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">可用的短链系统</h2>
+            <h2 class="article-title">Sublime配置SFTP</h2>
         </div>
     </a>
 </article>
@@ -844,12 +860,12 @@
             
                 
 <article class="">
-    <a href="/p/2407021/">
+    <a href="/p/2407017/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Sublime配置SFTP</h2>
+            <h2 class="article-title">pyenv,python的版本管理工具</h2>
         </div>
     </a>
 </article>

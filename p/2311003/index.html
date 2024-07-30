@@ -248,17 +248,22 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#前置条件">前置条件</a></li>
-    <li><a href="#卸载旧版本">卸载旧版本</a></li>
-    <li><a href="#设置存储库">设置存储库</a></li>
-    <li><a href="#安装">安装</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#前置条件-1">前置条件</a></li>
-    <li><a href="#卸载旧版本-1">卸载旧版本</a></li>
-    <li><a href="#设置存储库-1">设置存储库</a></li>
-    <li><a href="#安装-1">安装</a></li>
+    <li><a href="#debian">Debian</a>
+      <ol>
+        <li><a href="#前置条件">前置条件</a></li>
+        <li><a href="#卸载旧版本">卸载旧版本</a></li>
+        <li><a href="#设置存储库">设置存储库</a></li>
+        <li><a href="#安装">安装</a></li>
+      </ol>
+    </li>
+    <li><a href="#ubuntu">Ubuntu</a>
+      <ol>
+        <li><a href="#前置条件-1">前置条件</a></li>
+        <li><a href="#卸载旧版本-1">卸载旧版本</a></li>
+        <li><a href="#设置存储库-1">设置存储库</a></li>
+        <li><a href="#安装-1">安装</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -338,14 +343,14 @@
     <section class="article-content">
     
     
-    <h1 id="debian">Debian
-</h1><h2 id="前置条件">前置条件
-</h2><ul>
+    <h2 id="debian">Debian
+</h2><h3 id="前置条件">前置条件
+</h3><ul>
 <li>Debian Bookworm 12 (stable)</li>
 <li>Debian Bullseye 11 (oldstable)</li>
 </ul>
-<h2 id="卸载旧版本">卸载旧版本
-</h2><div class="highlight"><div class="chroma">
+<h3 id="卸载旧版本">卸载旧版本
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -353,8 +358,8 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> pkg in docker.io docker-doc docker-compose podman-docker containerd runc<span class="p">;</span> <span class="k">do</span> sudo apt-get remove <span class="nv">$pkg</span><span class="p">;</span> <span class="k">done</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="设置存储库">设置存储库
-</h2><div class="highlight"><div class="chroma">
+</div><h3 id="设置存储库">设置存储库
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -386,8 +391,8 @@
 </span></span><span class="line"><span class="cl">sudo apt-get update
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="安装">安装
-</h2><div class="highlight"><div class="chroma">
+</div><h3 id="安装">安装
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -395,17 +400,17 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="ubuntu">Ubuntu
-</h1><h2 id="前置条件-1">前置条件
-</h2><ul>
+</div><h2 id="ubuntu">Ubuntu
+</h2><h3 id="前置条件-1">前置条件
+</h3><ul>
 <li>Ubuntu Noble 24.04 (LTS)</li>
 <li>Ubuntu Mantic 23.10 (EOL: <a class="link" href="https://wiki.ubuntu.com/Releases"  target="_blank" rel="noopener"
     >July 12, 2024</a>)</li>
 <li>Ubuntu Jammy 22.04 (LTS)</li>
 <li>Ubuntu Focal 20.04 (LTS)</li>
 </ul>
-<h2 id="卸载旧版本-1">卸载旧版本
-</h2><div class="highlight"><div class="chroma">
+<h3 id="卸载旧版本-1">卸载旧版本
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -413,8 +418,8 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="k">for</span> pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc<span class="p">;</span> <span class="k">do</span> sudo apt-get remove <span class="nv">$pkg</span><span class="p">;</span> <span class="k">done</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="设置存储库-1">设置存储库
-</h2><div class="highlight"><div class="chroma">
+</div><h3 id="设置存储库-1">设置存储库
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -446,8 +451,8 @@
 </span></span><span class="line"><span class="cl">sudo apt-get update
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="安装-1">安装
-</h2><div class="highlight"><div class="chroma">
+</div><h3 id="安装-1">安装
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -455,10 +460,7 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 </span></span></code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<p>2024-03-18 更新</p>
-</blockquote>
-
+</div>
 </section>
 
 
