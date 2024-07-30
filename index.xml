@@ -7327,18 +7327,20 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
         <pubDate>Thu, 07 Dec 2023 14:07:10 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/p/2312007/</guid>
-        <description>&lt;h1 id=&#34;1-mpv播放器&#34;&gt;1. MPV播放器
-&lt;/h1&gt;&lt;h2 id=&#34;11-概述&#34;&gt;1.1. 概述
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;a free, open source, and cross-platform media player&lt;/p&gt;
+        <description>&lt;h2 id=&#34;1-mpv播放器&#34;&gt;1. MPV播放器
+&lt;/h2&gt;&lt;h3 id=&#34;11-概述&#34;&gt;1.1. 概述
+&lt;/h3&gt;&lt;p&gt;a free, open source, and cross-platform media player&lt;/p&gt;
 &lt;p&gt;简单来说，就是一个开源的，多平台的媒体播放器，支持视频，音频，图片等等。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;托管地址：https://github.com/mpv-player/mpv&lt;/p&gt;
-&lt;p&gt;官网：https://mpv.io/&lt;/p&gt;
-&lt;p&gt;下载地址：https://mpv.io/installation/&lt;/p&gt;
-&lt;p&gt;文档：https://mpv.io/manual/stable/&lt;/p&gt;
-&lt;h2 id=&#34;12-下载安装&#34;&gt;1.2. 下载安装
-&lt;/h2&gt;&lt;p&gt;本次以Win10平台为例，下载最新稳定版：&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mpv-player-windows/files/64bit-v3/mpv-x86_64-v3-20231210-git-443c248.7z/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;托管地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/mpv-player/mpv&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/mpv-player/mpv&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://mpv.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mpv.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://mpv.io/installation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mpv.io/installation/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文档：&lt;a class=&#34;link&#34; href=&#34;https://mpv.io/manual/stable/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mpv.io/manual/stable/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;12-下载安装&#34;&gt;1.2. 下载安装
+&lt;/h3&gt;&lt;p&gt;本次以Win10平台为例，下载最新稳定版：&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mpv-player-windows/files/64bit-v3/mpv-x86_64-v3-20231210-git-443c248.7z/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;点击开始下载&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;下载完成之后解压，不要解压到C盘下（权限太高），建议放到其他盘符，比如我的是解压路径是 &lt;code&gt;D:\Program Files\mpv-x86_64-v3-20231210-git-443c248\&lt;/code&gt;，双击 &lt;code&gt;mpv.exe&lt;/code&gt; 即可运行mpv播放器。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -7357,16 +7359,16 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 &lt;li&gt;新建 &lt;code&gt;script-opts&lt;/code&gt;文件夹，存放第三方脚本配置。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;到此安装基本完成。&lt;/p&gt;
-&lt;h1 id=&#34;2-脚本&#34;&gt;2. 脚本
-&lt;/h1&gt;&lt;p&gt;为了更好的体验，自定义配置。&lt;/p&gt;
+&lt;h2 id=&#34;2-脚本&#34;&gt;2. 脚本
+&lt;/h2&gt;&lt;p&gt;为了更好的体验，自定义配置。&lt;/p&gt;
 &lt;p&gt;为了避免冗余，以下所有脚本都遵循上述规范的配置，即：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;scripts : 脚本文件&lt;/li&gt;
 &lt;li&gt;input.conf : 自定义快捷键&lt;/li&gt;
 &lt;li&gt;mpv.conf : mpv配置&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;21-杜比视界&#34;&gt;2.1. 杜比视界
-&lt;/h2&gt;&lt;p&gt;杜比视界 DV HDR 常见的播放器都不支持，mpv只需要在 &lt;code&gt;mpv.conf&lt;/code&gt; 中添加两行代码即可让颜色正常化&lt;/p&gt;
+&lt;h3 id=&#34;21-杜比视界&#34;&gt;2.1. 杜比视界
+&lt;/h3&gt;&lt;p&gt;杜比视界 DV HDR 常见的播放器都不支持，mpv只需要在 &lt;code&gt;mpv.conf&lt;/code&gt; 中添加两行代码即可让颜色正常化&lt;/p&gt;
 &lt;p&gt;不过加上之后内存占用变高，看情况开吧。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -7378,8 +7380,8 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpu-context=win # 杜比视界颜色正常化
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;22-缩略图&#34;&gt;2.2. 缩略图
-&lt;/h2&gt;&lt;p&gt;需要第三方脚本支持：https://github.com/po5/thumbfast&lt;/p&gt;
+&lt;/div&gt;&lt;h3 id=&#34;22-缩略图&#34;&gt;2.2. 缩略图
+&lt;/h3&gt;&lt;p&gt;需要第三方脚本支持：https://github.com/po5/thumbfast&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;下载项目下的 &lt;a class=&#34;link&#34; href=&#34;https://github.com/po5/thumbfast/blob/master/thumbfast.lua&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -7410,8 +7412,8 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 &lt;blockquote&gt;
 &lt;p&gt;如果需要默认加载，把 thumbfast.lua 放入 scripts 中即可。不过占内存，不建议。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;23-文件浏览器&#34;&gt;2.3 文件浏览器
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;功能&lt;/strong&gt;：在 mpv 中浏览和打开文件和文件夹。&lt;/p&gt;
+&lt;h3 id=&#34;23-文件浏览器&#34;&gt;2.3 文件浏览器
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;功能&lt;/strong&gt;：在 mpv 中浏览和打开文件和文件夹。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;该脚本在 mpv API 之外不使用任何东西，因此在所有平台上都应该是相同的。浏览器可以上下移动目录，开始播放文件和文件夹，或者将它们添加到队列中。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -7455,8 +7457,8 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root=~/,C:/,D:/,E:/
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;24-最近播放&#34;&gt;2.4 最近播放
-&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hacel/recent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;h3 id=&#34;24-最近播放&#34;&gt;2.4 最近播放
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hacel/recent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/hacel/recent&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;快捷键&lt;/strong&gt;  `  ： 打开最近播放&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;配置&lt;/strong&gt;&lt;/p&gt;
@@ -7498,8 +7500,8 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ellipsis=no
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;3-mpvconf&#34;&gt;3. mpv.conf
-&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;3-mpvconf&#34;&gt;3. mpv.conf
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -7511,8 +7513,8 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;volume=70		# 默认音量设为70
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;4-常用快捷键&#34;&gt;4. 常用快捷键
-&lt;/h1&gt;&lt;p&gt;以下皆为内置快捷键&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;4-常用快捷键&#34;&gt;4. 常用快捷键
+&lt;/h2&gt;&lt;p&gt;以下皆为内置快捷键&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -7538,9 +7540,10 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;关于快捷键可查看 &lt;strong&gt;附录-快捷键&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&#34;附录&#34;&gt;附录
-&lt;/h1&gt;&lt;h2 id=&#34;快捷键&#34;&gt;快捷键
-&lt;/h2&gt;&lt;p&gt;图示：&lt;/p&gt;
+&lt;h2 id=&#34;附录&#34;&gt;附录
+&lt;/h2&gt;&lt;h3 id=&#34;快捷键&#34;&gt;快捷键
+&lt;/h3&gt;&lt;p&gt;图示：&lt;/p&gt;
+&lt;p&gt;英文版&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2023/12/14/KtUzvg3OmJB89Rh.png&#34;
 	
 	
@@ -7548,6 +7551,17 @@ Motrix: &lt;a class=&#34;link&#34; href=&#34;https://dl.motrix.app/release/Motri
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;mpbindings.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;中文版：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2024/07/30/sUVrb6MeoplgQBq.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;mpv-keybord-zh&#34;
 	
 	
 &gt;&lt;/p&gt;
