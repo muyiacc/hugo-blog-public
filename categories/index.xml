@@ -7,18 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Seektao | 寻道之旅</copyright>
-        <lastBuildDate>Thu, 25 Jul 2024 15:07:52 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Default</title>
-        <link>https://blog.seektao.cc/categories/default/</link>
-        <pubDate>Thu, 25 Jul 2024 15:07:52 +0800</pubDate>
-        
-        <guid>https://blog.seektao.cc/categories/default/</guid>
-        <description>&lt;img src="https://blog.seektao.cc/categories/default/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Default" /&gt;</description>
-        </item>
-        <item>
+        <lastBuildDate>Fri, 02 Aug 2024 15:08:25 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux</title>
         <link>https://blog.seektao.cc/categories/linux/</link>
-        <pubDate>Mon, 22 Jul 2024 15:07:51 +0800</pubDate>
+        <pubDate>Fri, 02 Aug 2024 15:08:25 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/linux/</guid>
         <description>&lt;img src="https://blog.seektao.cc/categories/linux/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Linux" /&gt;</description>
@@ -26,10 +18,18 @@
         <item>
         <title>Windows</title>
         <link>https://blog.seektao.cc/categories/windows/</link>
-        <pubDate>Wed, 17 Jul 2024 15:07:48 +0800</pubDate>
+        <pubDate>Thu, 01 Aug 2024 17:08:46 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/categories/windows/</guid>
         <description>&lt;img src="https://blog.seektao.cc/categories/windows/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Windows" /&gt;</description>
+        </item>
+        <item>
+        <title>Default</title>
+        <link>https://blog.seektao.cc/categories/default/</link>
+        <pubDate>Thu, 25 Jul 2024 15:07:52 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/categories/default/</guid>
+        <description>&lt;img src="https://blog.seektao.cc/categories/default/dbea7e96a8534e50a2286a2b6cfb7288_0.png" alt="Featured image of post Default" /&gt;</description>
         </item>
         <item>
         <title>Tao</title>
