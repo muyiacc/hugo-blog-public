@@ -226,7 +226,41 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1-下载">1. 下载</a></li>
+    <li><a href="#2-运行">2. 运行</a></li>
+    <li><a href="#3-系统服务">3. 系统服务</a></li>
+    <li><a href="#4-附录">4. 附录</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -301,8 +335,8 @@
 <blockquote>
 <p>笔者Windows版本为 Windows10 专业工作站，我不确定家庭版是否有限制</p>
 </blockquote>
-<h1 id="1-下载">1. 下载
-</h1><p>下载地址： <a class="link" href="https://github.com/alist-org/alist/releases/"  target="_blank" rel="noopener"
+<h2 id="1-下载">1. 下载
+</h2><p>下载地址： <a class="link" href="https://github.com/alist-org/alist/releases/"  target="_blank" rel="noopener"
     >https://github.com/alist-org/alist/releases/</a></p>
 <p><a class="link" href="https://github.com/alist-org/alist/releases/download/v3.29.1/alist-windows-amd64.zip"  target="_blank" rel="noopener"
     >点我可直接下载</a></p>
@@ -316,8 +350,8 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">D:<span class="se">\P</span>rogram Files<span class="se">\a</span>list<span class="se">\a</span>list.exe
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="2-运行">2. 运行
-</h1><p>启动服务，在地址栏输入cmd快速进入当前目录，输入</p>
+</div><h2 id="2-运行">2. 运行
+</h2><p>启动服务，在地址栏输入cmd快速进入当前目录，输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -378,8 +412,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>现在打开浏览器：输入 localhost:5245 即可打开 alist</p>
-<h1 id="3-系统服务">3. 系统服务
-</h1><p>还有一个问题，启动成功了，但是每次需要手动运行有点麻烦，最好的办法就是创建系统服务，让它开机自启。借助 NSSM 创建系统服务。</p>
+<h2 id="3-系统服务">3. 系统服务
+</h2><p>还有一个问题，启动成功了，但是每次需要手动运行有点麻烦，最好的办法就是创建系统服务，让它开机自启。借助 NSSM 创建系统服务。</p>
 <p>下载nssm： <a class="link" href="https://nssm.cc/release/nssm-2.24.zip"  target="_blank" rel="noopener"
     >点击下载</a></p>
 <p>将 nssm 解压之后，将所在的路径（比如 <code>D:\Program Files\nssm-2.24\win64</code>）添加到系统环境变量，确保可随处执行 nssm。</p>
@@ -451,8 +485,8 @@
 </span></span><span class="line"><span class="cl">......
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="4-附录">4. 附录
-</h1><p>关于 帮助命令</p>
+</div><h2 id="4-附录">4. 附录
+</h2><p>关于 帮助命令</p>
 <p>alist</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
