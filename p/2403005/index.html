@@ -10,7 +10,7 @@
 <meta property='og:description' content="nginx-proxy-manager 可以自动续期ssl证书，使用docker搭建也比较方便。 今天我的网站出现证书过期，然后我去管理端手动续期也出现了失败，但是没有报具体的错误，接着升级了镜像，新开容器也没有解决。 还好这个问题之前我也遇见过，可以通过重新申请域名ssl证书复现，让其给出真正的报错，结果和之前一样，缺乏 “zope”模块。 错误大概如下： 1 The &#39;certbot_dns_dnspod.dns_dnspod&#39; plugin errored while loading: No module named &#39;zope&#39;. You may need to remove or update this plugin. The Certbot log will contain the full error details and this should be reported to the plugin developer. 其中的 No module named &lsquo;zope&rsquo;，就是重点，解决办法就是进入容器，安装 zope 1 2 3 4 sudo docker exec -it [容器的id] /bin/bash # 进入容器之后 pip install zope -i https://pypi.tuna.tsinghua.edu.cn/simple 等待安装完成，ctrl+p，ctrl+q 退出即可。 接着再重新去手动续期下即可。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403005/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='nginx' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='nginx' /><meta property='article:published_time' content='2024-03-05T00:03:15&#43;08:00'/><meta property='article:modified_time' content='2024-03-05T00:03:15&#43;08:00'/>
 <meta name="twitter:title" content="nginx-proxy-manager申请证书失败之缺乏zope模块【已解决】">
 <meta name="twitter:description" content="nginx-proxy-manager 可以自动续期ssl证书，使用docker搭建也比较方便。 今天我的网站出现证书过期，然后我去管理端手动续期也出现了失败，但是没有报具体的错误，接着升级了镜像，新开容器也没有解决。 还好这个问题之前我也遇见过，可以通过重新申请域名ssl证书复现，让其给出真正的报错，结果和之前一样，缺乏 “zope”模块。 错误大概如下： 1 The &#39;certbot_dns_dnspod.dns_dnspod&#39; plugin errored while loading: No module named &#39;zope&#39;. You may need to remove or update this plugin. The Certbot log will contain the full error details and this should be reported to the plugin developer. 其中的 No module named &lsquo;zope&rsquo;，就是重点，解决办法就是进入容器，安装 zope 1 2 3 4 sudo docker exec -it [容器的id] /bin/bash # 进入容器之后 pip install zope -i https://pypi.tuna.tsinghua.edu.cn/simple 等待安装完成，ctrl+p，ctrl+q 退出即可。 接着再重新去手动续期下即可。">
   
@@ -257,6 +257,19 @@
     
     <footer class="article-time">
         
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 05, 2024</time>
+            </div>
+        
 
         
             <div>
@@ -405,6 +418,25 @@
             
                 
 <article class="has-image">
+    <a href="/p/240803170893/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://s2.loli.net/2024/08/03/ToNWBn8SqeM7lkc.webp" loading="lazy" data-key="&#34;240803170893&#34;" data-hash="https://s2.loli.net/2024/08/03/ToNWBn8SqeM7lkc.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">从远程 Git 仓库中删除已经上传但现在希望忽略的文件</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/2407025/">
         
         
@@ -430,19 +462,6 @@
 
         <div class="article-details">
             <h2 class="article-title">各平台影视观看指南</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/2407021/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Sublime配置SFTP</h2>
         </div>
     </a>
 </article>

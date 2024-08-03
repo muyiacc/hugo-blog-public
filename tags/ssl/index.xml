@@ -368,78 +368,31 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>ssl证书格式的转换</title>
-        <link>https://blog.seektao.cc/p/2310019/</link>
-        <pubDate>Thu, 19 Oct 2023 14:07:10 +0800</pubDate>
+        <title>openssl小小使用</title>
+        <link>https://blog.seektao.cc/p/2403008/</link>
+        <pubDate>Fri, 08 Mar 2024 00:03:35 +0800</pubDate>
         
-        <guid>https://blog.seektao.cc/p/2310019/</guid>
-        <description>&lt;p&gt;ssl证书格式的转换&lt;/p&gt;
-&lt;h1 id=&#34;需求&#34;&gt;需求
-&lt;/h1&gt;&lt;p&gt;把 ssl 证书，以 &lt;code&gt;pem&lt;/code&gt; 结尾的证书改成 &lt;code&gt;key、crt&lt;/code&gt;结尾。&lt;/p&gt;
-&lt;p&gt;因为我是使用的 npm（nginx proxy manager）生成的ssl证书，下载下来的证书格式全部为 &lt;code&gt;pem&lt;/code&gt; 结尾，现在其他地方需要用到ssl证书，但不是 pem 结尾，而是要求格式为 &lt;code&gt;private.key、public.crt&lt;/code&gt;，这前者是私钥，后者是公钥。&lt;/p&gt;
-&lt;p&gt;npm下载的证书的文件有&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cert1.pem  chain1.pem  fullchain1.pem  privkey1.pem
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;它们的含义分别为：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;cert1.pem&lt;/strong&gt;：这是服务器证书，也称为公钥证书或端点证书。当客户端请求与服务器建立SSL/TLS连接时，服务器会将此证书发送给客户端以验证身份和建立安全连接。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;chain1.pem&lt;/strong&gt;：这是证书链（CA Bundle），其中包括根证书和中间证书。证书链用于构建完整的证书信任链，以验证服务器证书的真实性。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;fullchain1.pem&lt;/strong&gt;：这是服务器证书和证书链的组合。它包括服务器证书和中间证书链，但不包括根证书，因为客户端应该已经具有根证书的信任。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;privkey1.pem&lt;/strong&gt;：这是私钥文件，它是与服务器证书配对使用的秘密密钥。私钥文件必须保持机密，不应共享或泄露给其他人，以确保安全连接的保密性&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我需要做的就是将privkey1.pem转化成privkey.key，将cert1.pem转化成public.crt&lt;/p&gt;
-&lt;p&gt;根据这个情况，linux系统终端有openssl工具，以下为转换步骤&lt;/p&gt;
-&lt;h1 id=&#34;解决办法&#34;&gt;解决办法
-&lt;/h1&gt;&lt;p&gt;将cert1.pem转化成public.crt&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in cert1.pem -out public.crt
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;将privkey1.pem转化成privkey.key&lt;/p&gt;
-&lt;p&gt;尝试一：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl rsa -in privkey1.pem -out private.key
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;尝试二：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果出现了错误，具体原因为 加密算法不是 RSA，除此RSA外，还有 EC、DSA等，&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;使用EC密钥算法，最后成功&lt;/p&gt;
+        <guid>https://blog.seektao.cc/p/2403008/</guid>
+        <description>&lt;p&gt;查看ssl证书详细信息&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl ec -in privkey1.pem -out private.key
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in /path/to/public.crt -text -noout
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; EC key
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;writing EC key
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl ec -in /path/to/private.key -text -noout
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;比如快速查找包含的域名&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in cert.pem -text -noout &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep seektao.cc
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
@@ -447,7 +400,7 @@
         <item>
         <title>Nginx使用，配置，模板一键生成，Certbot安装和申请免费Let&#39;s Encrypt证书</title>
         <link>https://blog.seektao.cc/p/2403006/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 06 Mar 2024 00:03:15 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/p/2403006/</guid>
         <description>&lt;p&gt;和往常一样，系统为 debian，让我们开始吧。&lt;/p&gt;
@@ -1791,31 +1744,78 @@
 </description>
         </item>
         <item>
-        <title>openssl小小使用</title>
-        <link>https://blog.seektao.cc/p/2403008/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>ssl证书格式的转换</title>
+        <link>https://blog.seektao.cc/p/2310019/</link>
+        <pubDate>Thu, 19 Oct 2023 14:07:10 +0800</pubDate>
         
-        <guid>https://blog.seektao.cc/p/2403008/</guid>
-        <description>&lt;p&gt;查看ssl证书详细信息&lt;/p&gt;
+        <guid>https://blog.seektao.cc/p/2310019/</guid>
+        <description>&lt;p&gt;ssl证书格式的转换&lt;/p&gt;
+&lt;h1 id=&#34;需求&#34;&gt;需求
+&lt;/h1&gt;&lt;p&gt;把 ssl 证书，以 &lt;code&gt;pem&lt;/code&gt; 结尾的证书改成 &lt;code&gt;key、crt&lt;/code&gt;结尾。&lt;/p&gt;
+&lt;p&gt;因为我是使用的 npm（nginx proxy manager）生成的ssl证书，下载下来的证书格式全部为 &lt;code&gt;pem&lt;/code&gt; 结尾，现在其他地方需要用到ssl证书，但不是 pem 结尾，而是要求格式为 &lt;code&gt;private.key、public.crt&lt;/code&gt;，这前者是私钥，后者是公钥。&lt;/p&gt;
+&lt;p&gt;npm下载的证书的文件有&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cert1.pem  chain1.pem  fullchain1.pem  privkey1.pem
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;它们的含义分别为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;cert1.pem&lt;/strong&gt;：这是服务器证书，也称为公钥证书或端点证书。当客户端请求与服务器建立SSL/TLS连接时，服务器会将此证书发送给客户端以验证身份和建立安全连接。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;chain1.pem&lt;/strong&gt;：这是证书链（CA Bundle），其中包括根证书和中间证书。证书链用于构建完整的证书信任链，以验证服务器证书的真实性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;fullchain1.pem&lt;/strong&gt;：这是服务器证书和证书链的组合。它包括服务器证书和中间证书链，但不包括根证书，因为客户端应该已经具有根证书的信任。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;privkey1.pem&lt;/strong&gt;：这是私钥文件，它是与服务器证书配对使用的秘密密钥。私钥文件必须保持机密，不应共享或泄露给其他人，以确保安全连接的保密性&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我需要做的就是将privkey1.pem转化成privkey.key，将cert1.pem转化成public.crt&lt;/p&gt;
+&lt;p&gt;根据这个情况，linux系统终端有openssl工具，以下为转换步骤&lt;/p&gt;
+&lt;h1 id=&#34;解决办法&#34;&gt;解决办法
+&lt;/h1&gt;&lt;p&gt;将cert1.pem转化成public.crt&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in cert1.pem -out public.crt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将privkey1.pem转化成privkey.key&lt;/p&gt;
+&lt;p&gt;尝试一：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl rsa -in privkey1.pem -out private.key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;尝试二：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果出现了错误，具体原因为 加密算法不是 RSA，除此RSA外，还有 EC、DSA等，&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用EC密钥算法，最后成功&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in /path/to/public.crt -text -noout
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl ec -in privkey1.pem -out private.key
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl ec -in /path/to/private.key -text -noout
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;比如快速查找包含的域名&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openssl x509 -in cert.pem -text -noout &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep seektao.cc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; EC key
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;writing EC key
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>

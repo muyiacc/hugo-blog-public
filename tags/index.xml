@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Seektao | 寻道之旅</copyright>
-        <lastBuildDate>Fri, 02 Aug 2024 15:08:25 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 03 Aug 2024 17:08:23 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Git</title>
+        <link>https://blog.seektao.cc/tags/git/</link>
+        <pubDate>Sat, 03 Aug 2024 17:08:23 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>G</title>
+        <link>https://blog.seektao.cc/tags/g/</link>
+        <pubDate>Sat, 03 Aug 2024 13:08:35 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/g/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Login</title>
         <link>https://blog.seektao.cc/tags/login/</link>
         <pubDate>Fri, 02 Aug 2024 15:08:25 +0800</pubDate>
@@ -277,6 +293,14 @@
         <pubDate>Tue, 02 Jul 2024 23:07:42 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/tags/chatgpt-next-web/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Serv00</title>
+        <link>https://blog.seektao.cc/tags/serv00/</link>
+        <pubDate>Sat, 22 Jun 2024 00:06:14 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/serv00/</guid>
         <description></description>
         </item>
         <item>
@@ -552,6 +576,62 @@
         <description></description>
         </item>
         <item>
+        <title>Gofilm</title>
+        <link>https://blog.seektao.cc/tags/gofilm/</link>
+        <pubDate>Mon, 11 Mar 2024 00:03:15 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/gofilm/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Postgresql</title>
+        <link>https://blog.seektao.cc/tags/postgresql/</link>
+        <pubDate>Sun, 10 Mar 2024 00:03:25 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/postgresql/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Backup</title>
+        <link>https://blog.seektao.cc/tags/backup/</link>
+        <pubDate>Sat, 09 Mar 2024 00:03:15 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/backup/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Openssl</title>
+        <link>https://blog.seektao.cc/tags/openssl/</link>
+        <pubDate>Fri, 08 Mar 2024 00:03:35 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/openssl/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Apt</title>
+        <link>https://blog.seektao.cc/tags/apt/</link>
+        <pubDate>Thu, 07 Mar 2024 00:03:15 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/apt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Flutter</title>
+        <link>https://blog.seektao.cc/tags/flutter/</link>
+        <pubDate>Sun, 03 Mar 2024 00:03:15 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/flutter/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Fvm</title>
+        <link>https://blog.seektao.cc/tags/fvm/</link>
+        <pubDate>Sun, 03 Mar 2024 00:03:15 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/fvm/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Chatgpt</title>
         <link>https://blog.seektao.cc/tags/chatgpt/</link>
         <pubDate>Thu, 14 Dec 2023 14:07:10 +0800</pubDate>
@@ -573,14 +653,6 @@
         <pubDate>Wed, 06 Dec 2023 14:07:10 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/tags/minconda/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Flutter</title>
-        <link>https://blog.seektao.cc/tags/flutter/</link>
-        <pubDate>Tue, 05 Dec 2023 14:07:10 +0800</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/flutter/</guid>
         <description></description>
         </item>
         <item>
@@ -1056,59 +1128,11 @@
         <description></description>
         </item>
         <item>
-        <title>Apt</title>
-        <link>https://blog.seektao.cc/tags/apt/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>安装系统</title>
+        <link>https://blog.seektao.cc/tags/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/</link>
+        <pubDate>Sun, 03 Sep 2023 14:12:15 +0800</pubDate>
         
-        <guid>https://blog.seektao.cc/tags/apt/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Backup</title>
-        <link>https://blog.seektao.cc/tags/backup/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/backup/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Fvm</title>
-        <link>https://blog.seektao.cc/tags/fvm/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/fvm/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Gofilm</title>
-        <link>https://blog.seektao.cc/tags/gofilm/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/gofilm/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Openssl</title>
-        <link>https://blog.seektao.cc/tags/openssl/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/openssl/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Postgresql</title>
-        <link>https://blog.seektao.cc/tags/postgresql/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/postgresql/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Serv00</title>
-        <link>https://blog.seektao.cc/tags/serv00/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/serv00/</guid>
+        <guid>https://blog.seektao.cc/tags/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid>
         <description></description>
         </item>
         <item>
@@ -1117,14 +1141,6 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://blog.seektao.cc/tags/tabby/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>安装系统</title>
-        <link>https://blog.seektao.cc/tags/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid>
         <description></description>
         </item>
         
