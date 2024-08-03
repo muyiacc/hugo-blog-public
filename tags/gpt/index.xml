@@ -165,14 +165,14 @@ sess-3ZHvR7crqpBtrJj0D94cXdQxA6P2r24RipUtuNgm&lt;/p&gt;
         <pubDate>Fri, 13 Oct 2023 14:07:10 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/p/2310013/</guid>
-        <description>&lt;p&gt;Docker部署 ChatGPT-Next-Web&lt;/p&gt;
-&lt;p&gt;之前介绍过一个免翻使用chatgpt接口的项目 &lt;a class=&#34;link&#34; href=&#34;https://www.seektao.cc/archives/8140777793851&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍
+&lt;/h2&gt;&lt;p&gt;之前介绍过一个免翻使用chatgpt接口的项目 &lt;a class=&#34;link&#34; href=&#34;https://www.seektao.cc/archives/8140777793851&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Pandora&lt;/a&gt;，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体验感不太好，后来发现另一个chatgpt的web项目，名字叫 ChatGPT-Next-Web，可以很方便的使用代理接口，我们可以使用一些免费的接口来提升使用感。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Github 地址：https://github.com/Yidadaa/ChatGPT-Next-Web&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;访问界面样式，可以看见还是很美观的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.seektao.cc/_media-sync_resources/20231203T140220/20231203T140220_41890.png&#34;
+&lt;p&gt;访问查看，界面样式可以看见还是很美观的：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2023/10/28/Tu5iPkerLvBpK3E.png&#34;
 	
 	
 	
@@ -182,8 +182,8 @@ sess-3ZHvR7crqpBtrJj0D94cXdQxA6P2r24RipUtuNgm&lt;/p&gt;
 	
 	
 &gt;&lt;/p&gt;
-&lt;h1 id=&#34;安装&#34;&gt;安装
-&lt;/h1&gt;&lt;p&gt;依旧使用docker compose 方式搭建。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;p&gt;使用docker compose 方式搭建。&lt;/p&gt;
 &lt;p&gt;docker-compose.yml&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -226,8 +226,8 @@ sess-3ZHvR7crqpBtrJj0D94cXdQxA6P2r24RipUtuNgm&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up -d
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;接口&#34;&gt;接口
-&lt;/h1&gt;&lt;p&gt;关于接口，网上也有一些免费的api 接口地址&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;接口&#34;&gt;接口
+&lt;/h2&gt;&lt;p&gt;关于接口，网上也有一些免费的api 接口地址&lt;/p&gt;
 &lt;p&gt;这里提供一个Github的开源项目：&lt;a class=&#34;link&#34; href=&#34;https://github.com/chatanywhere/GPT_API_free&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GPT_API_free&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;快速获取api key，点击下面的连接获取api，获取的api用来替换上面配置的api，接口地址呢推荐使用下面的国内地址转发。&lt;/p&gt;
