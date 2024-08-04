@@ -186,7 +186,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;提示：&lt;/p&gt;
-&lt;p&gt;alist有些盘可以妙传，但是超过一定大小将不可用，为了秒传的可用性，在备份时可以添加 &lt;code&gt;--max-size&lt;/code&gt;参数跳过最大的文件，比如 &lt;code&gt;--max-size 500M&lt;/code&gt;跳过超过500M的文件&lt;/p&gt;
+&lt;p&gt;alist有些盘可以秒传，但是超过一定大小将不可用，为了秒传的可用性，在备份时可以添加 &lt;code&gt;--max-size&lt;/code&gt;参数跳过最大的文件，比如 &lt;code&gt;--max-size 500M&lt;/code&gt;跳过超过500M的文件&lt;/p&gt;
 &lt;p&gt;案例：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

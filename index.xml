@@ -7,7 +7,84 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Seektao | 寻道之旅</copyright>
-        <lastBuildDate>Sat, 03 Aug 2024 17:08:23 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 04 Aug 2024 22:08:45 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>视频编码格式选择和常见后缀，音频编码格式及后缀</title>
+        <link>https://blog.seektao.cc/p/240804220845/</link>
+        <pubDate>Sun, 04 Aug 2024 22:08:45 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/p/240804220845/</guid>
+        <description>&lt;img src="https://s2.loli.net/2024/08/04/Chm17KaLquFPU36.webp" alt="Featured image of post 视频编码格式选择和常见后缀，音频编码格式及后缀" /&gt;&lt;p&gt;在视频编码格式中，&lt;code&gt;avc1&lt;/code&gt;、&lt;code&gt;av01&lt;/code&gt; 和 &lt;code&gt;vp09&lt;/code&gt; 的兼容性和播放支持情况如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;avc1 (H.264)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;兼容性非常好，几乎所有的设备和播放器都支持，通常不需要转码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;av01 (AV1)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;逐渐获得支持，但仍然不如 H.264 广泛。某些较新的设备和浏览器支持 AV1，但老旧设备可能不支持，可能需要转码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;vp09 (VP9)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在许多现代浏览器（如 Chrome 和 Firefox）和设备上得到支持，尤其是在流媒体平台（如 YouTube）上，但某些旧设备可能不支持，可能需要转码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;最常用且通常不需要转码的&lt;/strong&gt;：&lt;code&gt;avc1 (H.264)&lt;/code&gt;。
+&lt;strong&gt;可能需要转码的&lt;/strong&gt;：&lt;code&gt;av01 (AV1)&lt;/code&gt; 和 &lt;code&gt;vp09 (VP9)&lt;/code&gt;，具体取决于播放设备的支持情况。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;不同视频编码格式对应的常见文件后缀如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;avc1 (H.264)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见后缀：&lt;code&gt;.mp4&lt;/code&gt;, &lt;code&gt;.mkv&lt;/code&gt;, &lt;code&gt;.mov&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;av01 (AV1)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见后缀：&lt;code&gt;.mp4&lt;/code&gt;, &lt;code&gt;.mkv&lt;/code&gt;（有时可能会使用 &lt;code&gt;.av1&lt;/code&gt;，但不太常见）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;vp09 (VP9)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见后缀：&lt;code&gt;.webm&lt;/code&gt;, &lt;code&gt;.mkv&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这些后缀虽然与编码格式相关，但实际文件格式可能包含多种编码，具体播放支持还需查看播放器的兼容性。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;音频编码格式对应的常见文件后缀如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MP4 (MPEG-4 Part 14)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见后缀：&lt;code&gt;.mp4&lt;/code&gt;（可以包含多种音频编码）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;M4A (MPEG-4 Audio)&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见后缀：&lt;code&gt;.m4a&lt;/code&gt;（通常使用 AAC 编码）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Opus&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常见后缀：&lt;code&gt;.opus&lt;/code&gt;（专门用于 Opus 编码的音频文件）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这些后缀与编码格式相关，具体的编码格式可能因文件而异。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>从远程 Git 仓库中删除已经上传但现在希望忽略的文件</title>
         <link>https://blog.seektao.cc/p/240803170893/</link>
         <pubDate>Sat, 03 Aug 2024 17:08:23 +0800</pubDate>
@@ -1207,7 +1284,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;提示：&lt;/p&gt;
-&lt;p&gt;alist有些盘可以妙传，但是超过一定大小将不可用，为了秒传的可用性，在备份时可以添加 &lt;code&gt;--max-size&lt;/code&gt;参数跳过最大的文件，比如 &lt;code&gt;--max-size 500M&lt;/code&gt;跳过超过500M的文件&lt;/p&gt;
+&lt;p&gt;alist有些盘可以秒传，但是超过一定大小将不可用，为了秒传的可用性，在备份时可以添加 &lt;code&gt;--max-size&lt;/code&gt;参数跳过最大的文件，比如 &lt;code&gt;--max-size 500M&lt;/code&gt;跳过超过500M的文件&lt;/p&gt;
 &lt;p&gt;案例：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
