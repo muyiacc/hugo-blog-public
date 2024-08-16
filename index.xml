@@ -1032,7 +1032,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone config
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;挂载&#34;&gt;挂载
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Windows平台的rclone配置文件夹位置：C:\Users&amp;lt;your_user_name&amp;gt;\AppData\Roaming\rclone&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;挂载&#34;&gt;挂载
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;将远程存储挂载到本地文件夹&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;案例1：将坚果云挂载 &lt;code&gt;E:\jianguoyun&lt;/code&gt;（该目录需要不存在）&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;前台挂载&lt;/strong&gt;&lt;/p&gt;
@@ -18366,6 +18369,84 @@ menu:
         params:
             icon: home
 --- --&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://blog.seektao.cc/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.seektao.cc/p/</guid>
+        <description>&lt;h2 id=&#34;bitwarden&#34;&gt;Bitwarden
+&lt;/h2&gt;&lt;h2 id=&#34;gmail&#34;&gt;Gmail
+&lt;/h2&gt;&lt;h2 id=&#34;voice&#34;&gt;Voice
+&lt;/h2&gt;&lt;h2 id=&#34;v2rayng&#34;&gt;v2rayNG
+&lt;/h2&gt;&lt;h2 id=&#34;sagernet&#34;&gt;SagerNet
+&lt;/h2&gt;&lt;h2 id=&#34;f-droid&#34;&gt;F-Droid
+&lt;/h2&gt;&lt;h2 id=&#34;k-9-mail&#34;&gt;K-9 Mail
+&lt;/h2&gt;&lt;h2 id=&#34;telegram-x&#34;&gt;Telegram X
+&lt;/h2&gt;&lt;h2 id=&#34;fluent-reader&#34;&gt;Fluent Reader
+&lt;/h2&gt;&lt;h2 id=&#34;orgzly-revived&#34;&gt;Orgzly Revived
+&lt;/h2&gt;&lt;h2 id=&#34;legaopro&#34;&gt;legaoPro
+&lt;/h2&gt;&lt;h2 id=&#34;spotify&#34;&gt;Spotify
+&lt;/h2&gt;&lt;h2 id=&#34;reex&#34;&gt;Reex
+&lt;/h2&gt;&lt;h2 id=&#34;firefox&#34;&gt;Firefox
+&lt;/h2&gt;&lt;h2 id=&#34;youtube-pro&#34;&gt;YouTube Pro
+&lt;/h2&gt;&lt;h2 id=&#34;alook&#34;&gt;Alook
+&lt;/h2&gt;&lt;h2 id=&#34;oktv&#34;&gt;OKTV
+&lt;/h2&gt;&lt;h2 id=&#34;emby&#34;&gt;Emby
+&lt;/h2&gt;&lt;h2 id=&#34;reqable&#34;&gt;Reqable
+&lt;/h2&gt;&lt;p&gt;抓包软件&lt;/p&gt;
+&lt;h2 id=&#34;rcx&#34;&gt;RCX
+&lt;/h2&gt;&lt;h2 id=&#34;wireguard&#34;&gt;WireGuard
+&lt;/h2&gt;&lt;h2 id=&#34;famd-m3u8&#34;&gt;Famd M3U8
+&lt;/h2&gt;&lt;h2 id=&#34;deepl&#34;&gt;DeepL
+&lt;/h2&gt;&lt;h2 id=&#34;ytdlnis&#34;&gt;YTDLnis
+&lt;/h2&gt;&lt;h2 id=&#34;seal&#34;&gt;Seal
+&lt;/h2&gt;&lt;h2 id=&#34;okx&#34;&gt;OKX
+&lt;/h2&gt;&lt;h2 id=&#34;pcloud&#34;&gt;pCloud
+&lt;/h2&gt;&lt;h2 id=&#34;alcient&#34;&gt;ALCient
+&lt;/h2&gt;&lt;h2 id=&#34;alist&#34;&gt;Alist
+&lt;/h2&gt;&lt;h2 id=&#34;github&#34;&gt;Github
+&lt;/h2&gt;&lt;h2 id=&#34;speedtest&#34;&gt;Speedtest
+&lt;/h2&gt;&lt;h2 id=&#34;localsend&#34;&gt;LocalSend
+&lt;/h2&gt;&lt;h2 id=&#34;nplayer&#34;&gt;nPlayer
+&lt;/h2&gt;&lt;h2 id=&#34;replit&#34;&gt;Replit
+&lt;/h2&gt;&lt;h2 id=&#34;termux&#34;&gt;Termux
+&lt;/h2&gt;&lt;h2 id=&#34;flix&#34;&gt;flix
+&lt;/h2&gt;&lt;h2 id=&#34;markor&#34;&gt;Markor
+&lt;/h2&gt;&lt;h2 id=&#34;authenticator&#34;&gt;Authenticator
+&lt;/h2&gt;&lt;h2 id=&#34;outlook&#34;&gt;Outlook
+&lt;/h2&gt;&lt;h2 id=&#34;hiddify&#34;&gt;Hiddify
+&lt;/h2&gt;&lt;h2 id=&#34;chatgpt&#34;&gt;ChatGPT
+&lt;/h2&gt;&lt;h2 id=&#34;apkmirror-installer&#34;&gt;APKMirror Installer
+&lt;/h2&gt;&lt;h2 id=&#34;oblivion&#34;&gt;Oblivion
+&lt;/h2&gt;&lt;h2 id=&#34;pilipalax&#34;&gt;PiliPalaX
+&lt;/h2&gt;&lt;h2 id=&#34;whatsapp&#34;&gt;WhatsApp
+&lt;/h2&gt;&lt;h2 id=&#34;x&#34;&gt;X
+&lt;/h2&gt;&lt;h2 id=&#34;instagram&#34;&gt;Instagram
+&lt;/h2&gt;&lt;h2 id=&#34;fackbook-lite&#34;&gt;Fackbook Lite
+&lt;/h2&gt;&lt;h2 id=&#34;microsoft-365&#34;&gt;Microsoft 365
+&lt;/h2&gt;&lt;h2 id=&#34;1111&#34;&gt;1.1.1.1
+&lt;/h2&gt;&lt;h2 id=&#34;textnow&#34;&gt;TextNow
+&lt;/h2&gt;&lt;h2 id=&#34;brave&#34;&gt;Brave
+&lt;/h2&gt;&lt;h2 id=&#34;tor-browser&#34;&gt;Tor Browser
+&lt;/h2&gt;&lt;h2 id=&#34;pikpak&#34;&gt;Pikpak
+&lt;/h2&gt;&lt;h2 id=&#34;zarchiver&#34;&gt;ZArchiver
+&lt;/h2&gt;&lt;h2 id=&#34;amap&#34;&gt;Amap
+&lt;/h2&gt;&lt;h2 id=&#34;yamby&#34;&gt;Yamby
+&lt;/h2&gt;&lt;h2 id=&#34;moememos&#34;&gt;MoeMemos
+&lt;/h2&gt;&lt;h2 id=&#34;connectbot&#34;&gt;ConnectBot
+&lt;/h2&gt;&lt;h2 id=&#34;termius&#34;&gt;Termius
+&lt;/h2&gt;&lt;h2 id=&#34;textr-go&#34;&gt;Textr Go
+&lt;/h2&gt;&lt;h2 id=&#34;nutstore&#34;&gt;Nutstore
+&lt;/h2&gt;&lt;h2 id=&#34;vlc&#34;&gt;VLC
+&lt;/h2&gt;&lt;h2 id=&#34;spotube&#34;&gt;Spotube
+&lt;/h2&gt;&lt;h2 id=&#34;vmos&#34;&gt;VMOS
+&lt;/h2&gt;&lt;h2 id=&#34;mt-manager&#34;&gt;MT Manager
+&lt;/h2&gt;&lt;h2 id=&#34;中国移动&#34;&gt;中国移动
+&lt;/h2&gt;&lt;h2 id=&#34;rtranslator&#34;&gt;RTranslator
+&lt;/h2&gt;&lt;h2 id=&#34;dropbox&#34;&gt;Dropbox
+&lt;/h2&gt;</description>
         </item>
         
     </channel>

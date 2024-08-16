@@ -325,7 +325,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone config
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;挂载&#34;&gt;挂载
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Windows平台的rclone配置文件夹位置：C:\Users&amp;lt;your_user_name&amp;gt;\AppData\Roaming\rclone&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;挂载&#34;&gt;挂载
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;将远程存储挂载到本地文件夹&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;案例1：将坚果云挂载 &lt;code&gt;E:\jianguoyun&lt;/code&gt;（该目录需要不存在）&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;前台挂载&lt;/strong&gt;&lt;/p&gt;
