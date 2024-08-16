@@ -10,7 +10,7 @@
 <meta property='og:description' content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-Linux/MacOS 适用于 bash、zsh 1 2 # 建议安装前清空`GOROOT`、`GOBIN`等环境变量 curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash 1 echo &#34;unalias g&#34; &gt;&gt; ~/.bashrc # 可选。若其他程序（如&#39;git&#39;）使用了&#39;g&#39;作为别名。 1 source &#34;$HOME/.g/env&#34; 自动安装-Windows 目前经我测试有问题，请手动安装 适用于 pwsh 1 iwr https://raw.githubusercontent.com/voidint/g/master/install.ps1 -useb | iex 手动安装-Linux/macOS 创建 g 家目录（推荐~/.g目录） 下载release的二进制压缩包，并解压至 g 家目录下的 bin 子目录中（即~/.g/bin目录）。 将所需的环境变量写入~/.g/env文件 1 2 3 4 5 6 7 $ cat &gt;~/.g/env &lt;&lt;&#39;EOF&#39; #!/bin/sh # g shell setup export GOROOT=&#34;${HOME}/.">
 <meta property='og:url' content='https://blog.seektao.cc/p/240803130835/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='g' /><meta property='article:published_time' content='2024-08-03T13:08:35&#43;08:00'/><meta property='article:modified_time' content='2024-08-03T13:08:35&#43;08:00'/><meta property='og:image' content='https://s2.loli.net/2024/08/03/Rmn1rsdL28pXM6t.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='g' /><meta property='article:tag' content='go' /><meta property='article:published_time' content='2024-08-03T13:08:35&#43;08:00'/><meta property='article:modified_time' content='2024-08-03T13:08:35&#43;08:00'/><meta property='og:image' content='https://s2.loli.net/2024/08/03/Rmn1rsdL28pXM6t.jpg' />
 <meta name="twitter:title" content="g，go的多版本管理工具">
 <meta name="twitter:description" content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-Linux/MacOS 适用于 bash、zsh 1 2 # 建议安装前清空`GOROOT`、`GOBIN`等环境变量 curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash 1 echo &#34;unalias g&#34; &gt;&gt; ~/.bashrc # 可选。若其他程序（如&#39;git&#39;）使用了&#39;g&#39;作为别名。 1 source &#34;$HOME/.g/env&#34; 自动安装-Windows 目前经我测试有问题，请手动安装 适用于 pwsh 1 iwr https://raw.githubusercontent.com/voidint/g/master/install.ps1 -useb | iex 手动安装-Linux/macOS 创建 g 家目录（推荐~/.g目录） 下载release的二进制压缩包，并解压至 g 家目录下的 bin 子目录中（即~/.g/bin目录）。 将所需的环境变量写入~/.g/env文件 1 2 3 4 5 6 7 $ cat &gt;~/.g/env &lt;&lt;&#39;EOF&#39; #!/bin/sh # g shell setup export GOROOT=&#34;${HOME}/."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://s2.loli.net/2024/08/03/Rmn1rsdL28pXM6t.jpg' />
@@ -603,6 +603,8 @@
     <section class="article-tags">
         
             <a href="/tags/g/">G</a>
+        
+            <a href="/tags/go/">Go</a>
         
     </section>
 
