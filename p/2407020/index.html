@@ -488,7 +488,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: /home/taoone/jianyuoyun
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: /home/taoone/jianguoyun
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>后台挂载</p>
@@ -497,7 +497,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: /home/taoone/jianyuoyun --daemon
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: /home/taoone/jianguoyun --daemon
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>手动取消挂载</p>
@@ -506,7 +506,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">fusermount -u /home/taoone/jianyuoyun
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">fusermount -u /home/taoone/jianguoyun
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="案例2">案例2
@@ -587,7 +587,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone sync jianguoyun:/ /home/taoone/jianyuoyun
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone sync jianguoyun:/ /home/taoone/jianguoyun
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>案例2：从本地同步到远程坚果云（本地需要存在）</p>
@@ -596,7 +596,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone sync /home/taoone/jianyuoyun jianguoyun:/
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rclone sync /home/taoone/jianguoyun jianguoyun:/
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="双向同步谨慎使用">双向同步（谨慎使用）
