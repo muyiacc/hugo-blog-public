@@ -10,7 +10,7 @@
 <meta property='og:description' content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳定，避免视频卡顿。 缺点：在复杂场景中可能导致画质下降，因为码率不随内容复杂度变化。 ABR（Average Bit Rate，平均码率）： 码率在一定范围内波动，但保持一个平均值。 优点：在保证整体画质的同时，适应不同场景的复杂度。 缺点：可能在某些时刻出现瞬时的画质波动。 VBR（Variable Bit Rate，可变码率）： 码率根据视频内容的复杂度动态调整。 优点：在复杂场景中使用更高的码率，简单场景中使用更低的码率，从而提高整体画质。 缺点：可能导致文件大小不稳定，不适合实时流媒体。 CRF（Constant Rate Factor，恒定质量因子）： 主要用于视频编码（如使用 x264 编码器），通过设置一个质量因子来控制输出质量，而不是直接控制码率。 优点：可以保持高质量的同时，文件大小相对较小。质量因子通常在 0-51 之间，值越低，质量越高。 缺点：文件大小不固定，可能导致某些文件过大。 选择合适的码率控制方法取决于你的需求，例如直播的稳定性、录制的画质要求以及带宽条件。 视频 常用帧率 10 FPS：每秒显示10帧，适用于低流量视频。 20 FPS：每秒显示20帧，适用于简单的动画或低质量视频。 24 FPS：通常用于电影制作，提供较为平滑的视觉效果。 25 FPS：PAL制式（主要在欧洲和其他地区使用）的标准帧率。 29.97 FPS：NTSC制式（主要在北美和日本使用）的标准帧率，常用于电视广播。 30 FPS：在某些情况下使用，略高于29.97 FPS，适合网络视频。 34 FPS：不常见，可能用于特定应用或实验性视频。 48 FPS：用于高帧率电影，例如一些3D电影，以增强视觉体验。 50 FPS：PAL制式的高帧率，适合动作较快的内容。 59.94 FPS：接近60 FPS，主要用于高质量视频和游戏直播，提供流畅的画面。 60 FPS：高帧率，适合动作视频、游戏等，提供非常流畅的观看体验。 就我录制教学视频来说，一般情况下选择 30帧 即可，某些情况下转为 60 帧">
 <meta property='og:url' content='https://blog.seektao.cc/p/240901100943/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='obs' /><meta property='article:published_time' content='2024-09-01T10:09:43&#43;08:00'/><meta property='article:modified_time' content='2024-09-01T10:09:43&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='obs' /><meta property='article:published_time' content='2024-09-01T10:09:09&#43;08:00'/><meta property='article:modified_time' content='2024-09-01T10:09:09&#43;08:00'/>
 <meta name="twitter:title" content="OBS使用经验">
 <meta name="twitter:description" content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳定，避免视频卡顿。 缺点：在复杂场景中可能导致画质下降，因为码率不随内容复杂度变化。 ABR（Average Bit Rate，平均码率）： 码率在一定范围内波动，但保持一个平均值。 优点：在保证整体画质的同时，适应不同场景的复杂度。 缺点：可能在某些时刻出现瞬时的画质波动。 VBR（Variable Bit Rate，可变码率）： 码率根据视频内容的复杂度动态调整。 优点：在复杂场景中使用更高的码率，简单场景中使用更低的码率，从而提高整体画质。 缺点：可能导致文件大小不稳定，不适合实时流媒体。 CRF（Constant Rate Factor，恒定质量因子）： 主要用于视频编码（如使用 x264 编码器），通过设置一个质量因子来控制输出质量，而不是直接控制码率。 优点：可以保持高质量的同时，文件大小相对较小。质量因子通常在 0-51 之间，值越低，质量越高。 缺点：文件大小不固定，可能导致某些文件过大。 选择合适的码率控制方法取决于你的需求，例如直播的稳定性、录制的画质要求以及带宽条件。 视频 常用帧率 10 FPS：每秒显示10帧，适用于低流量视频。 20 FPS：每秒显示20帧，适用于简单的动画或低质量视频。 24 FPS：通常用于电影制作，提供较为平滑的视觉效果。 25 FPS：PAL制式（主要在欧洲和其他地区使用）的标准帧率。 29.97 FPS：NTSC制式（主要在北美和日本使用）的标准帧率，常用于电视广播。 30 FPS：在某些情况下使用，略高于29.97 FPS，适合网络视频。 34 FPS：不常见，可能用于特定应用或实验性视频。 48 FPS：用于高帧率电影，例如一些3D电影，以增强视觉体验。 50 FPS：PAL制式的高帧率，适合动作较快的内容。 59.94 FPS：接近60 FPS，主要用于高质量视频和游戏直播，提供流畅的画面。 60 FPS：高帧率，适合动作视频、游戏等，提供非常流畅的观看体验。 就我录制教学视频来说，一般情况下选择 30帧 即可，某些情况下转为 60 帧">
   
@@ -481,6 +481,19 @@
             
                 
 <article class="">
+    <a href="/p/240902180979/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">玩客云刷机安装armbian系统</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/p/240826190828/">
         
         
@@ -493,38 +506,13 @@
 
             
                 
-<article class="has-image">
-    <a href="/p/240804220845/">
+<article class="">
+    <a href="/p/240826140866/">
         
-        
-            <div class="article-image">
-                
-                    <img src="https://s2.loli.net/2024/08/04/Chm17KaLquFPU36.webp" loading="lazy" data-key="&#34;240804220845&#34;" data-hash="https://s2.loli.net/2024/08/04/Chm17KaLquFPU36.webp"/>
-                
-            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">视频编码格式选择和常见后缀，音频编码格式及后缀</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/240803170893/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://s2.loli.net/2024/08/03/ToNWBn8SqeM7lkc.webp" loading="lazy" data-key="&#34;240803170893&#34;" data-hash="https://s2.loli.net/2024/08/03/ToNWBn8SqeM7lkc.webp"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">从远程 Git 仓库中删除已经上传但现在希望忽略的文件</h2>
+            <h2 class="article-title">openwrt实践</h2>
         </div>
     </a>
 </article>
