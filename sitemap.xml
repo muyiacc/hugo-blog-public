@@ -56,10 +56,25 @@
     <loc>https://blog.seektao.cc/p/240819110878/</loc>
     <lastmod>2024-08-19T11:08:08+08:00</lastmod>
   </url><url>
+    <loc>https://blog.seektao.cc/tags/linux/</loc>
+    <lastmod>2024-08-18T21:08:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/categories/windows/</loc>
+    <lastmod>2024-08-18T21:08:41+08:00</lastmod>
+  </url><url>
     <loc>https://blog.seektao.cc/p/240818210841/</loc>
     <lastmod>2024-08-18T21:08:41+08:00</lastmod>
   </url><url>
+    <loc>https://blog.seektao.cc/tags/wsl/</loc>
+    <lastmod>2024-08-18T21:08:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/categories/linux/</loc>
+    <lastmod>2024-08-18T21:08:11+08:00</lastmod>
+  </url><url>
     <loc>https://blog.seektao.cc/p/240818210871/</loc>
+    <lastmod>2024-08-18T21:08:11+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/tags/mirror/</loc>
     <lastmod>2024-08-18T21:08:11+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/software/</loc>
@@ -89,9 +104,6 @@
     <loc>https://blog.seektao.cc/categories/golang/</loc>
     <lastmod>2024-08-03T13:08:35+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/categories/linux/</loc>
-    <lastmod>2024-08-02T15:08:25+08:00</lastmod>
-  </url><url>
     <loc>https://blog.seektao.cc/p/240802150825/</loc>
     <lastmod>2024-08-02T15:08:25+08:00</lastmod>
   </url><url>
@@ -108,9 +120,6 @@
     <lastmod>2024-08-02T15:08:25+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/service/</loc>
-    <lastmod>2024-08-01T17:08:46+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.seektao.cc/categories/windows/</loc>
     <lastmod>2024-08-01T17:08:46+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/240801170846/</loc>
@@ -800,9 +809,6 @@
     <loc>https://blog.seektao.cc/p/2311006/</loc>
     <lastmod>2023-11-06T14:07:10+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/tags/mirror/</loc>
-    <lastmod>2023-11-06T14:07:10+08:00</lastmod>
-  </url><url>
     <loc>https://blog.seektao.cc/p/2311005/</loc>
     <lastmod>2023-11-05T14:07:10+08:00</lastmod>
   </url><url>
@@ -892,9 +898,6 @@
   </url><url>
     <loc>https://blog.seektao.cc/tags/log/</loc>
     <lastmod>2023-10-16T14:07:10+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.seektao.cc/tags/linux/</loc>
-    <lastmod>2023-10-15T14:07:10+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/2310015/</loc>
     <lastmod>2023-10-15T14:07:10+08:00</lastmod>

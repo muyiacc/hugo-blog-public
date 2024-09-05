@@ -7,7 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Seektao | 寻道之旅</copyright>
-        <lastBuildDate>Thu, 01 Aug 2024 17:08:46 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 Aug 2024 21:08:41 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows使用WSL安装Linux系统</title>
+        <link>https://blog.seektao.cc/p/240818210841/</link>
+        <pubDate>Sun, 18 Aug 2024 21:08:41 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/p/240818210841/</guid>
+        <description>&lt;p&gt;参考文档&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://geekdaxue.co/read/xiaoyulive@wsl/flwxn1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://geekdaxue.co/read/xiaoyulive@wsl/flwxn1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/zh-cn/windows/wsl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://learn.microsoft.com/zh-cn/windows/wsl/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Windows创建系统服务的方式</title>
         <link>https://blog.seektao.cc/p/240801170846/</link>
         <pubDate>Thu, 01 Aug 2024 17:08:46 +0800</pubDate>
