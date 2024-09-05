@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳定，避免视频卡顿。 缺点：在复杂场景中可能导致画质下降，因为码率不随内容复杂度变化。 ABR（Average Bit Rate，平均码率）： 码率在一定范围内波动，但保持一个平均值。 优点：在保证整体画质的同时，适应不同场景的复杂度。 缺点：可能在某些时刻出现瞬时的画质波动。 VBR（Variable Bit Rate，可变码率）： 码率根据视频内容的复杂度动态调整。 优点：在复杂场景中使用更高的码率，简单场景中使用更低的码率，从而提高整体画质。 缺点：可能导致文件大小不稳定，不适合实时流媒体。 CRF（Constant Rate Factor，恒定质量因子）： 主要用于视频编码（如使用 x264 编码器），通过设置一个质量因子来控制输出质量，而不是直接控制码率。 优点：可以保持高质量的同时，文件大小相对较小。质量因子通常在 0-51 之间，值越低，质量越高。 缺点：文件大小不固定，可能导致某些文件过大。 选择合适的码率控制方法取决于你的需求，例如直播的稳定性、录制的画质要求以及带宽条件。 视频 常用帧率 10 FPS：每秒显示10帧，适用于低流量视频。 20 FPS：每秒显示20帧，适用于简单的动画或低质量视频。 24 FPS：通常用于电影制作，提供较为平滑的视觉效果。 25 FPS：PAL制式（主要在欧洲和其他地区使用）的标准帧率。 29.97 FPS：NTSC制式（主要在北美和日本使用）的标准帧率，常用于电视广播。 30 FPS：在某些情况下使用，略高于29.97 FPS，适合网络视频。 34 FPS：不常见，可能用于特定应用或实验性视频。 48 FPS：用于高帧率电影，例如一些3D电影，以增强视觉体验。 50 FPS：PAL制式的高帧率，适合动作较快的内容。 59.94 FPS：接近60 FPS，主要用于高质量视频和游戏直播，提供流畅的画面。 60 FPS：高帧率，适合动作视频、游戏等，提供非常流畅的观看体验。 就我录制教学视频来说，一般情况下选择 30帧 即可，某些情况下转为 60 帧">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳">
 <title>OBS使用经验</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/240901100943/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="OBS使用经验">
-<meta property='og:description' content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳定，避免视频卡顿。 缺点：在复杂场景中可能导致画质下降，因为码率不随内容复杂度变化。 ABR（Average Bit Rate，平均码率）： 码率在一定范围内波动，但保持一个平均值。 优点：在保证整体画质的同时，适应不同场景的复杂度。 缺点：可能在某些时刻出现瞬时的画质波动。 VBR（Variable Bit Rate，可变码率）： 码率根据视频内容的复杂度动态调整。 优点：在复杂场景中使用更高的码率，简单场景中使用更低的码率，从而提高整体画质。 缺点：可能导致文件大小不稳定，不适合实时流媒体。 CRF（Constant Rate Factor，恒定质量因子）： 主要用于视频编码（如使用 x264 编码器），通过设置一个质量因子来控制输出质量，而不是直接控制码率。 优点：可以保持高质量的同时，文件大小相对较小。质量因子通常在 0-51 之间，值越低，质量越高。 缺点：文件大小不固定，可能导致某些文件过大。 选择合适的码率控制方法取决于你的需求，例如直播的稳定性、录制的画质要求以及带宽条件。 视频 常用帧率 10 FPS：每秒显示10帧，适用于低流量视频。 20 FPS：每秒显示20帧，适用于简单的动画或低质量视频。 24 FPS：通常用于电影制作，提供较为平滑的视觉效果。 25 FPS：PAL制式（主要在欧洲和其他地区使用）的标准帧率。 29.97 FPS：NTSC制式（主要在北美和日本使用）的标准帧率，常用于电视广播。 30 FPS：在某些情况下使用，略高于29.97 FPS，适合网络视频。 34 FPS：不常见，可能用于特定应用或实验性视频。 48 FPS：用于高帧率电影，例如一些3D电影，以增强视觉体验。 50 FPS：PAL制式的高帧率，适合动作较快的内容。 59.94 FPS：接近60 FPS，主要用于高质量视频和游戏直播，提供流畅的画面。 60 FPS：高帧率，适合动作视频、游戏等，提供非常流畅的观看体验。 就我录制教学视频来说，一般情况下选择 30帧 即可，某些情况下转为 60 帧">
+<meta property='og:description' content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳">
 <meta property='og:url' content='https://blog.seektao.cc/p/240901100943/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='obs' /><meta property='article:published_time' content='2024-09-01T10:09:09&#43;08:00'/><meta property='article:modified_time' content='2024-09-01T10:09:09&#43;08:00'/>
 <meta name="twitter:title" content="OBS使用经验">
-<meta name="twitter:description" content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳定，避免视频卡顿。 缺点：在复杂场景中可能导致画质下降，因为码率不随内容复杂度变化。 ABR（Average Bit Rate，平均码率）： 码率在一定范围内波动，但保持一个平均值。 优点：在保证整体画质的同时，适应不同场景的复杂度。 缺点：可能在某些时刻出现瞬时的画质波动。 VBR（Variable Bit Rate，可变码率）： 码率根据视频内容的复杂度动态调整。 优点：在复杂场景中使用更高的码率，简单场景中使用更低的码率，从而提高整体画质。 缺点：可能导致文件大小不稳定，不适合实时流媒体。 CRF（Constant Rate Factor，恒定质量因子）： 主要用于视频编码（如使用 x264 编码器），通过设置一个质量因子来控制输出质量，而不是直接控制码率。 优点：可以保持高质量的同时，文件大小相对较小。质量因子通常在 0-51 之间，值越低，质量越高。 缺点：文件大小不固定，可能导致某些文件过大。 选择合适的码率控制方法取决于你的需求，例如直播的稳定性、录制的画质要求以及带宽条件。 视频 常用帧率 10 FPS：每秒显示10帧，适用于低流量视频。 20 FPS：每秒显示20帧，适用于简单的动画或低质量视频。 24 FPS：通常用于电影制作，提供较为平滑的视觉效果。 25 FPS：PAL制式（主要在欧洲和其他地区使用）的标准帧率。 29.97 FPS：NTSC制式（主要在北美和日本使用）的标准帧率，常用于电视广播。 30 FPS：在某些情况下使用，略高于29.97 FPS，适合网络视频。 34 FPS：不常见，可能用于特定应用或实验性视频。 48 FPS：用于高帧率电影，例如一些3D电影，以增强视觉体验。 50 FPS：PAL制式的高帧率，适合动作较快的内容。 59.94 FPS：接近60 FPS，主要用于高质量视频和游戏直播，提供流畅的画面。 60 FPS：高帧率，适合动作视频、游戏等，提供非常流畅的观看体验。 就我录制教学视频来说，一般情况下选择 30帧 即可，某些情况下转为 60 帧">
+<meta name="twitter:description" content="设置 输入 变为高级模式 录像 编码器设置 CBR（Constant Bit Rate，恒定码率）： 码率在整个视频中保持不变。 优点：适合实时流媒体，确保带宽稳">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -307,20 +307,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -402,18 +388,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -449,7 +423,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -461,6 +435,19 @@
 
         <div class="article-details">
             <h2 class="article-title">obs-studio在wayland环境下出现黑屏，解决方案</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
         </div>
     </a>
 </article>
@@ -500,19 +487,6 @@
 
         <div class="article-details">
             <h2 class="article-title">firefox个性化配置</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826140866/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">openwrt实践</h2>
         </div>
     </a>
 </article>
@@ -587,8 +561,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

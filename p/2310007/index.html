@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="debian12 安装中文输入法 如果安装系统的时候选择是中文安装，默认就会安装好中文输入法，因为后面我安装rime,不熟悉卸载了fcitx5导致默认的中文失效，发现rime配置太麻烦，默认还不好用，所以打算又重新安装默认的中文输入法，但一直没搞对，后来终于解决了，这里介绍一下经验 在使用fcitx5的前提下，安装中文输入法。本文不涉及字体等等 如果没有安装dcitx5的按照以下安装: sudo apt update sudo apt install fcitx5 正确步骤 实际上，中文输入法有个插件的，安装正确的插件才会恢复到默认的状态。 首先建议把系统语言设置为中文，在设置中文输入法有大用！！如果需要设置为英文，再换回来。 在终端直接用apt搜索fcitx5相关的中文插件，如下所示： 1 apt list | grep fcitx5 | grep chinese 输出如下： 1 2 3 4 5 6 WARNING: apt does not have a stable CLI interface. Use with caution in scripts. fcitx5-chinese-addons-bin/stable,now 5.0.16-1 amd64 [installed,automatic] fcitx5-chinese-addons-bin/stable 5.0.16-1 i386 fcitx5-chinese-addons-data/stable,stable,now 5.0.16-1 all [installed,automatic] fcitx5-chinese-addons/stable,stable,now 5.0.16-1 all [installed] 可以看到有 fcitx5-chinese-addons这个选项，安装它 1 sduo apt install fcitx5-chinese-addons 安装完就已经安装好了中文输入法，包含一些如拼音，五笔等等。到这里在设置里选择输入法为拼音就好了，重启。就这么简单。 网上答案质量层次不齐，害人不浅，搞死我了。。。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="debian12 安装中文输入法 如果安装系统的时候选择是中文安装，默认就会安装好中文输入法，因为后面我安装rime,不熟悉卸载了fcitx5导致默认的中文失">
 <title>debian12安装中文输入法</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310007/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="debian12安装中文输入法">
-<meta property='og:description' content="debian12 安装中文输入法 如果安装系统的时候选择是中文安装，默认就会安装好中文输入法，因为后面我安装rime,不熟悉卸载了fcitx5导致默认的中文失效，发现rime配置太麻烦，默认还不好用，所以打算又重新安装默认的中文输入法，但一直没搞对，后来终于解决了，这里介绍一下经验 在使用fcitx5的前提下，安装中文输入法。本文不涉及字体等等 如果没有安装dcitx5的按照以下安装: sudo apt update sudo apt install fcitx5 正确步骤 实际上，中文输入法有个插件的，安装正确的插件才会恢复到默认的状态。 首先建议把系统语言设置为中文，在设置中文输入法有大用！！如果需要设置为英文，再换回来。 在终端直接用apt搜索fcitx5相关的中文插件，如下所示： 1 apt list | grep fcitx5 | grep chinese 输出如下： 1 2 3 4 5 6 WARNING: apt does not have a stable CLI interface. Use with caution in scripts. fcitx5-chinese-addons-bin/stable,now 5.0.16-1 amd64 [installed,automatic] fcitx5-chinese-addons-bin/stable 5.0.16-1 i386 fcitx5-chinese-addons-data/stable,stable,now 5.0.16-1 all [installed,automatic] fcitx5-chinese-addons/stable,stable,now 5.0.16-1 all [installed] 可以看到有 fcitx5-chinese-addons这个选项，安装它 1 sduo apt install fcitx5-chinese-addons 安装完就已经安装好了中文输入法，包含一些如拼音，五笔等等。到这里在设置里选择输入法为拼音就好了，重启。就这么简单。 网上答案质量层次不齐，害人不浅，搞死我了。。。">
+<meta property='og:description' content="debian12 安装中文输入法 如果安装系统的时候选择是中文安装，默认就会安装好中文输入法，因为后面我安装rime,不熟悉卸载了fcitx5导致默认的中文失">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310007/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='debian' /><meta property='article:tag' content='输入法' /><meta property='article:published_time' content='2023-10-07T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-10-07T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="debian12安装中文输入法">
-<meta name="twitter:description" content="debian12 安装中文输入法 如果安装系统的时候选择是中文安装，默认就会安装好中文输入法，因为后面我安装rime,不熟悉卸载了fcitx5导致默认的中文失效，发现rime配置太麻烦，默认还不好用，所以打算又重新安装默认的中文输入法，但一直没搞对，后来终于解决了，这里介绍一下经验 在使用fcitx5的前提下，安装中文输入法。本文不涉及字体等等 如果没有安装dcitx5的按照以下安装: sudo apt update sudo apt install fcitx5 正确步骤 实际上，中文输入法有个插件的，安装正确的插件才会恢复到默认的状态。 首先建议把系统语言设置为中文，在设置中文输入法有大用！！如果需要设置为英文，再换回来。 在终端直接用apt搜索fcitx5相关的中文插件，如下所示： 1 apt list | grep fcitx5 | grep chinese 输出如下： 1 2 3 4 5 6 WARNING: apt does not have a stable CLI interface. Use with caution in scripts. fcitx5-chinese-addons-bin/stable,now 5.0.16-1 amd64 [installed,automatic] fcitx5-chinese-addons-bin/stable 5.0.16-1 i386 fcitx5-chinese-addons-data/stable,stable,now 5.0.16-1 all [installed,automatic] fcitx5-chinese-addons/stable,stable,now 5.0.16-1 all [installed] 可以看到有 fcitx5-chinese-addons这个选项，安装它 1 sduo apt install fcitx5-chinese-addons 安装完就已经安装好了中文输入法，包含一些如拼音，五笔等等。到这里在设置里选择输入法为拼音就好了，重启。就这么简单。 网上答案质量层次不齐，害人不浅，搞死我了。。。">
+<meta name="twitter:description" content="debian12 安装中文输入法 如果安装系统的时候选择是中文安装，默认就会安装好中文输入法，因为后面我安装rime,不熟悉卸载了fcitx5导致默认的中文失">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -271,20 +271,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -367,18 +353,6 @@ sudo apt install fcitx5-pinyin</p>
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -414,7 +388,7 @@ sudo apt install fcitx5-pinyin</p>
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -552,8 +526,8 @@ sudo apt install fcitx5-pinyin</p>
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

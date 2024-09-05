@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文列举安装并使用的的一些软件，基于debian12，debain12有很大的更新，使用wayland替代了x11，本文编辑时，可能好多软件没适配，体验感稍差。 本文将持续更新 Debian 官方指南：Debian 系统中可用的软件 浏览器 Firefox ESR 默认预装，感觉可以，更新频率比较慢 Firefox 更新速度较快，有很多Firefox ESR没有的新功能 Google chrome Brave https://brave.com/linux/ 1 2 3 4 5 6 7 8 9 sudo apt install curl sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg echo &#34;deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main&#34;|sudo tee /etc/apt/sources.list.d/brave-browser-release.list sudo apt update sudo apt install brave-browser 下载工具 Free Download Manager 截止本文，我觉得是linux上最好的下载工具 更新：推荐使用 gopeed gopeed https://github.com/GopeedLab/gopeed XDM 很混乱，感觉好久没怎么更新了，体验感较差 社交 QQ 通过官网下载安装即可 微信 推荐使用deepin-wechat，分辨率有问题，能尽量避免不用就不用吧，体验感很差 官方已推出linux测试版，通过这个仓库可以下载： https://github.com/lovechoudoufu/wechat_for_linux 播放器 VLC mpv 上手有一定难度，配置文件可备份，安装后即可使用">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文列举安装并使用的的一些软件，基于debian12，debain12有很大的更新，使用wayland替代了x11，本文编辑时，可能好多软件">
 <title>Debian12下的软件清单</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310006/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian12下的软件清单">
-<meta property='og:description' content="本文列举安装并使用的的一些软件，基于debian12，debain12有很大的更新，使用wayland替代了x11，本文编辑时，可能好多软件没适配，体验感稍差。 本文将持续更新 Debian 官方指南：Debian 系统中可用的软件 浏览器 Firefox ESR 默认预装，感觉可以，更新频率比较慢 Firefox 更新速度较快，有很多Firefox ESR没有的新功能 Google chrome Brave https://brave.com/linux/ 1 2 3 4 5 6 7 8 9 sudo apt install curl sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg echo &#34;deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main&#34;|sudo tee /etc/apt/sources.list.d/brave-browser-release.list sudo apt update sudo apt install brave-browser 下载工具 Free Download Manager 截止本文，我觉得是linux上最好的下载工具 更新：推荐使用 gopeed gopeed https://github.com/GopeedLab/gopeed XDM 很混乱，感觉好久没怎么更新了，体验感较差 社交 QQ 通过官网下载安装即可 微信 推荐使用deepin-wechat，分辨率有问题，能尽量避免不用就不用吧，体验感很差 官方已推出linux测试版，通过这个仓库可以下载： https://github.com/lovechoudoufu/wechat_for_linux 播放器 VLC mpv 上手有一定难度，配置文件可备份，安装后即可使用">
+<meta property='og:description' content="本文列举安装并使用的的一些软件，基于debian12，debain12有很大的更新，使用wayland替代了x11，本文编辑时，可能好多软件">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310006/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software' /><meta property='article:published_time' content='2023-10-06T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-10-06T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="Debian12下的软件清单">
-<meta name="twitter:description" content="本文列举安装并使用的的一些软件，基于debian12，debain12有很大的更新，使用wayland替代了x11，本文编辑时，可能好多软件没适配，体验感稍差。 本文将持续更新 Debian 官方指南：Debian 系统中可用的软件 浏览器 Firefox ESR 默认预装，感觉可以，更新频率比较慢 Firefox 更新速度较快，有很多Firefox ESR没有的新功能 Google chrome Brave https://brave.com/linux/ 1 2 3 4 5 6 7 8 9 sudo apt install curl sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg echo &#34;deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main&#34;|sudo tee /etc/apt/sources.list.d/brave-browser-release.list sudo apt update sudo apt install brave-browser 下载工具 Free Download Manager 截止本文，我觉得是linux上最好的下载工具 更新：推荐使用 gopeed gopeed https://github.com/GopeedLab/gopeed XDM 很混乱，感觉好久没怎么更新了，体验感较差 社交 QQ 通过官网下载安装即可 微信 推荐使用deepin-wechat，分辨率有问题，能尽量避免不用就不用吧，体验感很差 官方已推出linux测试版，通过这个仓库可以下载： https://github.com/lovechoudoufu/wechat_for_linux 播放器 VLC mpv 上手有一定难度，配置文件可备份，安装后即可使用">
+<meta name="twitter:description" content="本文列举安装并使用的的一些软件，基于debian12，debain12有很大的更新，使用wayland替代了x11，本文编辑时，可能好多软件">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -383,20 +383,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -631,18 +617,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -678,7 +652,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -816,8 +790,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

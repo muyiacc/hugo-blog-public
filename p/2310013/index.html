@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 之前介绍过一个免翻使用chatgpt接口的项目 Pandora，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体验感不太好，后来发现另一个chatgpt的web项目，名字叫 ChatGPT-Next-Web，可以很方便的使用代理接口，我们可以使用一些免费的接口来提升使用感。 Github 地址：https://github.com/Yidadaa/ChatGPT-Next-Web 访问查看，界面样式可以看见还是很美观的： 安装 使用docker compose 方式搭建。 docker-compose.yml 1 2 3 4 5 6 7 8 9 10 11 12 version: &#39;3.9&#39; services: chatgpt-next-web: image: yidadaa/chatgpt-next-web container_name: chatgpt-next-web environment: - CODE=#页面访问密码， - OPENAI_API_KEY=#你的api key - BASE_URL=#接口地址 ports: - &#39;3000:3000&#39; restart: unless-stopped 上述的docker-compose 文件是一个简洁版，免去了代理proxy，我们使用免费的api接口，后面有介绍 关于完整的内容可以去官方查看。 启动容器 1 docker compose up -d 接口 关于接口，网上也有一些免费的api 接口地址 这里提供一个Github的开源项目：GPT_API_free 快速获取api key，点击下面的连接获取api，获取的api用来替换上面配置的api，接口地址呢推荐使用下面的国内地址转发。 申请领取内测免费API Key 转发Host1: https://api.chatanywhere.com.cn (国内中转，延时更低，推荐) 转发Host2: https://api.chatanywhere.cn (国外使用,国内需要全局代理)">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 之前介绍过一个免翻使用chatgpt接口的项目 Pandora，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体">
 <title>Docker部署ChatGPT-Next-Web</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310013/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Docker部署ChatGPT-Next-Web">
-<meta property='og:description' content="介绍 之前介绍过一个免翻使用chatgpt接口的项目 Pandora，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体验感不太好，后来发现另一个chatgpt的web项目，名字叫 ChatGPT-Next-Web，可以很方便的使用代理接口，我们可以使用一些免费的接口来提升使用感。 Github 地址：https://github.com/Yidadaa/ChatGPT-Next-Web 访问查看，界面样式可以看见还是很美观的： 安装 使用docker compose 方式搭建。 docker-compose.yml 1 2 3 4 5 6 7 8 9 10 11 12 version: &#39;3.9&#39; services: chatgpt-next-web: image: yidadaa/chatgpt-next-web container_name: chatgpt-next-web environment: - CODE=#页面访问密码， - OPENAI_API_KEY=#你的api key - BASE_URL=#接口地址 ports: - &#39;3000:3000&#39; restart: unless-stopped 上述的docker-compose 文件是一个简洁版，免去了代理proxy，我们使用免费的api接口，后面有介绍 关于完整的内容可以去官方查看。 启动容器 1 docker compose up -d 接口 关于接口，网上也有一些免费的api 接口地址 这里提供一个Github的开源项目：GPT_API_free 快速获取api key，点击下面的连接获取api，获取的api用来替换上面配置的api，接口地址呢推荐使用下面的国内地址转发。 申请领取内测免费API Key 转发Host1: https://api.chatanywhere.com.cn (国内中转，延时更低，推荐) 转发Host2: https://api.chatanywhere.cn (国外使用,国内需要全局代理)">
+<meta property='og:description' content="介绍 之前介绍过一个免翻使用chatgpt接口的项目 Pandora，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310013/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='chatgpt-next-web' /><meta property='article:tag' content='gpt' /><meta property='article:published_time' content='2023-10-13T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-10-13T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="Docker部署ChatGPT-Next-Web">
-<meta name="twitter:description" content="介绍 之前介绍过一个免翻使用chatgpt接口的项目 Pandora，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体验感不太好，后来发现另一个chatgpt的web项目，名字叫 ChatGPT-Next-Web，可以很方便的使用代理接口，我们可以使用一些免费的接口来提升使用感。 Github 地址：https://github.com/Yidadaa/ChatGPT-Next-Web 访问查看，界面样式可以看见还是很美观的： 安装 使用docker compose 方式搭建。 docker-compose.yml 1 2 3 4 5 6 7 8 9 10 11 12 version: &#39;3.9&#39; services: chatgpt-next-web: image: yidadaa/chatgpt-next-web container_name: chatgpt-next-web environment: - CODE=#页面访问密码， - OPENAI_API_KEY=#你的api key - BASE_URL=#接口地址 ports: - &#39;3000:3000&#39; restart: unless-stopped 上述的docker-compose 文件是一个简洁版，免去了代理proxy，我们使用免费的api接口，后面有介绍 关于完整的内容可以去官方查看。 启动容器 1 docker compose up -d 接口 关于接口，网上也有一些免费的api 接口地址 这里提供一个Github的开源项目：GPT_API_free 快速获取api key，点击下面的连接获取api，获取的api用来替换上面配置的api，接口地址呢推荐使用下面的国内地址转发。 申请领取内测免费API Key 转发Host1: https://api.chatanywhere.com.cn (国内中转，延时更低，推荐) 转发Host2: https://api.chatanywhere.cn (国外使用,国内需要全局代理)">
+<meta name="twitter:description" content="介绍 之前介绍过一个免翻使用chatgpt接口的项目 Pandora，但是呢，这个项目的代理是由项目作者提供的，而且访问比较慢，界面比较朴实，体">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -304,20 +304,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -415,18 +401,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -462,7 +436,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -587,8 +561,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

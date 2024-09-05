@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.seektao.cc/</loc>
-    <lastmod>2024-09-04T15:09:28+08:00</lastmod>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/categories/</loc>
-    <lastmod>2024-09-04T15:09:28+08:00</lastmod>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/categories/default/</loc>
-    <lastmod>2024-09-04T15:09:28+08:00</lastmod>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/tags/hugo/</loc>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/post/</loc>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/tags/</loc>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/tags/theme/</loc>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/p/240905211706/</loc>
+    <lastmod>2024-09-05T21:17:06+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/docs/</loc>
     <lastmod>2024-09-04T15:09:28+08:00</lastmod>
@@ -18,12 +33,6 @@
     <lastmod>2024-09-04T15:09:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/240904150928/</loc>
-    <lastmod>2024-09-04T15:09:28+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.seektao.cc/post/</loc>
-    <lastmod>2024-09-04T15:09:28+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.seektao.cc/tags/</loc>
     <lastmod>2024-09-04T15:09:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/armbian/</loc>
@@ -131,10 +140,10 @@
     <loc>https://blog.seektao.cc/archives/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/search/</loc>
+    <loc>https://blog.seektao.cc/links/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/links/</loc>
+    <loc>https://blog.seektao.cc/search/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/2407025/</loc>
@@ -146,10 +155,10 @@
     <loc>https://blog.seektao.cc/tags/%E5%BD%B1%E8%A7%86/</loc>
     <lastmod>2024-07-24T15:07:52+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/p/2407023/</loc>
+    <loc>https://blog.seektao.cc/tags/%E7%9F%AD%E9%93%BE/</loc>
     <lastmod>2024-07-23T15:07:51+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/tags/%E7%9F%AD%E9%93%BE/</loc>
+    <loc>https://blog.seektao.cc/p/2407023/</loc>
     <lastmod>2024-07-23T15:07:51+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/vmware/</loc>
@@ -224,10 +233,10 @@
     <loc>https://blog.seektao.cc/p/linux-start-menu/</loc>
     <lastmod>2024-07-13T19:07:28+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/tags/%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2/</loc>
+    <loc>https://blog.seektao.cc/tags/%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95/</loc>
     <lastmod>2024-07-13T19:07:28+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/tags/%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95/</loc>
+    <loc>https://blog.seektao.cc/tags/%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2024-07-13T19:07:28+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/%E6%A1%8C%E9%9D%A2%E5%9B%BE%E6%A0%87/</loc>
@@ -971,13 +980,13 @@
     <loc>https://blog.seektao.cc/p/2309016/</loc>
     <lastmod>2023-09-17T14:07:10+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/tags/%E5%BA%94%E7%94%A8/</loc>
-    <lastmod>2023-09-16T14:07:10+08:00</lastmod>
-  </url><url>
     <loc>https://blog.seektao.cc/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2023-09-16T14:07:10+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/2309015/</loc>
+    <lastmod>2023-09-16T14:07:10+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/tags/%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2023-09-16T14:07:10+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/vue/</loc>
@@ -1079,13 +1088,11 @@
     <loc>https://blog.seektao.cc/tags/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2023-09-03T14:12:15+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/_index.zh-cn/</loc>
-  </url><url>
     <loc>https://blog.seektao.cc/p/tp.file.creation_dateyymmddhhmmss/</loc>
   </url><url>
-    <loc>https://blog.seektao.cc/p/git-command/</loc>
-  </url><url>
     <loc>https://blog.seektao.cc/p/git-course/</loc>
+  </url><url>
+    <loc>https://blog.seektao.cc/p/git-command/</loc>
   </url><url>
     <loc>https://blog.seektao.cc/p/linux-command/</loc>
   </url><url>

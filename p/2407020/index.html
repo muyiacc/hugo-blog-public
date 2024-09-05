@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 Rclone 是一个命令行工具，用于管理和同步文件到各种云存储服务和本地文件系统。它支持多种云存储提供商，如 Google Drive、Dropbox、Amazon S3、OneDrive 等。 主要特点： 多种存储支持：支持超过 70 种不同的云存储服务。 文件同步：可以在本地和云之间同步文件或文件夹。 加密功能：支持文件加密，确保数据安全。 增量备份：只同步变化的文件，节省时间和带宽。 跨平台：可以在 Windows、macOS 和 Linux 上运行。 脚本自动化：可以通过脚本实现定期备份和同步。 官网：https://rclone.org/ 安装 To install rclone on Linux/macOS/BSD systems, run: 1 sudo -v ; curl https://rclone.org/install.sh | sudo bash For beta installation, run: 1 sudo -v ; curl https://rclone.org/install.sh | sudo bash -s beta 配置远程存储（首次使用必须配置） 要实现后续操作，第一次使用rclone首先需要增加远程存储配置，下面这是一个交互式的命令，执行后按照提示操作即可 1 rclone config 复制（即是备份） 将文件从源复制到目标位置，跳过相同的文件（根据文件大小、修改时间或 MD5SUM判断） 1 rclone copy source:sourcepath dest:destpath 案例1 将本地software文件夹复制到alist下aliyunpan/software 1 2 # 复制（复制到远程可能需要等待完成）-P 可查看具体信息 rclone copy ~/software alist:/aliyunpan/software -P 复制可当作备份使用，写为脚本文件，需要时就运行一下。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 Rclone 是一个命令行工具，用于管理和同步文件到各种云存储服务和本地文件系统。它支持多种云存储提供商，如 Google Drive、Dropbox、Amazo">
 <title>RClone，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407020/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="RClone，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一">
-<meta property='og:description' content="介绍 Rclone 是一个命令行工具，用于管理和同步文件到各种云存储服务和本地文件系统。它支持多种云存储提供商，如 Google Drive、Dropbox、Amazon S3、OneDrive 等。 主要特点： 多种存储支持：支持超过 70 种不同的云存储服务。 文件同步：可以在本地和云之间同步文件或文件夹。 加密功能：支持文件加密，确保数据安全。 增量备份：只同步变化的文件，节省时间和带宽。 跨平台：可以在 Windows、macOS 和 Linux 上运行。 脚本自动化：可以通过脚本实现定期备份和同步。 官网：https://rclone.org/ 安装 To install rclone on Linux/macOS/BSD systems, run: 1 sudo -v ; curl https://rclone.org/install.sh | sudo bash For beta installation, run: 1 sudo -v ; curl https://rclone.org/install.sh | sudo bash -s beta 配置远程存储（首次使用必须配置） 要实现后续操作，第一次使用rclone首先需要增加远程存储配置，下面这是一个交互式的命令，执行后按照提示操作即可 1 rclone config 复制（即是备份） 将文件从源复制到目标位置，跳过相同的文件（根据文件大小、修改时间或 MD5SUM判断） 1 rclone copy source:sourcepath dest:destpath 案例1 将本地software文件夹复制到alist下aliyunpan/software 1 2 # 复制（复制到远程可能需要等待完成）-P 可查看具体信息 rclone copy ~/software alist:/aliyunpan/software -P 复制可当作备份使用，写为脚本文件，需要时就运行一下。">
+<meta property='og:description' content="介绍 Rclone 是一个命令行工具，用于管理和同步文件到各种云存储服务和本地文件系统。它支持多种云存储提供商，如 Google Drive、Dropbox、Amazo">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407020/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='rclone' /><meta property='article:published_time' content='2024-07-20T15:07:50&#43;08:00'/><meta property='article:modified_time' content='2024-07-20T15:07:50&#43;08:00'/><meta property='og:image' content='https://s2.loli.net/2024/08/06/IyYvUsDeqloum4M.webp' />
 <meta name="twitter:title" content="RClone，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一">
-<meta name="twitter:description" content="介绍 Rclone 是一个命令行工具，用于管理和同步文件到各种云存储服务和本地文件系统。它支持多种云存储提供商，如 Google Drive、Dropbox、Amazon S3、OneDrive 等。 主要特点： 多种存储支持：支持超过 70 种不同的云存储服务。 文件同步：可以在本地和云之间同步文件或文件夹。 加密功能：支持文件加密，确保数据安全。 增量备份：只同步变化的文件，节省时间和带宽。 跨平台：可以在 Windows、macOS 和 Linux 上运行。 脚本自动化：可以通过脚本实现定期备份和同步。 官网：https://rclone.org/ 安装 To install rclone on Linux/macOS/BSD systems, run: 1 sudo -v ; curl https://rclone.org/install.sh | sudo bash For beta installation, run: 1 sudo -v ; curl https://rclone.org/install.sh | sudo bash -s beta 配置远程存储（首次使用必须配置） 要实现后续操作，第一次使用rclone首先需要增加远程存储配置，下面这是一个交互式的命令，执行后按照提示操作即可 1 rclone config 复制（即是备份） 将文件从源复制到目标位置，跳过相同的文件（根据文件大小、修改时间或 MD5SUM判断） 1 rclone copy source:sourcepath dest:destpath 案例1 将本地software文件夹复制到alist下aliyunpan/software 1 2 # 复制（复制到远程可能需要等待完成）-P 可查看具体信息 rclone copy ~/software alist:/aliyunpan/software -P 复制可当作备份使用，写为脚本文件，需要时就运行一下。"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="介绍 Rclone 是一个命令行工具，用于管理和同步文件到各种云存储服务和本地文件系统。它支持多种云存储提供商，如 Google Drive、Dropbox、Amazo"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://s2.loli.net/2024/08/06/IyYvUsDeqloum4M.webp' />
   
 
@@ -44,7 +44,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -219,7 +219,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -244,7 +244,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -333,20 +333,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -661,18 +647,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -708,9 +682,22 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -759,19 +746,6 @@
 
         <div class="article-details">
             <h2 class="article-title">firefox个性化配置</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826140866/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">openwrt实践</h2>
         </div>
     </a>
 </article>
@@ -846,8 +820,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

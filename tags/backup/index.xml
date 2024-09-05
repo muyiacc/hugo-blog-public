@@ -5,7 +5,7 @@
         <link>https://blog.seektao.cc/tags/backup/</link>
         <description>Recent content in Backup on Seektao | 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>zh-cn</language>
         <copyright>Seektao | 寻道之旅</copyright>
         <lastBuildDate>Sat, 09 Mar 2024 00:03:15 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/backup/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>PostgreSQL备份数据库</title>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在Debian系统上清理无用的软件包和残留文件，您可以执行以下步骤： 清理无用的软件包：使用apt包管理器清理无用的软件包。运行以下命令以更新软件包列表并删除不再需要的软件包： 1 2 sudo apt update sudo apt autoremove apt autoremove命令将自动删除已经不再需要的软件包及其依赖项。 清理残留的配置文件：有时，卸载软件包后会保留一些残留的配置文件。您可以使用以下命令清理这些文件： 1 sudo dpkg --purge $(dpkg -l | grep &#39;^rc&#39; | awk &#39;{print $2}&#39;) 这将删除所有已经标记为&quot;rc&quot;（已删除但仍保留配置文件）的软件包。 清理临时文件和缓存：您可以使用以下命令清理系统中的临时文件和包管理器缓存： 1 2 sudo apt clean sudo apt autoclean apt clean命令将清理已下载的软件包文件，而apt autoclean命令将清理过期的软件包缓存。 通过执行上述步骤，您可以清理Debian系统中的无用软件包和残留文件，从而释放磁盘空间并保持系统整洁。请注意，在执行命令之前，确保您具有足够的权限以使用sudo来执行它们。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在Debian系统上清理无用的软件包和残留文件，您可以执行以下步骤： 清理无用的软件包：使用apt包管理器清理无用的软件包。运行以下命令以更新">
 <title>Debian清理无用的软件包和残留文件</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2312003/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian清理无用的软件包和残留文件">
-<meta property='og:description' content="在Debian系统上清理无用的软件包和残留文件，您可以执行以下步骤： 清理无用的软件包：使用apt包管理器清理无用的软件包。运行以下命令以更新软件包列表并删除不再需要的软件包： 1 2 sudo apt update sudo apt autoremove apt autoremove命令将自动删除已经不再需要的软件包及其依赖项。 清理残留的配置文件：有时，卸载软件包后会保留一些残留的配置文件。您可以使用以下命令清理这些文件： 1 sudo dpkg --purge $(dpkg -l | grep &#39;^rc&#39; | awk &#39;{print $2}&#39;) 这将删除所有已经标记为&quot;rc&quot;（已删除但仍保留配置文件）的软件包。 清理临时文件和缓存：您可以使用以下命令清理系统中的临时文件和包管理器缓存： 1 2 sudo apt clean sudo apt autoclean apt clean命令将清理已下载的软件包文件，而apt autoclean命令将清理过期的软件包缓存。 通过执行上述步骤，您可以清理Debian系统中的无用软件包和残留文件，从而释放磁盘空间并保持系统整洁。请注意，在执行命令之前，确保您具有足够的权限以使用sudo来执行它们。">
+<meta property='og:description' content="在Debian系统上清理无用的软件包和残留文件，您可以执行以下步骤： 清理无用的软件包：使用apt包管理器清理无用的软件包。运行以下命令以更新">
 <meta property='og:url' content='https://blog.seektao.cc/p/2312003/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='debian' /><meta property='article:tag' content='software' /><meta property='article:published_time' content='2023-12-03T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-12-03T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="Debian清理无用的软件包和残留文件">
-<meta name="twitter:description" content="在Debian系统上清理无用的软件包和残留文件，您可以执行以下步骤： 清理无用的软件包：使用apt包管理器清理无用的软件包。运行以下命令以更新软件包列表并删除不再需要的软件包： 1 2 sudo apt update sudo apt autoremove apt autoremove命令将自动删除已经不再需要的软件包及其依赖项。 清理残留的配置文件：有时，卸载软件包后会保留一些残留的配置文件。您可以使用以下命令清理这些文件： 1 sudo dpkg --purge $(dpkg -l | grep &#39;^rc&#39; | awk &#39;{print $2}&#39;) 这将删除所有已经标记为&quot;rc&quot;（已删除但仍保留配置文件）的软件包。 清理临时文件和缓存：您可以使用以下命令清理系统中的临时文件和包管理器缓存： 1 2 sudo apt clean sudo apt autoclean apt clean命令将清理已下载的软件包文件，而apt autoclean命令将清理过期的软件包缓存。 通过执行上述步骤，您可以清理Debian系统中的无用软件包和残留文件，从而释放磁盘空间并保持系统整洁。请注意，在执行命令之前，确保您具有足够的权限以使用sudo来执行它们。">
+<meta name="twitter:description" content="在Debian系统上清理无用的软件包和残留文件，您可以执行以下步骤： 清理无用的软件包：使用apt包管理器清理无用的软件包。运行以下命令以更新">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -271,20 +271,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -356,18 +342,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -403,7 +377,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -541,8 +515,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

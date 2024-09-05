@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="安装 Linux 1 curl https://pyenv.run | bash 添加环境变量 1 vim ~/.bashrc 1 2 3 export PYENV_ROOT=&#34;$HOME/.pyenv&#34; [[ -d $PYENV_ROOT/bin ]] &amp;&amp; export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34; eval &#34;$(pyenv init -)&#34; 新开终端测试 使用 查看可支持安装的python版本 1 pyenv install --list 虚拟环境 在使用 pyenv virtualenv 创建虚拟环境时，虚拟环境的目录通常不会自动出现在当前目录中。相反，pyenv 会将虚拟环境存储在其管理的全局目录中。要在当前目录中使用虚拟环境，你需要手动设置。 以下是确保在当前目录中使用 .venv 的步骤： 创建虚拟环境： 你可以创建虚拟环境并指定名称（如 .venv）： 1 pyenv virtualenv 3.11.0 .venv 激活虚拟环境： 在当前目录激活虚拟环境： 1 pyenv local .venv 检查虚拟环境： 现在你可以在当前目录中使用虚拟环境，验证是否激活： 1 python --version 额外说明 虚拟环境的实际文件夹通常位于 ~/.pyenv/versions/ 下。你可以通过 pyenv versions 查看所有的虚拟环境。 使用 pyenv local 命令会在当前目录创建一个 .">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="安装 Linux 1 curl https://pyenv.run | bash 添加环境变量 1 vim ~/.bashrc 1 2 3 export PYENV_ROOT=&#34;$HOME/.pyenv&#34; [[ -d $PYENV_ROOT/bin ]] &amp;&amp; export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34; eval &#34;$(pyenv init -)&#34; 新开终端测试 使用 查看可支持安装的python版本 1 pyenv install --list 虚拟环境 在使用 pyenv virtualenv">
 <title>pyenv,python的版本管理工具</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407017/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="pyenv,python的版本管理工具">
-<meta property='og:description' content="安装 Linux 1 curl https://pyenv.run | bash 添加环境变量 1 vim ~/.bashrc 1 2 3 export PYENV_ROOT=&#34;$HOME/.pyenv&#34; [[ -d $PYENV_ROOT/bin ]] &amp;&amp; export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34; eval &#34;$(pyenv init -)&#34; 新开终端测试 使用 查看可支持安装的python版本 1 pyenv install --list 虚拟环境 在使用 pyenv virtualenv 创建虚拟环境时，虚拟环境的目录通常不会自动出现在当前目录中。相反，pyenv 会将虚拟环境存储在其管理的全局目录中。要在当前目录中使用虚拟环境，你需要手动设置。 以下是确保在当前目录中使用 .venv 的步骤： 创建虚拟环境： 你可以创建虚拟环境并指定名称（如 .venv）： 1 pyenv virtualenv 3.11.0 .venv 激活虚拟环境： 在当前目录激活虚拟环境： 1 pyenv local .venv 检查虚拟环境： 现在你可以在当前目录中使用虚拟环境，验证是否激活： 1 python --version 额外说明 虚拟环境的实际文件夹通常位于 ~/.pyenv/versions/ 下。你可以通过 pyenv versions 查看所有的虚拟环境。 使用 pyenv local 命令会在当前目录创建一个 .">
+<meta property='og:description' content="安装 Linux 1 curl https://pyenv.run | bash 添加环境变量 1 vim ~/.bashrc 1 2 3 export PYENV_ROOT=&#34;$HOME/.pyenv&#34; [[ -d $PYENV_ROOT/bin ]] &amp;&amp; export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34; eval &#34;$(pyenv init -)&#34; 新开终端测试 使用 查看可支持安装的python版本 1 pyenv install --list 虚拟环境 在使用 pyenv virtualenv">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407017/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:published_time' content='2024-07-17T15:07:48&#43;08:00'/><meta property='article:modified_time' content='2024-07-17T15:07:48&#43;08:00'/>
 <meta name="twitter:title" content="pyenv,python的版本管理工具">
-<meta name="twitter:description" content="安装 Linux 1 curl https://pyenv.run | bash 添加环境变量 1 vim ~/.bashrc 1 2 3 export PYENV_ROOT=&#34;$HOME/.pyenv&#34; [[ -d $PYENV_ROOT/bin ]] &amp;&amp; export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34; eval &#34;$(pyenv init -)&#34; 新开终端测试 使用 查看可支持安装的python版本 1 pyenv install --list 虚拟环境 在使用 pyenv virtualenv 创建虚拟环境时，虚拟环境的目录通常不会自动出现在当前目录中。相反，pyenv 会将虚拟环境存储在其管理的全局目录中。要在当前目录中使用虚拟环境，你需要手动设置。 以下是确保在当前目录中使用 .venv 的步骤： 创建虚拟环境： 你可以创建虚拟环境并指定名称（如 .venv）： 1 pyenv virtualenv 3.11.0 .venv 激活虚拟环境： 在当前目录激活虚拟环境： 1 pyenv local .venv 检查虚拟环境： 现在你可以在当前目录中使用虚拟环境，验证是否激活： 1 python --version 额外说明 虚拟环境的实际文件夹通常位于 ~/.pyenv/versions/ 下。你可以通过 pyenv versions 查看所有的虚拟环境。 使用 pyenv local 命令会在当前目录创建一个 .">
+<meta name="twitter:description" content="安装 Linux 1 curl https://pyenv.run | bash 添加环境变量 1 vim ~/.bashrc 1 2 3 export PYENV_ROOT=&#34;$HOME/.pyenv&#34; [[ -d $PYENV_ROOT/bin ]] &amp;&amp; export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34; eval &#34;$(pyenv init -)&#34; 新开终端测试 使用 查看可支持安装的python版本 1 pyenv install --list 虚拟环境 在使用 pyenv virtualenv">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -307,20 +307,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -435,18 +421,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -482,9 +456,22 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -533,19 +520,6 @@
 
         <div class="article-details">
             <h2 class="article-title">firefox个性化配置</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826140866/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">openwrt实践</h2>
         </div>
     </a>
 </article>
@@ -620,8 +594,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

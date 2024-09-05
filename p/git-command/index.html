@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文持续更新 初始化仓库 本地没有项目，仓库有 git clone &lt;项目地址&gt; 本地有项目，仓库也有 确保本地已经初始化git init,先将本地提交了。 添加远程仓库地址，拉取项目，解决冲突。 1 2 3 git remote add &lt;别名&gt; &lt;仓库地址&gt; # 案例 # git remote add origin git@github.com:muyiacc/test.git 如果本地也有记录，且和远程有冲突，后面讲 拉取 pull 推送 push 将当前分支提交到远程对应分支 1 git push 将当前分支提交到特定的远程仓库，同名分支 1 git push &lt;remote&gt; 将本地分支提交到远程特定的分支 1 git push &lt;remote&gt; &lt;branch&gt; 设置上游分支：推送当前分支，并设置上游分支（tracking branch），这样之后可以使用 git push 直接推送，而不需要指定远程仓库和分支。 1 git push -u &lt;remote&gt; &lt;branch&gt; 强制推送：强制推送本地更改，即使这会导致远程仓库的更改丢失。使用此选项需要谨慎，因为它可能会覆盖远程分支上的提交。（慎用！！！） 1 git push -f 或 git push --force 删除远程分支：删除远程仓库上的指定分支。 1 git push &lt;remote&gt; --delete &lt;branch&gt; 推送标签：推送本地创建的标签到远程仓库">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文持续更新 初始化仓库 本地没有项目，仓库有 git clone &lt;项目地址&gt; 本地有项目，仓库也有 确保本地已经初始化git init,先将本地提交了。">
 <title>Git命令详解</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/git-command/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Git命令详解">
-<meta property='og:description' content="本文持续更新 初始化仓库 本地没有项目，仓库有 git clone &lt;项目地址&gt; 本地有项目，仓库也有 确保本地已经初始化git init,先将本地提交了。 添加远程仓库地址，拉取项目，解决冲突。 1 2 3 git remote add &lt;别名&gt; &lt;仓库地址&gt; # 案例 # git remote add origin git@github.com:muyiacc/test.git 如果本地也有记录，且和远程有冲突，后面讲 拉取 pull 推送 push 将当前分支提交到远程对应分支 1 git push 将当前分支提交到特定的远程仓库，同名分支 1 git push &lt;remote&gt; 将本地分支提交到远程特定的分支 1 git push &lt;remote&gt; &lt;branch&gt; 设置上游分支：推送当前分支，并设置上游分支（tracking branch），这样之后可以使用 git push 直接推送，而不需要指定远程仓库和分支。 1 git push -u &lt;remote&gt; &lt;branch&gt; 强制推送：强制推送本地更改，即使这会导致远程仓库的更改丢失。使用此选项需要谨慎，因为它可能会覆盖远程分支上的提交。（慎用！！！） 1 git push -f 或 git push --force 删除远程分支：删除远程仓库上的指定分支。 1 git push &lt;remote&gt; --delete &lt;branch&gt; 推送标签：推送本地创建的标签到远程仓库">
+<meta property='og:description' content="本文持续更新 初始化仓库 本地没有项目，仓库有 git clone &lt;项目地址&gt; 本地有项目，仓库也有 确保本地已经初始化git init,先将本地提交了。">
 <meta property='og:url' content='https://blog.seektao.cc/p/git-command/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' />
 <meta name="twitter:title" content="Git命令详解">
-<meta name="twitter:description" content="本文持续更新 初始化仓库 本地没有项目，仓库有 git clone &lt;项目地址&gt; 本地有项目，仓库也有 确保本地已经初始化git init,先将本地提交了。 添加远程仓库地址，拉取项目，解决冲突。 1 2 3 git remote add &lt;别名&gt; &lt;仓库地址&gt; # 案例 # git remote add origin git@github.com:muyiacc/test.git 如果本地也有记录，且和远程有冲突，后面讲 拉取 pull 推送 push 将当前分支提交到远程对应分支 1 git push 将当前分支提交到特定的远程仓库，同名分支 1 git push &lt;remote&gt; 将本地分支提交到远程特定的分支 1 git push &lt;remote&gt; &lt;branch&gt; 设置上游分支：推送当前分支，并设置上游分支（tracking branch），这样之后可以使用 git push 直接推送，而不需要指定远程仓库和分支。 1 git push -u &lt;remote&gt; &lt;branch&gt; 强制推送：强制推送本地更改，即使这会导致远程仓库的更改丢失。使用此选项需要谨慎，因为它可能会覆盖远程分支上的提交。（慎用！！！） 1 git push -f 或 git push --force 删除远程分支：删除远程仓库上的指定分支。 1 git push &lt;remote&gt; --delete &lt;branch&gt; 推送标签：推送本地创建的标签到远程仓库">
+<meta name="twitter:description" content="本文持续更新 初始化仓库 本地没有项目，仓库有 git clone &lt;项目地址&gt; 本地有项目，仓库也有 确保本地已经初始化git init,先将本地提交了。">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -290,26 +290,6 @@
     
     
     
-    
-    <footer class="article-time">
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
-        
-    </footer>
     
 
     
@@ -437,18 +417,6 @@
     <footer class="article-footer">
     
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -548,8 +516,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

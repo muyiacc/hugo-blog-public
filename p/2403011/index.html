@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 最近在看动漫，但是好多站点要么没有，要么搜不到，有些搜索还有时间限制，或者从网盘转存，太繁琐了。所以想在自己的服务器新增一个看影视的功能，毕竟有时候找资源是真的痛苦。 加上之前了解到GitHub上有一个在线采集影视的项目，正好今天上上手，自己动手部署，丰衣足食。 项目介绍 项目框架为 Go+Vue。用到了 Redis和 Mysql，经过我的测试，docker启动运行需要差不多 500M 的内存，主要是MySQL占用内存较大，感觉可以优化为 postgresql 来大大降低内存占用。 项目地址：https://github.com/ProudMuBai/GoFilm 项目提供的教程需要自己构建docker镜像，并且构建的镜像需要特别大，对此我进行了优化，并讲 docker 镜像上传到了 docker仓库，所以你可以直接使用我构建的镜像而不用自己手动构建 截至目前构建的最新版本为 1 2 3 提交编号：67097207074deffb884c2ba88c935dc35efd46f0 日期：Feb 26, 2024 前置准备 安装好 docker，如果没有，请参考 docker安装。 部署 方式一： xxxxxxxxxx\u00a0# 前台运行./cms\u200b# 后台运行nohup ./cms shell 为了简单起见，采用 root 用户，如果不是，请自己注意权限问题，加上 sudo提权。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 进入 /opt/目录 cd /opt/ # 克隆项目 git clone https://github.com/muyiacc/GoFilm.git # 复制 GoFilm的 film目录到 /opt/ cp -r GoFilm/film .">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 最近在看动漫，但是好多站点要么没有，要么搜不到，有些搜索还有时间限制，或者从网盘转存，太繁琐了。所以想在自己的服务器新增一个看影视的功能">
 <title>开源多播放源采集在线影视GoFilm</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403011/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="开源多播放源采集在线影视GoFilm">
-<meta property='og:description' content="前言 最近在看动漫，但是好多站点要么没有，要么搜不到，有些搜索还有时间限制，或者从网盘转存，太繁琐了。所以想在自己的服务器新增一个看影视的功能，毕竟有时候找资源是真的痛苦。 加上之前了解到GitHub上有一个在线采集影视的项目，正好今天上上手，自己动手部署，丰衣足食。 项目介绍 项目框架为 Go+Vue。用到了 Redis和 Mysql，经过我的测试，docker启动运行需要差不多 500M 的内存，主要是MySQL占用内存较大，感觉可以优化为 postgresql 来大大降低内存占用。 项目地址：https://github.com/ProudMuBai/GoFilm 项目提供的教程需要自己构建docker镜像，并且构建的镜像需要特别大，对此我进行了优化，并讲 docker 镜像上传到了 docker仓库，所以你可以直接使用我构建的镜像而不用自己手动构建 截至目前构建的最新版本为 1 2 3 提交编号：67097207074deffb884c2ba88c935dc35efd46f0 日期：Feb 26, 2024 前置准备 安装好 docker，如果没有，请参考 docker安装。 部署 方式一： xxxxxxxxxx\u00a0# 前台运行./cms\u200b# 后台运行nohup ./cms shell 为了简单起见，采用 root 用户，如果不是，请自己注意权限问题，加上 sudo提权。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 进入 /opt/目录 cd /opt/ # 克隆项目 git clone https://github.com/muyiacc/GoFilm.git # 复制 GoFilm的 film目录到 /opt/ cp -r GoFilm/film .">
+<meta property='og:description' content="前言 最近在看动漫，但是好多站点要么没有，要么搜不到，有些搜索还有时间限制，或者从网盘转存，太繁琐了。所以想在自己的服务器新增一个看影视的功能">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403011/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='gofilm' /><meta property='article:published_time' content='2024-03-11T00:03:15&#43;08:00'/><meta property='article:modified_time' content='2024-03-11T00:03:15&#43;08:00'/>
 <meta name="twitter:title" content="开源多播放源采集在线影视GoFilm">
-<meta name="twitter:description" content="前言 最近在看动漫，但是好多站点要么没有，要么搜不到，有些搜索还有时间限制，或者从网盘转存，太繁琐了。所以想在自己的服务器新增一个看影视的功能，毕竟有时候找资源是真的痛苦。 加上之前了解到GitHub上有一个在线采集影视的项目，正好今天上上手，自己动手部署，丰衣足食。 项目介绍 项目框架为 Go+Vue。用到了 Redis和 Mysql，经过我的测试，docker启动运行需要差不多 500M 的内存，主要是MySQL占用内存较大，感觉可以优化为 postgresql 来大大降低内存占用。 项目地址：https://github.com/ProudMuBai/GoFilm 项目提供的教程需要自己构建docker镜像，并且构建的镜像需要特别大，对此我进行了优化，并讲 docker 镜像上传到了 docker仓库，所以你可以直接使用我构建的镜像而不用自己手动构建 截至目前构建的最新版本为 1 2 3 提交编号：67097207074deffb884c2ba88c935dc35efd46f0 日期：Feb 26, 2024 前置准备 安装好 docker，如果没有，请参考 docker安装。 部署 方式一： xxxxxxxxxx\u00a0# 前台运行./cms\u200b# 后台运行nohup ./cms shell 为了简单起见，采用 root 用户，如果不是，请自己注意权限问题，加上 sudo提权。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 进入 /opt/目录 cd /opt/ # 克隆项目 git clone https://github.com/muyiacc/GoFilm.git # 复制 GoFilm的 film目录到 /opt/ cp -r GoFilm/film .">
+<meta name="twitter:description" content="前言 最近在看动漫，但是好多站点要么没有，要么搜不到，有些搜索还有时间限制，或者从网盘转存，太繁琐了。所以想在自己的服务器新增一个看影视的功能">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -303,20 +303,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -429,18 +415,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -476,9 +450,22 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -527,19 +514,6 @@
 
         <div class="article-details">
             <h2 class="article-title">firefox个性化配置</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826140866/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">openwrt实践</h2>
         </div>
     </a>
 </article>
@@ -614,8 +588,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

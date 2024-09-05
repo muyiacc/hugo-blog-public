@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="移动 移动的命令很重要，删除，复制，粘贴都跟它有关 命令 作用 备注 h 将光标向左移动一个字符。 h - Left j 将光标向下移动一行。 j - Down k 将光标向上移动一行。 k - Up l 将光标向右移动一个字符。 l - Right w 将光标移动到下一个单词的开头。 w - Word b 将光标移动到前一个单词的开头。 b - Back e 将光标移动到当前单词的末尾。 e - End 0 将光标移动到当前行的行首（忽略空白字符）。 0 - Beginning $ 将光标移动到当前行的行尾。 $ - End of line ^ 将光标移动到当前行的第一个非空白字符。 ^ - First non-blank gg 将光标移动到文件的第一行。 gg - Go to top G 将光标移动到文件的最后一行。 G - Go to bottom H 将光标移动到当前屏幕顶部的行。 H - High M 将光标移动到当前屏幕中间的行。 M - Middle L 将光标移动到当前屏幕底部的行。 L - Low Ctrl + f 向下滚动一页。 Ctrl + f - Forward one page Ctrl + b 向上滚动一页。 Ctrl + b - Backward one page Ctrl + d 向下滚动半页。 Ctrl + d - Down half page Ctrl + u 向上滚动半页。 Ctrl + u - Up half page 删除 命令 作用 备注 x 删除光标所在位置的字符。 x - Delete character dd 删除当前行。 dd - Delete line dw 删除从光标位置到下一个单词开头的字符。 dw - Delete word D 删除从光标位置到行尾的字符。 D - Delete to end of line d0 删除从光标位置到行首的字符（忽略空白字符）。 d0 - Delete to beginning of line d$ 删除从光标位置到行尾的字符。 d$ - Delete to end of line d^ 删除从光标位置到行首的第一个非空白字符。 d^ - Delete to first non-blank character ndd 删除当前行及接下来的 n-1 行。 ndd - Delete current line and next n-1 lines :%d 删除整个文件的内容。 :%d - Delete entire file content p 粘贴最后一次删除的内容。 p - Paste last deleted content u 撤销最后一次操作。 u - Undo last operation Ctrl + r 重做被撤销的操作。 Ctrl + r - Redo undone operation dgg 删除从当前行到文件的第一行。 dgg - Delete from current line to first line dG 删除从当前行到文件的最后一行。 dG - Delete from current line to last line 复制+粘贴 命令 作用 备注 yy 复制当前行。 yy - Yank (copy) line yw 复制从光标位置到下一个单词结尾的字符。 yw - Yank (copy) word y$ 复制从光标位置到行尾的字符。 y$ - Yank (copy) to end of line y0 复制从光标位置到行首的字符（忽略空白字符）。 y0 - Yank (copy) to beginning of line y^ 复制从光标位置到行首的第一个非空白字符。 y^ - Yank (copy) to first non-blank character p 粘贴最后一次复制的内容。 p - Paste last yanked (copied) content P 在当前行之前粘贴最后一次复制的内容。 P - Paste above current line &ldquo;+y 复制文本到系统剪贴板。 &quot;+y - Yank (copy) to system clipboard &ldquo;+p 从系统剪贴板粘贴内容。 &quot;+p - Paste from system clipboard :reg 查看 Vim 寄存器中保存的内容。 :reg - View contents of Vim registers &ldquo;ayy 将当前行复制到寄存器 a 中。 &quot;ayy - Copy current line to register a &ldquo;ap 从寄存器 a 中粘贴内容。 &quot;ap - Paste from register a &ldquo;ayiw 将当前单词复制到寄存器 a 中。 &quot;ayiw - Copy current word to register a &ldquo;aP 从寄存器 a 中粘贴内容到当前位置。 &quot;aP - Paste from register a at current position ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="移动 移动的命令很重要，删除，复制，粘贴都跟它有关 命令 作用 备注 h 将光标向左移动一个字符。 h - Left j 将光标向下移动一行。 j - Down k 将光标向上移动一行">
 <title>VIM快捷键</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/vim-keyworld/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="VIM快捷键">
-<meta property='og:description' content="移动 移动的命令很重要，删除，复制，粘贴都跟它有关 命令 作用 备注 h 将光标向左移动一个字符。 h - Left j 将光标向下移动一行。 j - Down k 将光标向上移动一行。 k - Up l 将光标向右移动一个字符。 l - Right w 将光标移动到下一个单词的开头。 w - Word b 将光标移动到前一个单词的开头。 b - Back e 将光标移动到当前单词的末尾。 e - End 0 将光标移动到当前行的行首（忽略空白字符）。 0 - Beginning $ 将光标移动到当前行的行尾。 $ - End of line ^ 将光标移动到当前行的第一个非空白字符。 ^ - First non-blank gg 将光标移动到文件的第一行。 gg - Go to top G 将光标移动到文件的最后一行。 G - Go to bottom H 将光标移动到当前屏幕顶部的行。 H - High M 将光标移动到当前屏幕中间的行。 M - Middle L 将光标移动到当前屏幕底部的行。 L - Low Ctrl + f 向下滚动一页。 Ctrl + f - Forward one page Ctrl + b 向上滚动一页。 Ctrl + b - Backward one page Ctrl + d 向下滚动半页。 Ctrl + d - Down half page Ctrl + u 向上滚动半页。 Ctrl + u - Up half page 删除 命令 作用 备注 x 删除光标所在位置的字符。 x - Delete character dd 删除当前行。 dd - Delete line dw 删除从光标位置到下一个单词开头的字符。 dw - Delete word D 删除从光标位置到行尾的字符。 D - Delete to end of line d0 删除从光标位置到行首的字符（忽略空白字符）。 d0 - Delete to beginning of line d$ 删除从光标位置到行尾的字符。 d$ - Delete to end of line d^ 删除从光标位置到行首的第一个非空白字符。 d^ - Delete to first non-blank character ndd 删除当前行及接下来的 n-1 行。 ndd - Delete current line and next n-1 lines :%d 删除整个文件的内容。 :%d - Delete entire file content p 粘贴最后一次删除的内容。 p - Paste last deleted content u 撤销最后一次操作。 u - Undo last operation Ctrl + r 重做被撤销的操作。 Ctrl + r - Redo undone operation dgg 删除从当前行到文件的第一行。 dgg - Delete from current line to first line dG 删除从当前行到文件的最后一行。 dG - Delete from current line to last line 复制+粘贴 命令 作用 备注 yy 复制当前行。 yy - Yank (copy) line yw 复制从光标位置到下一个单词结尾的字符。 yw - Yank (copy) word y$ 复制从光标位置到行尾的字符。 y$ - Yank (copy) to end of line y0 复制从光标位置到行首的字符（忽略空白字符）。 y0 - Yank (copy) to beginning of line y^ 复制从光标位置到行首的第一个非空白字符。 y^ - Yank (copy) to first non-blank character p 粘贴最后一次复制的内容。 p - Paste last yanked (copied) content P 在当前行之前粘贴最后一次复制的内容。 P - Paste above current line &ldquo;+y 复制文本到系统剪贴板。 &quot;+y - Yank (copy) to system clipboard &ldquo;+p 从系统剪贴板粘贴内容。 &quot;+p - Paste from system clipboard :reg 查看 Vim 寄存器中保存的内容。 :reg - View contents of Vim registers &ldquo;ayy 将当前行复制到寄存器 a 中。 &quot;ayy - Copy current line to register a &ldquo;ap 从寄存器 a 中粘贴内容。 &quot;ap - Paste from register a &ldquo;ayiw 将当前单词复制到寄存器 a 中。 &quot;ayiw - Copy current word to register a &ldquo;aP 从寄存器 a 中粘贴内容到当前位置。 &quot;aP - Paste from register a at current position ">
+<meta property='og:description' content="移动 移动的命令很重要，删除，复制，粘贴都跟它有关 命令 作用 备注 h 将光标向左移动一个字符。 h - Left j 将光标向下移动一行。 j - Down k 将光标向上移动一行">
 <meta property='og:url' content='https://blog.seektao.cc/p/vim-keyworld/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-23T13:06:24&#43;08:00'/><meta property='article:modified_time' content='2024-06-23T13:06:24&#43;08:00'/>
 <meta name="twitter:title" content="VIM快捷键">
-<meta name="twitter:description" content="移动 移动的命令很重要，删除，复制，粘贴都跟它有关 命令 作用 备注 h 将光标向左移动一个字符。 h - Left j 将光标向下移动一行。 j - Down k 将光标向上移动一行。 k - Up l 将光标向右移动一个字符。 l - Right w 将光标移动到下一个单词的开头。 w - Word b 将光标移动到前一个单词的开头。 b - Back e 将光标移动到当前单词的末尾。 e - End 0 将光标移动到当前行的行首（忽略空白字符）。 0 - Beginning $ 将光标移动到当前行的行尾。 $ - End of line ^ 将光标移动到当前行的第一个非空白字符。 ^ - First non-blank gg 将光标移动到文件的第一行。 gg - Go to top G 将光标移动到文件的最后一行。 G - Go to bottom H 将光标移动到当前屏幕顶部的行。 H - High M 将光标移动到当前屏幕中间的行。 M - Middle L 将光标移动到当前屏幕底部的行。 L - Low Ctrl + f 向下滚动一页。 Ctrl + f - Forward one page Ctrl + b 向上滚动一页。 Ctrl + b - Backward one page Ctrl + d 向下滚动半页。 Ctrl + d - Down half page Ctrl + u 向上滚动半页。 Ctrl + u - Up half page 删除 命令 作用 备注 x 删除光标所在位置的字符。 x - Delete character dd 删除当前行。 dd - Delete line dw 删除从光标位置到下一个单词开头的字符。 dw - Delete word D 删除从光标位置到行尾的字符。 D - Delete to end of line d0 删除从光标位置到行首的字符（忽略空白字符）。 d0 - Delete to beginning of line d$ 删除从光标位置到行尾的字符。 d$ - Delete to end of line d^ 删除从光标位置到行首的第一个非空白字符。 d^ - Delete to first non-blank character ndd 删除当前行及接下来的 n-1 行。 ndd - Delete current line and next n-1 lines :%d 删除整个文件的内容。 :%d - Delete entire file content p 粘贴最后一次删除的内容。 p - Paste last deleted content u 撤销最后一次操作。 u - Undo last operation Ctrl + r 重做被撤销的操作。 Ctrl + r - Redo undone operation dgg 删除从当前行到文件的第一行。 dgg - Delete from current line to first line dG 删除从当前行到文件的最后一行。 dG - Delete from current line to last line 复制+粘贴 命令 作用 备注 yy 复制当前行。 yy - Yank (copy) line yw 复制从光标位置到下一个单词结尾的字符。 yw - Yank (copy) word y$ 复制从光标位置到行尾的字符。 y$ - Yank (copy) to end of line y0 复制从光标位置到行首的字符（忽略空白字符）。 y0 - Yank (copy) to beginning of line y^ 复制从光标位置到行首的第一个非空白字符。 y^ - Yank (copy) to first non-blank character p 粘贴最后一次复制的内容。 p - Paste last yanked (copied) content P 在当前行之前粘贴最后一次复制的内容。 P - Paste above current line &ldquo;+y 复制文本到系统剪贴板。 &quot;+y - Yank (copy) to system clipboard &ldquo;+p 从系统剪贴板粘贴内容。 &quot;+p - Paste from system clipboard :reg 查看 Vim 寄存器中保存的内容。 :reg - View contents of Vim registers &ldquo;ayy 将当前行复制到寄存器 a 中。 &quot;ayy - Copy current line to register a &ldquo;ap 从寄存器 a 中粘贴内容。 &quot;ap - Paste from register a &ldquo;ayiw 将当前单词复制到寄存器 a 中。 &quot;ayiw - Copy current word to register a &ldquo;aP 从寄存器 a 中粘贴内容到当前位置。 &quot;aP - Paste from register a at current position ">
+<meta name="twitter:description" content="移动 移动的命令很重要，删除，复制，粘贴都跟它有关 命令 作用 备注 h 将光标向左移动一个字符。 h - Left j 将光标向下移动一行。 j - Down k 将光标向上移动一行">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -296,20 +296,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -601,18 +587,6 @@
     <footer class="article-footer">
     
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -712,8 +686,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

@@ -5,7 +5,7 @@
         <link>https://blog.seektao.cc/tags/web/</link>
         <description>Recent content in Web on Seektao | 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>zh-cn</language>
         <copyright>Seektao | 寻道之旅</copyright>
         <lastBuildDate>Fri, 15 Sep 2023 14:07:10 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/web/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>对于没有使用过vue的人，如何快速运行其他人的vue项目</title>

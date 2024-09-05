@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="刷机过程 基本设置 灯 https://www.bilibili.com/read/cv21700714/ 玩客云这设备有个红、绿、蓝三色led灯，在刷入armbian系统以后，这个灯的颜色就会显示异常，往往是一直显示红色。 如果要自动动手调整led灯的颜色，控制命令如下（需要root用户执行） 1 2 3 echo 1 &gt; /sys/class/leds/onecloud:blue:alive/brightness echo 1 &gt; /sys/class/leds/onecloud:green:alive/brightness echo 1 &gt; /sys/class/leds/onecloud:red:alive/brightness echo 1是开，echo 0就是关。现在可以组合出多种颜色，蓝绿、红蓝、红绿、红绿蓝。😄 但这个设置重启后失效。╮(╯▽╰)╭ 静态ip 查看当前网络连接信息 1 nmcli connection show 设置静态ip 1 2 3 4 nmcli connection modify &#34;Wired connection 1&#34; ipv4.addresses 192.168.68.9/24 nmcli connection modify &#34;Wired connection 1&#34; ipv4.gateway 192.168.68.1 nmcli connection modify &#34;Wired connection 1&#34; ipv4.dns 223.5.5.5 nmcli connection modify &#34;Wired connection 1&#34; ipv4.method manual 重新启动网络连接： 1 2 nmcli connection down &#34;Wired connection 1&#34; nmcli connection up &#34;Wired connection 1&#34; 检查网络配置，确保静态 IP 已成功应用：">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="刷机过程 基本设置 灯 https://www.bilibili.com/read/cv21700714/ 玩客云这设备有个红、绿、蓝三色led灯，在刷入armbian系统以后，这个灯的颜色就会显示异常，往往是一直显示红色。 如果">
 <title>玩客云刷机安装armbian系统</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/240902180979/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="玩客云刷机安装armbian系统">
-<meta property='og:description' content="刷机过程 基本设置 灯 https://www.bilibili.com/read/cv21700714/ 玩客云这设备有个红、绿、蓝三色led灯，在刷入armbian系统以后，这个灯的颜色就会显示异常，往往是一直显示红色。 如果要自动动手调整led灯的颜色，控制命令如下（需要root用户执行） 1 2 3 echo 1 &gt; /sys/class/leds/onecloud:blue:alive/brightness echo 1 &gt; /sys/class/leds/onecloud:green:alive/brightness echo 1 &gt; /sys/class/leds/onecloud:red:alive/brightness echo 1是开，echo 0就是关。现在可以组合出多种颜色，蓝绿、红蓝、红绿、红绿蓝。😄 但这个设置重启后失效。╮(╯▽╰)╭ 静态ip 查看当前网络连接信息 1 nmcli connection show 设置静态ip 1 2 3 4 nmcli connection modify &#34;Wired connection 1&#34; ipv4.addresses 192.168.68.9/24 nmcli connection modify &#34;Wired connection 1&#34; ipv4.gateway 192.168.68.1 nmcli connection modify &#34;Wired connection 1&#34; ipv4.dns 223.5.5.5 nmcli connection modify &#34;Wired connection 1&#34; ipv4.method manual 重新启动网络连接： 1 2 nmcli connection down &#34;Wired connection 1&#34; nmcli connection up &#34;Wired connection 1&#34; 检查网络配置，确保静态 IP 已成功应用：">
+<meta property='og:description' content="刷机过程 基本设置 灯 https://www.bilibili.com/read/cv21700714/ 玩客云这设备有个红、绿、蓝三色led灯，在刷入armbian系统以后，这个灯的颜色就会显示异常，往往是一直显示红色。 如果">
 <meta property='og:url' content='https://blog.seektao.cc/p/240902180979/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='armbian' /><meta property='article:published_time' content='2024-09-02T18:09:19&#43;08:00'/><meta property='article:modified_time' content='2024-09-02T18:09:19&#43;08:00'/>
 <meta name="twitter:title" content="玩客云刷机安装armbian系统">
-<meta name="twitter:description" content="刷机过程 基本设置 灯 https://www.bilibili.com/read/cv21700714/ 玩客云这设备有个红、绿、蓝三色led灯，在刷入armbian系统以后，这个灯的颜色就会显示异常，往往是一直显示红色。 如果要自动动手调整led灯的颜色，控制命令如下（需要root用户执行） 1 2 3 echo 1 &gt; /sys/class/leds/onecloud:blue:alive/brightness echo 1 &gt; /sys/class/leds/onecloud:green:alive/brightness echo 1 &gt; /sys/class/leds/onecloud:red:alive/brightness echo 1是开，echo 0就是关。现在可以组合出多种颜色，蓝绿、红蓝、红绿、红绿蓝。😄 但这个设置重启后失效。╮(╯▽╰)╭ 静态ip 查看当前网络连接信息 1 nmcli connection show 设置静态ip 1 2 3 4 nmcli connection modify &#34;Wired connection 1&#34; ipv4.addresses 192.168.68.9/24 nmcli connection modify &#34;Wired connection 1&#34; ipv4.gateway 192.168.68.1 nmcli connection modify &#34;Wired connection 1&#34; ipv4.dns 223.5.5.5 nmcli connection modify &#34;Wired connection 1&#34; ipv4.method manual 重新启动网络连接： 1 2 nmcli connection down &#34;Wired connection 1&#34; nmcli connection up &#34;Wired connection 1&#34; 检查网络配置，确保静态 IP 已成功应用：">
+<meta name="twitter:description" content="刷机过程 基本设置 灯 https://www.bilibili.com/read/cv21700714/ 玩客云这设备有个红、绿、蓝三色led灯，在刷入armbian系统以后，这个灯的颜色就会显示异常，往往是一直显示红色。 如果">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -318,20 +318,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -658,18 +644,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -705,9 +679,22 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -756,19 +743,6 @@
 
         <div class="article-details">
             <h2 class="article-title">openwrt实践</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240819110878/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">curl，命令行或脚本中与 URL 进行交互的工具</h2>
         </div>
     </a>
 </article>
@@ -843,8 +817,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

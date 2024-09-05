@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-Linux/MacOS 适用于 bash、zsh 1 2 # 建议安装前清空`GOROOT`、`GOBIN`等环境变量 curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash 1 echo &#34;unalias g&#34; &gt;&gt; ~/.bashrc # 可选。若其他程序（如&#39;git&#39;）使用了&#39;g&#39;作为别名。 1 source &#34;$HOME/.g/env&#34; 自动安装-Windows 目前经我测试有问题，请手动安装 适用于 pwsh 1 iwr https://raw.githubusercontent.com/voidint/g/master/install.ps1 -useb | iex 手动安装-Linux/macOS 创建 g 家目录（推荐~/.g目录） 下载release的二进制压缩包，并解压至 g 家目录下的 bin 子目录中（即~/.g/bin目录）。 将所需的环境变量写入~/.g/env文件 1 2 3 4 5 6 7 $ cat &gt;~/.g/env &lt;&lt;&#39;EOF&#39; #!/bin/sh # g shell setup export GOROOT=&#34;${HOME}/.">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-L">
 <title>g，go的多版本管理工具</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/240803130835/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="g，go的多版本管理工具">
-<meta property='og:description' content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-Linux/MacOS 适用于 bash、zsh 1 2 # 建议安装前清空`GOROOT`、`GOBIN`等环境变量 curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash 1 echo &#34;unalias g&#34; &gt;&gt; ~/.bashrc # 可选。若其他程序（如&#39;git&#39;）使用了&#39;g&#39;作为别名。 1 source &#34;$HOME/.g/env&#34; 自动安装-Windows 目前经我测试有问题，请手动安装 适用于 pwsh 1 iwr https://raw.githubusercontent.com/voidint/g/master/install.ps1 -useb | iex 手动安装-Linux/macOS 创建 g 家目录（推荐~/.g目录） 下载release的二进制压缩包，并解压至 g 家目录下的 bin 子目录中（即~/.g/bin目录）。 将所需的环境变量写入~/.g/env文件 1 2 3 4 5 6 7 $ cat &gt;~/.g/env &lt;&lt;&#39;EOF&#39; #!/bin/sh # g shell setup export GOROOT=&#34;${HOME}/.">
+<meta property='og:description' content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-L">
 <meta property='og:url' content='https://blog.seektao.cc/p/240803130835/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='g' /><meta property='article:tag' content='go' /><meta property='article:published_time' content='2024-08-03T13:08:35&#43;08:00'/><meta property='article:modified_time' content='2024-08-03T13:08:35&#43;08:00'/><meta property='og:image' content='https://s2.loli.net/2024/08/03/Rmn1rsdL28pXM6t.jpg' />
 <meta name="twitter:title" content="g，go的多版本管理工具">
-<meta name="twitter:description" content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-Linux/MacOS 适用于 bash、zsh 1 2 # 建议安装前清空`GOROOT`、`GOBIN`等环境变量 curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash 1 echo &#34;unalias g&#34; &gt;&gt; ~/.bashrc # 可选。若其他程序（如&#39;git&#39;）使用了&#39;g&#39;作为别名。 1 source &#34;$HOME/.g/env&#34; 自动安装-Windows 目前经我测试有问题，请手动安装 适用于 pwsh 1 iwr https://raw.githubusercontent.com/voidint/g/master/install.ps1 -useb | iex 手动安装-Linux/macOS 创建 g 家目录（推荐~/.g目录） 下载release的二进制压缩包，并解压至 g 家目录下的 bin 子目录中（即~/.g/bin目录）。 将所需的环境变量写入~/.g/env文件 1 2 3 4 5 6 7 $ cat &gt;~/.g/env &lt;&lt;&#39;EOF&#39; #!/bin/sh # g shell setup export GOROOT=&#34;${HOME}/."><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="介绍 g 是管理 go 版本的工具，可以简化 go 的版本管理。 相似项目： gvm goenv 源码：https://github.com/voidint/g 安装 自动安装-L"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://s2.loli.net/2024/08/03/Rmn1rsdL28pXM6t.jpg' />
   
 
@@ -44,7 +44,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -219,7 +219,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -244,7 +244,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -324,20 +324,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -609,18 +595,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -656,7 +630,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -742,8 +716,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

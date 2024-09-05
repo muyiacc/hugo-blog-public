@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2024-06-06未知原因docker.com国内镜像全都被要求下架服务。 为了另求出路，采用cloudflare wokers pages搭建镜像服务。特点：免费、简单 地址：https://github.com/muyiacc/CF-Workers-docker.io 本次使用cmliu大佬提供的代码。 克隆仓库，登陆cloudflare，选择Wokers &amp; Pages create an application 选择pages-connect to git-github-github account-select a repository begin setup custom domains 设置本地镜像 修改文件 /etc/docker/daemon.json（如果不存在则创建），将 https://docker.fxxk.dedyn.io替换为自己的域名 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &#34;registry-mirrors&#34;: [&#34;https://docker.ksg.us.kg&#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker 相似项目： 项目：https://github.com/muyiacc/cloudflare-docker-proxy 已经创建好的服务 1 2 3 4 5 6 7 docker.ksg.us.kg quay.ksg.us.kg gcr.ksg.us.kg k8s-gcr.ksg.us.kg k8s.ksg.us.kg ghcr.ksg.us.kg cloudsmith.">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2024-06-06未知原因docker.com国内镜像全都被要求下架服务。 为了另求出路，采用cloudflare wokers pages搭建镜像服务。">
 <title>Docker镜像服务搭建</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2406005/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Docker镜像服务搭建">
-<meta property='og:description' content="2024-06-06未知原因docker.com国内镜像全都被要求下架服务。 为了另求出路，采用cloudflare wokers pages搭建镜像服务。特点：免费、简单 地址：https://github.com/muyiacc/CF-Workers-docker.io 本次使用cmliu大佬提供的代码。 克隆仓库，登陆cloudflare，选择Wokers &amp; Pages create an application 选择pages-connect to git-github-github account-select a repository begin setup custom domains 设置本地镜像 修改文件 /etc/docker/daemon.json（如果不存在则创建），将 https://docker.fxxk.dedyn.io替换为自己的域名 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &#34;registry-mirrors&#34;: [&#34;https://docker.ksg.us.kg&#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker 相似项目： 项目：https://github.com/muyiacc/cloudflare-docker-proxy 已经创建好的服务 1 2 3 4 5 6 7 docker.ksg.us.kg quay.ksg.us.kg gcr.ksg.us.kg k8s-gcr.ksg.us.kg k8s.ksg.us.kg ghcr.ksg.us.kg cloudsmith.">
+<meta property='og:description' content="2024-06-06未知原因docker.com国内镜像全都被要求下架服务。 为了另求出路，采用cloudflare wokers pages搭建镜像服务。">
 <meta property='og:url' content='https://blog.seektao.cc/p/2406005/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-05T16:06:01&#43;08:00'/><meta property='article:modified_time' content='2024-06-05T16:06:01&#43;08:00'/>
 <meta name="twitter:title" content="Docker镜像服务搭建">
-<meta name="twitter:description" content="2024-06-06未知原因docker.com国内镜像全都被要求下架服务。 为了另求出路，采用cloudflare wokers pages搭建镜像服务。特点：免费、简单 地址：https://github.com/muyiacc/CF-Workers-docker.io 本次使用cmliu大佬提供的代码。 克隆仓库，登陆cloudflare，选择Wokers &amp; Pages create an application 选择pages-connect to git-github-github account-select a repository begin setup custom domains 设置本地镜像 修改文件 /etc/docker/daemon.json（如果不存在则创建），将 https://docker.fxxk.dedyn.io替换为自己的域名 1 2 3 4 5 6 7 8 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &#34;registry-mirrors&#34;: [&#34;https://docker.ksg.us.kg&#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker 相似项目： 项目：https://github.com/muyiacc/cloudflare-docker-proxy 已经创建好的服务 1 2 3 4 5 6 7 docker.ksg.us.kg quay.ksg.us.kg gcr.ksg.us.kg k8s-gcr.ksg.us.kg k8s.ksg.us.kg ghcr.ksg.us.kg cloudsmith.">
+<meta name="twitter:description" content="2024-06-06未知原因docker.com国内镜像全都被要求下架服务。 为了另求出路，采用cloudflare wokers pages搭建镜像服务。">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -306,20 +306,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -410,18 +396,6 @@
     <footer class="article-footer">
     
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -457,7 +431,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -582,8 +556,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

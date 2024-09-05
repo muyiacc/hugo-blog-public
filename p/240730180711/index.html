@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="用tabby自带的sftp上传文件时，会自动进入 / 目录，点来点去很麻烦，官方有给出答案，点此跳转 bash ~/.bash_profile 1 export PS1=&#34;$PS1\\[\\e]1337;CurrentDir=&#34;&#39;$(pwd)\\a\\]&#39; ZSH ~/.zshrc 1 precmd () { echo -n &#34;\\x1b]1337;CurrentDir=$(pwd)\\x07&#34; } ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="用tabby自带的sftp上传文件时，会自动进入 / 目录，点来点去很麻烦，官方有给出答案，点此跳转 bash ~/.bash_profile 1 export PS1=&#34;$PS1\\[\\e]1337;CurrentDir=&#34;&#39;$(pwd)\\a\\]&#39; ZSH ~/.zshrc 1 precmd () { echo -n &#34;\\x1b]1337;CurrentDir=$(pwd)\\x07&#34; }">
 <title>Tabby点击上传按钮不识别当前目录【已解决】</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/240730180711/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Tabby点击上传按钮不识别当前目录【已解决】">
-<meta property='og:description' content="用tabby自带的sftp上传文件时，会自动进入 / 目录，点来点去很麻烦，官方有给出答案，点此跳转 bash ~/.bash_profile 1 export PS1=&#34;$PS1\\[\\e]1337;CurrentDir=&#34;&#39;$(pwd)\\a\\]&#39; ZSH ~/.zshrc 1 precmd () { echo -n &#34;\\x1b]1337;CurrentDir=$(pwd)\\x07&#34; } ">
+<meta property='og:description' content="用tabby自带的sftp上传文件时，会自动进入 / 目录，点来点去很麻烦，官方有给出答案，点此跳转 bash ~/.bash_profile 1 export PS1=&#34;$PS1\\[\\e]1337;CurrentDir=&#34;&#39;$(pwd)\\a\\]&#39; ZSH ~/.zshrc 1 precmd () { echo -n &#34;\\x1b]1337;CurrentDir=$(pwd)\\x07&#34; }">
 <meta property='og:url' content='https://blog.seektao.cc/p/240730180711/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='tabby' /><meta property='article:tag' content='ssh' />
 <meta name="twitter:title" content="Tabby点击上传按钮不识别当前目录【已解决】">
-<meta name="twitter:description" content="用tabby自带的sftp上传文件时，会自动进入 / 目录，点来点去很麻烦，官方有给出答案，点此跳转 bash ~/.bash_profile 1 export PS1=&#34;$PS1\\[\\e]1337;CurrentDir=&#34;&#39;$(pwd)\\a\\]&#39; ZSH ~/.zshrc 1 precmd () { echo -n &#34;\\x1b]1337;CurrentDir=$(pwd)\\x07&#34; } ">
+<meta name="twitter:description" content="用tabby自带的sftp上传文件时，会自动进入 / 目录，点来点去很麻烦，官方有给出答案，点此跳转 bash ~/.bash_profile 1 export PS1=&#34;$PS1\\[\\e]1337;CurrentDir=&#34;&#39;$(pwd)\\a\\]&#39; ZSH ~/.zshrc 1 precmd () { echo -n &#34;\\x1b]1337;CurrentDir=$(pwd)\\x07&#34; }">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -254,26 +254,6 @@
     
     
     
-    
-    <footer class="article-time">
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
-        
-    </footer>
     
 
     
@@ -321,18 +301,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -368,9 +336,22 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -419,19 +400,6 @@
 
         <div class="article-details">
             <h2 class="article-title">firefox个性化配置</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826140866/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">openwrt实践</h2>
         </div>
     </a>
 </article>
@@ -506,8 +474,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

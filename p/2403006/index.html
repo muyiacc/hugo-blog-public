@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="和往常一样，系统为 debian，让我们开始吧。 1. Nginx 安装和配置 Nginx官网文档 https://nginx.org/en/docs/ Nginx（发音为&quot;engine-x&quot;）是一个高性能的开源 Web 服务器，也可以用作反向代理服务器、负载均衡器和 HTTP 缓存。 1.1 安装 （1）安装Nginx 1 2 3 4 5 6 7 # debian sudo apt update sudo apt install nginx # centos sudo yum update sudo yum install nginx 关于Nginx的一些命令和配置文件的位置介绍 在安装过程中可以看到 配置文件的位置在 /etc/nginx下 当然不同的安装方式也可能不一样，可以通过 whereis nginx来搜索 1.2 配置文件 通过包管理工具安装的Nginx一般在 /etc/nginx下 其中有一个 nginx.conf 文件，它就是Nginx的配置文件，但是为了方便管理，所以我一般不直接修改该文件，而是在 /etc/nginx/conf.d/ 下新建文件。 在默认的 nginx.conf中 http模块下，有这样一条命令 include /etc/nginx/conf.d/*.conf; 它表示包含了 /etc/nginx/conf.d/下所有文件，所以我们在/etc/nginx/conf.d/直接添加新文件即可，如果没有该命令需要手动把文件的路径添加到 nginx.conf中 关于 Nginx配置文件模块该如何书写，以下做一些简单介绍。 1.3 配置⽂件的结构 Nginx的配置⽂件是由⼀系列的指令组成的，每个指令都是由⼀个指令名和⼀个或者多个参数组成的。 指令和参数之间使⽤空格来分隔，指令以分号 ; 结尾，参数可以使⽤单引号或者双引号来包裹。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="和往常一样，系统为 debian，让我们开始吧。 1. Nginx 安装和配置 Nginx官网文档 https://nginx.org/en/docs/ Nginx（发音为&quot;engine-x&quot;）">
 <title>Nginx使用，配置，模板一键生成，Certbot安装和申请免费Let&#39;s Encrypt证书</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2403006/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Nginx使用，配置，模板一键生成，Certbot安装和申请免费Let's Encrypt证书">
-<meta property='og:description' content="和往常一样，系统为 debian，让我们开始吧。 1. Nginx 安装和配置 Nginx官网文档 https://nginx.org/en/docs/ Nginx（发音为&quot;engine-x&quot;）是一个高性能的开源 Web 服务器，也可以用作反向代理服务器、负载均衡器和 HTTP 缓存。 1.1 安装 （1）安装Nginx 1 2 3 4 5 6 7 # debian sudo apt update sudo apt install nginx # centos sudo yum update sudo yum install nginx 关于Nginx的一些命令和配置文件的位置介绍 在安装过程中可以看到 配置文件的位置在 /etc/nginx下 当然不同的安装方式也可能不一样，可以通过 whereis nginx来搜索 1.2 配置文件 通过包管理工具安装的Nginx一般在 /etc/nginx下 其中有一个 nginx.conf 文件，它就是Nginx的配置文件，但是为了方便管理，所以我一般不直接修改该文件，而是在 /etc/nginx/conf.d/ 下新建文件。 在默认的 nginx.conf中 http模块下，有这样一条命令 include /etc/nginx/conf.d/*.conf; 它表示包含了 /etc/nginx/conf.d/下所有文件，所以我们在/etc/nginx/conf.d/直接添加新文件即可，如果没有该命令需要手动把文件的路径添加到 nginx.conf中 关于 Nginx配置文件模块该如何书写，以下做一些简单介绍。 1.3 配置⽂件的结构 Nginx的配置⽂件是由⼀系列的指令组成的，每个指令都是由⼀个指令名和⼀个或者多个参数组成的。 指令和参数之间使⽤空格来分隔，指令以分号 ; 结尾，参数可以使⽤单引号或者双引号来包裹。">
+<meta property='og:description' content="和往常一样，系统为 debian，让我们开始吧。 1. Nginx 安装和配置 Nginx官网文档 https://nginx.org/en/docs/ Nginx（发音为&quot;engine-x&quot;）">
 <meta property='og:url' content='https://blog.seektao.cc/p/2403006/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='nginx' /><meta property='article:tag' content='ssl' /><meta property='article:tag' content='certbot' /><meta property='article:published_time' content='2024-03-06T00:03:15&#43;08:00'/><meta property='article:modified_time' content='2024-03-06T00:03:15&#43;08:00'/>
 <meta name="twitter:title" content="Nginx使用，配置，模板一键生成，Certbot安装和申请免费Let's Encrypt证书">
-<meta name="twitter:description" content="和往常一样，系统为 debian，让我们开始吧。 1. Nginx 安装和配置 Nginx官网文档 https://nginx.org/en/docs/ Nginx（发音为&quot;engine-x&quot;）是一个高性能的开源 Web 服务器，也可以用作反向代理服务器、负载均衡器和 HTTP 缓存。 1.1 安装 （1）安装Nginx 1 2 3 4 5 6 7 # debian sudo apt update sudo apt install nginx # centos sudo yum update sudo yum install nginx 关于Nginx的一些命令和配置文件的位置介绍 在安装过程中可以看到 配置文件的位置在 /etc/nginx下 当然不同的安装方式也可能不一样，可以通过 whereis nginx来搜索 1.2 配置文件 通过包管理工具安装的Nginx一般在 /etc/nginx下 其中有一个 nginx.conf 文件，它就是Nginx的配置文件，但是为了方便管理，所以我一般不直接修改该文件，而是在 /etc/nginx/conf.d/ 下新建文件。 在默认的 nginx.conf中 http模块下，有这样一条命令 include /etc/nginx/conf.d/*.conf; 它表示包含了 /etc/nginx/conf.d/下所有文件，所以我们在/etc/nginx/conf.d/直接添加新文件即可，如果没有该命令需要手动把文件的路径添加到 nginx.conf中 关于 Nginx配置文件模块该如何书写，以下做一些简单介绍。 1.3 配置⽂件的结构 Nginx的配置⽂件是由⼀系列的指令组成的，每个指令都是由⼀个指令名和⼀个或者多个参数组成的。 指令和参数之间使⽤空格来分隔，指令以分号 ; 结尾，参数可以使⽤单引号或者双引号来包裹。">
+<meta name="twitter:description" content="和往常一样，系统为 debian，让我们开始吧。 1. Nginx 安装和配置 Nginx官网文档 https://nginx.org/en/docs/ Nginx（发音为&quot;engine-x&quot;）">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -336,20 +336,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    11 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -1717,18 +1703,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -1764,7 +1738,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -1902,8 +1876,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

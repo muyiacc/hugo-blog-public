@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 Certbot 是一个由 Electronic Frontier Foundation (EFF) 开发的免费、开源的工具，用于自动化在 Web 服务器上部署 SSL/TLS 证书。SSL/TLS 证书是用于加密网站与用户之间传输的数据，确保数据传输的安全性和隐私性。 Certbot 支持大多数常见的 Web 服务器，包括 Apache、Nginx、IIS 等。 安装 certbot （1）安装snap certbot官方已经说了，各个发行版安装的certbot版本落后，功能不全，推荐我们使用snap安装，我之前就是用的是apt安装，后来一堆问题，血的教训！！ 参考文档：https://snapcraft.io/docs/installing-snap-on-debian 1 2 3 4 5 6 7 8 # 安装snap sudo apt update sudo apt install snapd # 重启系统 # 安装core sudo snap install core sudo snap refresh core （2）安装certbot 安装之前确保没有其他方式安装的certbot 如：apt，pip 可通过这条命令查看 whereis certbot 如果有，卸载它们 sudo apt remove certbot sudo pip uninstall certbot 1 2 sudo snap install --classic certbot sudo ln -s /snap/bin/certbot /usr/bin/certbot （3）查看版本">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 Certbot 是一个由 Electronic Frontier Foundation (EFF) 开发的免费、开源的工具，用于自动化在 Web 服务器上部署 SSL/TLS 证书。SSL/TLS 证书是用于加密网站与用户之间传输的数据，确保数">
 <title>Debian下的Certbot安装使用，附nginx使用</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2405004/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Debian下的Certbot安装使用，附nginx使用">
-<meta property='og:description' content="介绍 Certbot 是一个由 Electronic Frontier Foundation (EFF) 开发的免费、开源的工具，用于自动化在 Web 服务器上部署 SSL/TLS 证书。SSL/TLS 证书是用于加密网站与用户之间传输的数据，确保数据传输的安全性和隐私性。 Certbot 支持大多数常见的 Web 服务器，包括 Apache、Nginx、IIS 等。 安装 certbot （1）安装snap certbot官方已经说了，各个发行版安装的certbot版本落后，功能不全，推荐我们使用snap安装，我之前就是用的是apt安装，后来一堆问题，血的教训！！ 参考文档：https://snapcraft.io/docs/installing-snap-on-debian 1 2 3 4 5 6 7 8 # 安装snap sudo apt update sudo apt install snapd # 重启系统 # 安装core sudo snap install core sudo snap refresh core （2）安装certbot 安装之前确保没有其他方式安装的certbot 如：apt，pip 可通过这条命令查看 whereis certbot 如果有，卸载它们 sudo apt remove certbot sudo pip uninstall certbot 1 2 sudo snap install --classic certbot sudo ln -s /snap/bin/certbot /usr/bin/certbot （3）查看版本">
+<meta property='og:description' content="介绍 Certbot 是一个由 Electronic Frontier Foundation (EFF) 开发的免费、开源的工具，用于自动化在 Web 服务器上部署 SSL/TLS 证书。SSL/TLS 证书是用于加密网站与用户之间传输的数据，确保数">
 <meta property='og:url' content='https://blog.seektao.cc/p/2405004/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='certbot' /><meta property='article:tag' content='nginx' /><meta property='article:published_time' content='2024-05-04T16:05:43&#43;08:00'/><meta property='article:modified_time' content='2024-05-04T16:05:43&#43;08:00'/>
 <meta name="twitter:title" content="Debian下的Certbot安装使用，附nginx使用">
-<meta name="twitter:description" content="介绍 Certbot 是一个由 Electronic Frontier Foundation (EFF) 开发的免费、开源的工具，用于自动化在 Web 服务器上部署 SSL/TLS 证书。SSL/TLS 证书是用于加密网站与用户之间传输的数据，确保数据传输的安全性和隐私性。 Certbot 支持大多数常见的 Web 服务器，包括 Apache、Nginx、IIS 等。 安装 certbot （1）安装snap certbot官方已经说了，各个发行版安装的certbot版本落后，功能不全，推荐我们使用snap安装，我之前就是用的是apt安装，后来一堆问题，血的教训！！ 参考文档：https://snapcraft.io/docs/installing-snap-on-debian 1 2 3 4 5 6 7 8 # 安装snap sudo apt update sudo apt install snapd # 重启系统 # 安装core sudo snap install core sudo snap refresh core （2）安装certbot 安装之前确保没有其他方式安装的certbot 如：apt，pip 可通过这条命令查看 whereis certbot 如果有，卸载它们 sudo apt remove certbot sudo pip uninstall certbot 1 2 sudo snap install --classic certbot sudo ln -s /snap/bin/certbot /usr/bin/certbot （3）查看版本">
+<meta name="twitter:description" content="介绍 Certbot 是一个由 Electronic Frontier Foundation (EFF) 开发的免费、开源的工具，用于自动化在 Web 服务器上部署 SSL/TLS 证书。SSL/TLS 证书是用于加密网站与用户之间传输的数据，确保数">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -304,20 +304,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    3 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -683,18 +669,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -730,7 +704,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -868,8 +842,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

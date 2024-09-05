@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1. Shell概述 作为一个开发人员，使用Linux实在是太频繁了，无论是观看别人程序的脚本，还是自己编写脚本，都离不开Shell，所以这篇文章总结一下Shell中常见的语法 2. 解释器 Linux中，解析脚本的是命令解释器，也就是终端解释器，如 Bash、Zsh。 在脚本中常见的头部声明如 #! /bin/bash 或者 #! /bin/zsh，前者如CentOS , 后者如 Debian（得比安）。 3. 入门 3.1. 脚本的格式 以 #! 解释器 开头，如 #! /bin/bash 或者 #! /bin/zsh 一般来说默认解释器是 bash， 笔者自己所运行的解释器是 zsh，大多数情况下兼容 bash 临时进入 bash 解释器的方法为 exec /bin/bash 如需查看自己的解释器，请在终端执行echo #SHELL， 按照习惯，bash对应的脚本文件的后缀一般是 .sh 结尾，而 zsh对应的脚本文件以 .zsh 结尾，当然，这不是必须的。 以下为一个简单的示： 在家目录新建目录 bin, 继续在 bin目录新建一个文件 test1.sh vim test1.sh 1 2 3 #! /bin/sh echo &#34;我的解释器为 $SHELL&#34; 3.2 脚本执行 在新建 test1.sh 之后，如何执行呢？ 方式1 语法 解释器 + 脚本的路径">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1. Shell概述 作为一个开发人员，使用Linux实在是太频繁了，无论是观看别人程序的脚本，还是自己编写脚本，都离不开Shell，所以这篇文章">
 <title>Shell的基本语法-1-概述-解释器-入门</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2309006/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Shell的基本语法-1-概述-解释器-入门">
-<meta property='og:description' content="1. Shell概述 作为一个开发人员，使用Linux实在是太频繁了，无论是观看别人程序的脚本，还是自己编写脚本，都离不开Shell，所以这篇文章总结一下Shell中常见的语法 2. 解释器 Linux中，解析脚本的是命令解释器，也就是终端解释器，如 Bash、Zsh。 在脚本中常见的头部声明如 #! /bin/bash 或者 #! /bin/zsh，前者如CentOS , 后者如 Debian（得比安）。 3. 入门 3.1. 脚本的格式 以 #! 解释器 开头，如 #! /bin/bash 或者 #! /bin/zsh 一般来说默认解释器是 bash， 笔者自己所运行的解释器是 zsh，大多数情况下兼容 bash 临时进入 bash 解释器的方法为 exec /bin/bash 如需查看自己的解释器，请在终端执行echo #SHELL， 按照习惯，bash对应的脚本文件的后缀一般是 .sh 结尾，而 zsh对应的脚本文件以 .zsh 结尾，当然，这不是必须的。 以下为一个简单的示： 在家目录新建目录 bin, 继续在 bin目录新建一个文件 test1.sh vim test1.sh 1 2 3 #! /bin/sh echo &#34;我的解释器为 $SHELL&#34; 3.2 脚本执行 在新建 test1.sh 之后，如何执行呢？ 方式1 语法 解释器 + 脚本的路径">
+<meta property='og:description' content="1. Shell概述 作为一个开发人员，使用Linux实在是太频繁了，无论是观看别人程序的脚本，还是自己编写脚本，都离不开Shell，所以这篇文章">
 <meta property='og:url' content='https://blog.seektao.cc/p/2309006/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='shell' /><meta property='article:tag' content='linux' /><meta property='article:published_time' content='2023-09-08T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-09-08T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="Shell的基本语法-1-概述-解释器-入门">
-<meta name="twitter:description" content="1. Shell概述 作为一个开发人员，使用Linux实在是太频繁了，无论是观看别人程序的脚本，还是自己编写脚本，都离不开Shell，所以这篇文章总结一下Shell中常见的语法 2. 解释器 Linux中，解析脚本的是命令解释器，也就是终端解释器，如 Bash、Zsh。 在脚本中常见的头部声明如 #! /bin/bash 或者 #! /bin/zsh，前者如CentOS , 后者如 Debian（得比安）。 3. 入门 3.1. 脚本的格式 以 #! 解释器 开头，如 #! /bin/bash 或者 #! /bin/zsh 一般来说默认解释器是 bash， 笔者自己所运行的解释器是 zsh，大多数情况下兼容 bash 临时进入 bash 解释器的方法为 exec /bin/bash 如需查看自己的解释器，请在终端执行echo #SHELL， 按照习惯，bash对应的脚本文件的后缀一般是 .sh 结尾，而 zsh对应的脚本文件以 .zsh 结尾，当然，这不是必须的。 以下为一个简单的示： 在家目录新建目录 bin, 继续在 bin目录新建一个文件 test1.sh vim test1.sh 1 2 3 #! /bin/sh echo &#34;我的解释器为 $SHELL&#34; 3.2 脚本执行 在新建 test1.sh 之后，如何执行呢？ 方式1 语法 解释器 + 脚本的路径">
+<meta name="twitter:description" content="1. Shell概述 作为一个开发人员，使用Linux实在是太频繁了，无论是观看别人程序的脚本，还是自己编写脚本，都离不开Shell，所以这篇文章">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -308,20 +308,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -435,18 +421,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -482,7 +456,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -620,8 +594,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

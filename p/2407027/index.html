@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 YOURLS 是一个强大的 PHP 脚本集，可以让您在服务器上运行自己的 URL 缩短程序。有了 YOURLS，你可以完全控制你的链接、详细的统计数据、插件支持等等，所有这些都包装在一个免费的开源软件包中。 官网：https://yourls.org 源码：https://github.com/YOURLS/YOURLS 预览： 安装 本次以serv00为例，教学安装 下载 1 wget https://github.com/YOURLS/YOURLS/archive/refs/tags/1.9.2.zip 解压 1 unzip 1.9.2.zip -d public_html/ 复制文件 1 2 3 cd public_html/ rm -rf index.html cp -r YOURLS-1.9.2/* ./ 配置 1 cp user/config-sample.php user/config.php 修改user/config.php 1 vim user/config.php serv00后台创建数据库，将数据库信息填写到 user/config.php，除了数据库外，还需要修改其他信息，按需填写 这里需要注意的是，如果你想让多个短链指向同一个站点，需要做如下操作 define( 'YOURLS_UNIQUE_URLS', 'false' ); 修改完成之后访问：域名/admin 进入到这个界面，点击 Install YOURLS 登陆后台，长这样： 主题 Sleeky https://github.com/Flynntes/Sleeky/releases/tag/v2.5.0 1 2 3 4 wget https://github.com/Flynntes/Sleeky/archive/refs/tags/v2.5.0.zip unzip v2.5.0.zip cp -r Sleeky-2.">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍 YOURLS 是一个强大的 PHP 脚本集，可以让您在服务器上运行自己的 URL 缩短程序。有了 YOURLS，你可以完全控制你的链接、详细的统计数据、插件支持等等，">
 <title>短链系统yourls安装使用</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407027/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="短链系统yourls安装使用">
-<meta property='og:description' content="介绍 YOURLS 是一个强大的 PHP 脚本集，可以让您在服务器上运行自己的 URL 缩短程序。有了 YOURLS，你可以完全控制你的链接、详细的统计数据、插件支持等等，所有这些都包装在一个免费的开源软件包中。 官网：https://yourls.org 源码：https://github.com/YOURLS/YOURLS 预览： 安装 本次以serv00为例，教学安装 下载 1 wget https://github.com/YOURLS/YOURLS/archive/refs/tags/1.9.2.zip 解压 1 unzip 1.9.2.zip -d public_html/ 复制文件 1 2 3 cd public_html/ rm -rf index.html cp -r YOURLS-1.9.2/* ./ 配置 1 cp user/config-sample.php user/config.php 修改user/config.php 1 vim user/config.php serv00后台创建数据库，将数据库信息填写到 user/config.php，除了数据库外，还需要修改其他信息，按需填写 这里需要注意的是，如果你想让多个短链指向同一个站点，需要做如下操作 define( 'YOURLS_UNIQUE_URLS', 'false' ); 修改完成之后访问：域名/admin 进入到这个界面，点击 Install YOURLS 登陆后台，长这样： 主题 Sleeky https://github.com/Flynntes/Sleeky/releases/tag/v2.5.0 1 2 3 4 wget https://github.com/Flynntes/Sleeky/archive/refs/tags/v2.5.0.zip unzip v2.5.0.zip cp -r Sleeky-2.">
+<meta property='og:description' content="介绍 YOURLS 是一个强大的 PHP 脚本集，可以让您在服务器上运行自己的 URL 缩短程序。有了 YOURLS，你可以完全控制你的链接、详细的统计数据、插件支持等等，">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407027/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='短链' /><meta property='article:published_time' content='2024-07-07T15:07:53&#43;08:00'/><meta property='article:modified_time' content='2024-07-07T15:07:53&#43;08:00'/>
 <meta name="twitter:title" content="短链系统yourls安装使用">
-<meta name="twitter:description" content="介绍 YOURLS 是一个强大的 PHP 脚本集，可以让您在服务器上运行自己的 URL 缩短程序。有了 YOURLS，你可以完全控制你的链接、详细的统计数据、插件支持等等，所有这些都包装在一个免费的开源软件包中。 官网：https://yourls.org 源码：https://github.com/YOURLS/YOURLS 预览： 安装 本次以serv00为例，教学安装 下载 1 wget https://github.com/YOURLS/YOURLS/archive/refs/tags/1.9.2.zip 解压 1 unzip 1.9.2.zip -d public_html/ 复制文件 1 2 3 cd public_html/ rm -rf index.html cp -r YOURLS-1.9.2/* ./ 配置 1 cp user/config-sample.php user/config.php 修改user/config.php 1 vim user/config.php serv00后台创建数据库，将数据库信息填写到 user/config.php，除了数据库外，还需要修改其他信息，按需填写 这里需要注意的是，如果你想让多个短链指向同一个站点，需要做如下操作 define( 'YOURLS_UNIQUE_URLS', 'false' ); 修改完成之后访问：域名/admin 进入到这个界面，点击 Install YOURLS 登陆后台，长这样： 主题 Sleeky https://github.com/Flynntes/Sleeky/releases/tag/v2.5.0 1 2 3 4 wget https://github.com/Flynntes/Sleeky/archive/refs/tags/v2.5.0.zip unzip v2.5.0.zip cp -r Sleeky-2.">
+<meta name="twitter:description" content="介绍 YOURLS 是一个强大的 PHP 脚本集，可以让您在服务器上运行自己的 URL 缩短程序。有了 YOURLS，你可以完全控制你的链接、详细的统计数据、插件支持等等，">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -309,20 +309,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -516,18 +502,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -563,9 +537,22 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -614,19 +601,6 @@
 
         <div class="article-details">
             <h2 class="article-title">firefox个性化配置</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826140866/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">openwrt实践</h2>
         </div>
     </a>
 </article>
@@ -701,8 +675,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

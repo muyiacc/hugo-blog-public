@@ -5,7 +5,7 @@
         <link>https://blog.seektao.cc/page/</link>
         <description>Recent content in Pages on Seektao | 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>zh-cn</language>
         <copyright>Seektao | 寻道之旅</copyright>
         <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.seektao.cc/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
@@ -16,19 +16,19 @@
         <description></description>
         </item>
         <item>
-        <title>搜索</title>
-        <link>https://blog.seektao.cc/search/</link>
-        <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.seektao.cc/search/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>链接</title>
         <link>https://blog.seektao.cc/links/</link>
         <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
         
         <guid>https://blog.seektao.cc/links/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://blog.seektao.cc/search/</link>
+        <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.seektao.cc/search/</guid>
         <description></description>
         </item>
         <item>

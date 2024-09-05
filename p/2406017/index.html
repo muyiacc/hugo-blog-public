@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="安装系统选择的是中文，生成几个主要目录也是中文，后来终端切换文件夹影响体验，所以改为英文。 参考：https://wiki.archlinuxcn.org/wiki/XDG_%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95# 备份 1 cp ~/.config/user-dirs.dirs ~/.config/user-dirs.dirs.bak 原本的样子 1 2 3 4 5 6 7 8 XDG_DESKTOP_DIR=&#34;$HOME/桌面&#34; XDG_DOCUMENTS_DIR=&#34;$HOME/文档&#34; XDG_DOWNLOAD_DIR=&#34;$HOME/下载&#34; XDG_MUSIC_DIR=&#34;$HOME/音乐&#34; XDG_PICTURES_DIR=&#34;$HOME/图片&#34; XDG_PUBLICSHARE_DIR=&#34;$HOME/公共&#34; XDG_TEMPLATES_DIR=&#34;$HOME/模板&#34; XDG_VIDEOS_DIR=&#34;$HOME/视频&#34; 修改为英文 1 vim .config/user-dirs.dirs 1 2 3 4 5 6 7 8 XDG_DESKTOP_DIR=&#34;$HOME/Desktop&#34; XDG_DOCUMENTS_DIR=&#34;$HOME/Documents&#34; XDG_DOWNLOAD_DIR=&#34;$HOME/Downloads&#34; XDG_MUSIC_DIR=&#34;$HOME/Music&#34; XDG_PICTURES_DIR=&#34;$HOME/Pictures&#34; XDG_PUBLICSHARE_DIR=&#34;$HOME/Public&#34; XDG_TEMPLATES_DIR=&#34;$HOME/Templates&#34; XDG_VIDEOS_DIR=&#34;$HOME/Videos&#34; 现在把已经生成的中文文件夹名字改为英文 1 2 3 4 5 6 7 8 mv &#34;$HOME/桌面&#34; &#34;$HOME/Desktop&#34; mv &#34;$HOME/文档&#34; &#34;$HOME/Documents&#34; mv &#34;$HOME/下载&#34; &#34;$HOME/Downloads&#34; mv &#34;$HOME/音乐&#34; &#34;$HOME/Music&#34; mv &#34;$HOME/图片&#34; &#34;$HOME/Pictures&#34; mv &#34;$HOME/公共&#34; &#34;$HOME/Public&#34; mv &#34;$HOME/模板&#34; &#34;$HOME/Templates&#34; mv &#34;$HOME/视频&#34; &#34;$HOME/Videos&#34; 最后去文件管理器，把原来的位置改为新的位置。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="安装系统选择的是中文，生成几个主要目录也是中文，后来终端切换文件夹影响体验，所以改为英文。 参考：https://wiki.archlinux">
 <title>xdg-user-dirs，修改用户目录。</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2406017/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="xdg-user-dirs，修改用户目录。">
-<meta property='og:description' content="安装系统选择的是中文，生成几个主要目录也是中文，后来终端切换文件夹影响体验，所以改为英文。 参考：https://wiki.archlinuxcn.org/wiki/XDG_%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95# 备份 1 cp ~/.config/user-dirs.dirs ~/.config/user-dirs.dirs.bak 原本的样子 1 2 3 4 5 6 7 8 XDG_DESKTOP_DIR=&#34;$HOME/桌面&#34; XDG_DOCUMENTS_DIR=&#34;$HOME/文档&#34; XDG_DOWNLOAD_DIR=&#34;$HOME/下载&#34; XDG_MUSIC_DIR=&#34;$HOME/音乐&#34; XDG_PICTURES_DIR=&#34;$HOME/图片&#34; XDG_PUBLICSHARE_DIR=&#34;$HOME/公共&#34; XDG_TEMPLATES_DIR=&#34;$HOME/模板&#34; XDG_VIDEOS_DIR=&#34;$HOME/视频&#34; 修改为英文 1 vim .config/user-dirs.dirs 1 2 3 4 5 6 7 8 XDG_DESKTOP_DIR=&#34;$HOME/Desktop&#34; XDG_DOCUMENTS_DIR=&#34;$HOME/Documents&#34; XDG_DOWNLOAD_DIR=&#34;$HOME/Downloads&#34; XDG_MUSIC_DIR=&#34;$HOME/Music&#34; XDG_PICTURES_DIR=&#34;$HOME/Pictures&#34; XDG_PUBLICSHARE_DIR=&#34;$HOME/Public&#34; XDG_TEMPLATES_DIR=&#34;$HOME/Templates&#34; XDG_VIDEOS_DIR=&#34;$HOME/Videos&#34; 现在把已经生成的中文文件夹名字改为英文 1 2 3 4 5 6 7 8 mv &#34;$HOME/桌面&#34; &#34;$HOME/Desktop&#34; mv &#34;$HOME/文档&#34; &#34;$HOME/Documents&#34; mv &#34;$HOME/下载&#34; &#34;$HOME/Downloads&#34; mv &#34;$HOME/音乐&#34; &#34;$HOME/Music&#34; mv &#34;$HOME/图片&#34; &#34;$HOME/Pictures&#34; mv &#34;$HOME/公共&#34; &#34;$HOME/Public&#34; mv &#34;$HOME/模板&#34; &#34;$HOME/Templates&#34; mv &#34;$HOME/视频&#34; &#34;$HOME/Videos&#34; 最后去文件管理器，把原来的位置改为新的位置。">
+<meta property='og:description' content="安装系统选择的是中文，生成几个主要目录也是中文，后来终端切换文件夹影响体验，所以改为英文。 参考：https://wiki.archlinux">
 <meta property='og:url' content='https://blog.seektao.cc/p/2406017/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-17T16:06:01&#43;08:00'/><meta property='article:modified_time' content='2024-06-17T16:06:01&#43;08:00'/>
 <meta name="twitter:title" content="xdg-user-dirs，修改用户目录。">
-<meta name="twitter:description" content="安装系统选择的是中文，生成几个主要目录也是中文，后来终端切换文件夹影响体验，所以改为英文。 参考：https://wiki.archlinuxcn.org/wiki/XDG_%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95# 备份 1 cp ~/.config/user-dirs.dirs ~/.config/user-dirs.dirs.bak 原本的样子 1 2 3 4 5 6 7 8 XDG_DESKTOP_DIR=&#34;$HOME/桌面&#34; XDG_DOCUMENTS_DIR=&#34;$HOME/文档&#34; XDG_DOWNLOAD_DIR=&#34;$HOME/下载&#34; XDG_MUSIC_DIR=&#34;$HOME/音乐&#34; XDG_PICTURES_DIR=&#34;$HOME/图片&#34; XDG_PUBLICSHARE_DIR=&#34;$HOME/公共&#34; XDG_TEMPLATES_DIR=&#34;$HOME/模板&#34; XDG_VIDEOS_DIR=&#34;$HOME/视频&#34; 修改为英文 1 vim .config/user-dirs.dirs 1 2 3 4 5 6 7 8 XDG_DESKTOP_DIR=&#34;$HOME/Desktop&#34; XDG_DOCUMENTS_DIR=&#34;$HOME/Documents&#34; XDG_DOWNLOAD_DIR=&#34;$HOME/Downloads&#34; XDG_MUSIC_DIR=&#34;$HOME/Music&#34; XDG_PICTURES_DIR=&#34;$HOME/Pictures&#34; XDG_PUBLICSHARE_DIR=&#34;$HOME/Public&#34; XDG_TEMPLATES_DIR=&#34;$HOME/Templates&#34; XDG_VIDEOS_DIR=&#34;$HOME/Videos&#34; 现在把已经生成的中文文件夹名字改为英文 1 2 3 4 5 6 7 8 mv &#34;$HOME/桌面&#34; &#34;$HOME/Desktop&#34; mv &#34;$HOME/文档&#34; &#34;$HOME/Documents&#34; mv &#34;$HOME/下载&#34; &#34;$HOME/Downloads&#34; mv &#34;$HOME/音乐&#34; &#34;$HOME/Music&#34; mv &#34;$HOME/图片&#34; &#34;$HOME/Pictures&#34; mv &#34;$HOME/公共&#34; &#34;$HOME/Public&#34; mv &#34;$HOME/模板&#34; &#34;$HOME/Templates&#34; mv &#34;$HOME/视频&#34; &#34;$HOME/Videos&#34; 最后去文件管理器，把原来的位置改为新的位置。">
+<meta name="twitter:description" content="安装系统选择的是中文，生成几个主要目录也是中文，后来终端切换文件夹影响体验，所以改为英文。 参考：https://wiki.archlinux">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -271,20 +271,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -399,18 +385,6 @@
     <footer class="article-footer">
     
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -446,7 +420,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -584,8 +558,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

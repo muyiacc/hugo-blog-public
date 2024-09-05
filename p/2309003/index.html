@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="HOME：用户的主目录，通常是/home/用户名。 USER：当前登录的用户名。 PATH：环境变量，包含了可执行文件的搜索路径。 BASH_VERSION：Bash shell的版本信息。 PWD：当前工作目录的绝对路径。 SHELL：当前使用的shell类型（如bash、zsh等）。 LANG：系统的语言和字符集设置。 TERM：终端类型。 LOGNAME：当前登录的用户名。 MAIL：用户的邮件地址。 HISTSIZE：命令历史记录的数量。 EDITOR：默认的文本编辑器。 PS1：命令提示符的格式。 LD_LIBRARY_PATH：动态链接库的搜索路径。 LD_PRELOAD：动态链接库的预加载设置。 HOSTNAME：主机名。 IP_ADDRESS：本地IP地址。 IPV6_ADDRESS：IPv6地址。 IFS：内部字段分隔符。 COLUMNS：终端的列数。 LINES：终端的行数。 USER：非root用户的用户名。 UID：用户ID（root用户为0）。 GID：组ID（root用户为0）。 OPIE：是否启用OpenPGP加密支持。 RUNLEVEL：运行级别。 PS1、PS2、PS3：自定义命令提示符的前缀、后缀和中间部分。 EDITOR、VISUAL：自定义文本编辑器和可视化编辑器。 MANPATH：手册页的搜索路径。 MYTMPDIR：临时文件目录。 TMPDIR：临时目录。 TMUX_PANE：当前活动的tmux面板。 TMUX_WINDOW：当前活动的tmux窗口。 TMUX_STATUS：当前活动的tmux状态。 TMUX_PID：当前活动的tmux进程ID。 TMUX_SERVER：当前活动的tmux服务器。 TMUX_PORT：当前活动的tmux端口。 TMUX_LISTEN_ADDRESS：当前活动的tmux监听地址。 TMUX_UNIX_SOCKET：当前活动的tmux Unix套接字。 TMUX_WINDOWS_SOCKET：当前活动的tmux Windows套接字。 TMUX_PID：当前活动的tmux进程ID。 TMUX_SERVER：当前活动的tmux服务器。 TMUX_PORT：当前活动的tmux端口。 TMUX_LISTEN_ADDRESS：当前活动的tmux监听地址。 TMUX_UNIX_SOCKET：当前活动的tmux Unix套接字。 TMUX_WINDOWS_SOCKET：当前活动的tmux Windows套接字。 TMUX_VERSION：当前活动的tmux版本。 TMUX_CONFIG_FILE：当前活动的tmux配置文件路径。 TMUX_DEFAULT_COMMAND：当前活动的tmux默认命令。 TMUX_CURRENT_COMMAND：当前活动的tmux当前命令。 ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="HOME：用户的主目录，通常是/home/用户名。 USER：当前登录的用户名。 PATH：环境变量，包含了可执行文件的搜索路径。 BASH_VE">
 <title>Linux系统的系统变量合集</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2309003/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Linux系统的系统变量合集">
-<meta property='og:description' content="HOME：用户的主目录，通常是/home/用户名。 USER：当前登录的用户名。 PATH：环境变量，包含了可执行文件的搜索路径。 BASH_VERSION：Bash shell的版本信息。 PWD：当前工作目录的绝对路径。 SHELL：当前使用的shell类型（如bash、zsh等）。 LANG：系统的语言和字符集设置。 TERM：终端类型。 LOGNAME：当前登录的用户名。 MAIL：用户的邮件地址。 HISTSIZE：命令历史记录的数量。 EDITOR：默认的文本编辑器。 PS1：命令提示符的格式。 LD_LIBRARY_PATH：动态链接库的搜索路径。 LD_PRELOAD：动态链接库的预加载设置。 HOSTNAME：主机名。 IP_ADDRESS：本地IP地址。 IPV6_ADDRESS：IPv6地址。 IFS：内部字段分隔符。 COLUMNS：终端的列数。 LINES：终端的行数。 USER：非root用户的用户名。 UID：用户ID（root用户为0）。 GID：组ID（root用户为0）。 OPIE：是否启用OpenPGP加密支持。 RUNLEVEL：运行级别。 PS1、PS2、PS3：自定义命令提示符的前缀、后缀和中间部分。 EDITOR、VISUAL：自定义文本编辑器和可视化编辑器。 MANPATH：手册页的搜索路径。 MYTMPDIR：临时文件目录。 TMPDIR：临时目录。 TMUX_PANE：当前活动的tmux面板。 TMUX_WINDOW：当前活动的tmux窗口。 TMUX_STATUS：当前活动的tmux状态。 TMUX_PID：当前活动的tmux进程ID。 TMUX_SERVER：当前活动的tmux服务器。 TMUX_PORT：当前活动的tmux端口。 TMUX_LISTEN_ADDRESS：当前活动的tmux监听地址。 TMUX_UNIX_SOCKET：当前活动的tmux Unix套接字。 TMUX_WINDOWS_SOCKET：当前活动的tmux Windows套接字。 TMUX_PID：当前活动的tmux进程ID。 TMUX_SERVER：当前活动的tmux服务器。 TMUX_PORT：当前活动的tmux端口。 TMUX_LISTEN_ADDRESS：当前活动的tmux监听地址。 TMUX_UNIX_SOCKET：当前活动的tmux Unix套接字。 TMUX_WINDOWS_SOCKET：当前活动的tmux Windows套接字。 TMUX_VERSION：当前活动的tmux版本。 TMUX_CONFIG_FILE：当前活动的tmux配置文件路径。 TMUX_DEFAULT_COMMAND：当前活动的tmux默认命令。 TMUX_CURRENT_COMMAND：当前活动的tmux当前命令。 ">
+<meta property='og:description' content="HOME：用户的主目录，通常是/home/用户名。 USER：当前登录的用户名。 PATH：环境变量，包含了可执行文件的搜索路径。 BASH_VE">
 <meta property='og:url' content='https://blog.seektao.cc/p/2309003/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='linux' /><meta property='article:tag' content='系统变量' /><meta property='article:published_time' content='2023-09-05T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-09-05T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="Linux系统的系统变量合集">
-<meta name="twitter:description" content="HOME：用户的主目录，通常是/home/用户名。 USER：当前登录的用户名。 PATH：环境变量，包含了可执行文件的搜索路径。 BASH_VERSION：Bash shell的版本信息。 PWD：当前工作目录的绝对路径。 SHELL：当前使用的shell类型（如bash、zsh等）。 LANG：系统的语言和字符集设置。 TERM：终端类型。 LOGNAME：当前登录的用户名。 MAIL：用户的邮件地址。 HISTSIZE：命令历史记录的数量。 EDITOR：默认的文本编辑器。 PS1：命令提示符的格式。 LD_LIBRARY_PATH：动态链接库的搜索路径。 LD_PRELOAD：动态链接库的预加载设置。 HOSTNAME：主机名。 IP_ADDRESS：本地IP地址。 IPV6_ADDRESS：IPv6地址。 IFS：内部字段分隔符。 COLUMNS：终端的列数。 LINES：终端的行数。 USER：非root用户的用户名。 UID：用户ID（root用户为0）。 GID：组ID（root用户为0）。 OPIE：是否启用OpenPGP加密支持。 RUNLEVEL：运行级别。 PS1、PS2、PS3：自定义命令提示符的前缀、后缀和中间部分。 EDITOR、VISUAL：自定义文本编辑器和可视化编辑器。 MANPATH：手册页的搜索路径。 MYTMPDIR：临时文件目录。 TMPDIR：临时目录。 TMUX_PANE：当前活动的tmux面板。 TMUX_WINDOW：当前活动的tmux窗口。 TMUX_STATUS：当前活动的tmux状态。 TMUX_PID：当前活动的tmux进程ID。 TMUX_SERVER：当前活动的tmux服务器。 TMUX_PORT：当前活动的tmux端口。 TMUX_LISTEN_ADDRESS：当前活动的tmux监听地址。 TMUX_UNIX_SOCKET：当前活动的tmux Unix套接字。 TMUX_WINDOWS_SOCKET：当前活动的tmux Windows套接字。 TMUX_PID：当前活动的tmux进程ID。 TMUX_SERVER：当前活动的tmux服务器。 TMUX_PORT：当前活动的tmux端口。 TMUX_LISTEN_ADDRESS：当前活动的tmux监听地址。 TMUX_UNIX_SOCKET：当前活动的tmux Unix套接字。 TMUX_WINDOWS_SOCKET：当前活动的tmux Windows套接字。 TMUX_VERSION：当前活动的tmux版本。 TMUX_CONFIG_FILE：当前活动的tmux配置文件路径。 TMUX_DEFAULT_COMMAND：当前活动的tmux默认命令。 TMUX_CURRENT_COMMAND：当前活动的tmux当前命令。 ">
+<meta name="twitter:description" content="HOME：用户的主目录，通常是/home/用户名。 USER：当前登录的用户名。 PATH：环境变量，包含了可执行文件的搜索路径。 BASH_VE">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -271,20 +271,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -362,18 +348,6 @@ TMUX_CURRENT_COMMAND：当前活动的tmux当前命令。</code></pre>
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -409,7 +383,7 @@ TMUX_CURRENT_COMMAND：当前活动的tmux当前命令。</code></pre>
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -547,8 +521,8 @@ TMUX_CURRENT_COMMAND：当前活动的tmux当前命令。</code></pre>
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 maccms的环境PHP，对于PHP配置太繁琐，且污染系统环境，所以采用docker的方式安装，docker镜像已经好心人帮忙构建了，用的最多是这个：esme518/docker-maccms10。 伪静态配置 默认运行环境是apache，按照官方的教程在根目录添加 .htaccess，接着后台开启伪静态是不成功的，因为docker这个版本没有启用rewrite组件。我们这下来介绍如何开启rewrite模块。 启用 mod_rewrite （1）进入docker容器 1 docker exec -it &lt;容器id&gt; bash （2）查看是否启用 mod_rewrite 1 apachectl -M （3）如果输出结果没有 mod_rewrite，则启用 1 a2enmod rewrite （4）重启 apache，使其生效，运行后会退出容器 1 service apache2 restart （5）再次进入容器，查看是否启用 1 apachectl -M 开启伪静态 （1）在根目录添加 .htaccess 1 vim .htaccess 1 2 3 4 5 6 7 8 &lt;IfModule mod_rewrite.c&gt; Options +FollowSymlinks -Multiviews RewriteEngine on RewriteCond %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_FILENAME} !-f RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L] &lt;/IfModule&gt; （2）登录后台，启用伪静态 路径为：系统-URL地址配置-路由伪静态设置 路由状态：开启 伪静态状态：开启 测试访问网站，查看是否成功。">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 maccms的环境PHP，对于PHP配置太繁琐，且污染系统环境，所以采用docker的方式安装，docker镜像已经好心人帮忙构建了，用">
 <title>影视站点maccms搭建教程</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2404015/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="影视站点maccms搭建教程">
-<meta property='og:description' content="前言 maccms的环境PHP，对于PHP配置太繁琐，且污染系统环境，所以采用docker的方式安装，docker镜像已经好心人帮忙构建了，用的最多是这个：esme518/docker-maccms10。 伪静态配置 默认运行环境是apache，按照官方的教程在根目录添加 .htaccess，接着后台开启伪静态是不成功的，因为docker这个版本没有启用rewrite组件。我们这下来介绍如何开启rewrite模块。 启用 mod_rewrite （1）进入docker容器 1 docker exec -it &lt;容器id&gt; bash （2）查看是否启用 mod_rewrite 1 apachectl -M （3）如果输出结果没有 mod_rewrite，则启用 1 a2enmod rewrite （4）重启 apache，使其生效，运行后会退出容器 1 service apache2 restart （5）再次进入容器，查看是否启用 1 apachectl -M 开启伪静态 （1）在根目录添加 .htaccess 1 vim .htaccess 1 2 3 4 5 6 7 8 &lt;IfModule mod_rewrite.c&gt; Options +FollowSymlinks -Multiviews RewriteEngine on RewriteCond %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_FILENAME} !-f RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L] &lt;/IfModule&gt; （2）登录后台，启用伪静态 路径为：系统-URL地址配置-路由伪静态设置 路由状态：开启 伪静态状态：开启 测试访问网站，查看是否成功。">
+<meta property='og:description' content="前言 maccms的环境PHP，对于PHP配置太繁琐，且污染系统环境，所以采用docker的方式安装，docker镜像已经好心人帮忙构建了，用">
 <meta property='og:url' content='https://blog.seektao.cc/p/2404015/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='maccms' /><meta property='article:published_time' content='2024-04-15T15:07:04&#43;08:00'/><meta property='article:modified_time' content='2024-04-15T15:07:04&#43;08:00'/>
 <meta name="twitter:title" content="影视站点maccms搭建教程">
-<meta name="twitter:description" content="前言 maccms的环境PHP，对于PHP配置太繁琐，且污染系统环境，所以采用docker的方式安装，docker镜像已经好心人帮忙构建了，用的最多是这个：esme518/docker-maccms10。 伪静态配置 默认运行环境是apache，按照官方的教程在根目录添加 .htaccess，接着后台开启伪静态是不成功的，因为docker这个版本没有启用rewrite组件。我们这下来介绍如何开启rewrite模块。 启用 mod_rewrite （1）进入docker容器 1 docker exec -it &lt;容器id&gt; bash （2）查看是否启用 mod_rewrite 1 apachectl -M （3）如果输出结果没有 mod_rewrite，则启用 1 a2enmod rewrite （4）重启 apache，使其生效，运行后会退出容器 1 service apache2 restart （5）再次进入容器，查看是否启用 1 apachectl -M 开启伪静态 （1）在根目录添加 .htaccess 1 vim .htaccess 1 2 3 4 5 6 7 8 &lt;IfModule mod_rewrite.c&gt; Options +FollowSymlinks -Multiviews RewriteEngine on RewriteCond %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_FILENAME} !-f RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L] &lt;/IfModule&gt; （2）登录后台，启用伪静态 路径为：系统-URL地址配置-路由伪静态设置 路由状态：开启 伪静态状态：开启 测试访问网站，查看是否成功。">
+<meta name="twitter:description" content="前言 maccms的环境PHP，对于PHP配置太繁琐，且污染系统环境，所以采用docker的方式安装，docker镜像已经好心人帮忙构建了，用">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -311,20 +311,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -583,18 +569,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -630,7 +604,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -642,6 +616,19 @@
 
         <div class="article-details">
             <h2 class="article-title">maccms数据备份和恢复</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
         </div>
     </a>
 </article>
@@ -681,19 +668,6 @@
 
         <div class="article-details">
             <h2 class="article-title">OBS使用经验</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826190828/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">firefox个性化配置</h2>
         </div>
     </a>
 </article>
@@ -768,8 +742,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

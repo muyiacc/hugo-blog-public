@@ -5,7 +5,7 @@
         <link>https://blog.seektao.cc/tags/flutter/</link>
         <description>Recent content in Flutter on Seektao | 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>zh-cn</language>
         <copyright>Seektao | 寻道之旅</copyright>
         <lastBuildDate>Sun, 03 Mar 2024 00:03:15 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/flutter/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>FVM，Flutter的多版本管理工具</title>

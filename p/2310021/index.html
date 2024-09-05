@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 之前使用gitee当作图床，typora能渲染，但是博客里无法渲染，可能是有防盗链，所以换成了smms图床，换了之后就可以了。 前置条件 NodeJs https://nodejs.org/en 官网下载安装即可 Picgo-Core 1）我这里不推荐使用图形化的picgo，占用内存。建议使用nodejs安装picgo，安装nodejs之后，再安装picgo。 1 2 3 4 5 # 通过node安装picgo（前提node环境已经安装好） npm install picgo -g # 配置文件所在的位置 # 用户家目录下的.picgo/config.json 2）把picgo所在的路径添加到系统环境变量，方便使用。 3）在typora设置中，图像选择【上传图片】，上传服务选择 【costom command】,命令选择picgo所在的位置，不过需要在最后面加上 小写字母 u，如： 1 picgo u 关于picgo的更多信息请参考：https://picgo.github.io/PicGo-Core-Doc/ 图床服务 smms 1）注册账号 smms注册账户拥有5g的空间，对于文章上传图片来说，应该是够用了，如果不够大不了再注册个账户而已。 官网：https://sm.ms/ 备用地址：https://smms.app 注册账户之后，进入控制台查看api token，记下来，稍后使用。 2）配置picgo 首先确定好是否配置了环境变量，如果没有配置，请在picgo所在的路径打开终端。 1 2 3 4 5 6 7 8 9 10 11 12 # 1. 查看picgo版本 picgo -v # 2. 设置使用的图床服务 # 键盘上下键选择使用的图床服务，如smms，回车确认 picgo use # 3. 设置使用的图床配置，如上传的路径，token等 picgo set uploader # 继续选择smms，输入api token，输入的时候密码看不见。 # 接着输入smms备用域名，如smms.">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 之前使用gitee当作图床，typora能渲染，但是博客里无法渲染，可能是有防盗链，所以换成了smms图床，换了之后就可以了。 前置条件 NodeJs">
 <title>使用picgo-core将markdown图片上传至smms图床</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310021/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="使用picgo-core将markdown图片上传至smms图床">
-<meta property='og:description' content="前言 之前使用gitee当作图床，typora能渲染，但是博客里无法渲染，可能是有防盗链，所以换成了smms图床，换了之后就可以了。 前置条件 NodeJs https://nodejs.org/en 官网下载安装即可 Picgo-Core 1）我这里不推荐使用图形化的picgo，占用内存。建议使用nodejs安装picgo，安装nodejs之后，再安装picgo。 1 2 3 4 5 # 通过node安装picgo（前提node环境已经安装好） npm install picgo -g # 配置文件所在的位置 # 用户家目录下的.picgo/config.json 2）把picgo所在的路径添加到系统环境变量，方便使用。 3）在typora设置中，图像选择【上传图片】，上传服务选择 【costom command】,命令选择picgo所在的位置，不过需要在最后面加上 小写字母 u，如： 1 picgo u 关于picgo的更多信息请参考：https://picgo.github.io/PicGo-Core-Doc/ 图床服务 smms 1）注册账号 smms注册账户拥有5g的空间，对于文章上传图片来说，应该是够用了，如果不够大不了再注册个账户而已。 官网：https://sm.ms/ 备用地址：https://smms.app 注册账户之后，进入控制台查看api token，记下来，稍后使用。 2）配置picgo 首先确定好是否配置了环境变量，如果没有配置，请在picgo所在的路径打开终端。 1 2 3 4 5 6 7 8 9 10 11 12 # 1. 查看picgo版本 picgo -v # 2. 设置使用的图床服务 # 键盘上下键选择使用的图床服务，如smms，回车确认 picgo use # 3. 设置使用的图床配置，如上传的路径，token等 picgo set uploader # 继续选择smms，输入api token，输入的时候密码看不见。 # 接着输入smms备用域名，如smms.">
+<meta property='og:description' content="前言 之前使用gitee当作图床，typora能渲染，但是博客里无法渲染，可能是有防盗链，所以换成了smms图床，换了之后就可以了。 前置条件 NodeJs">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310021/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='picgo' /><meta property='article:tag' content='smms' /><meta property='article:published_time' content='2023-10-21T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-10-21T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="使用picgo-core将markdown图片上传至smms图床">
-<meta name="twitter:description" content="前言 之前使用gitee当作图床，typora能渲染，但是博客里无法渲染，可能是有防盗链，所以换成了smms图床，换了之后就可以了。 前置条件 NodeJs https://nodejs.org/en 官网下载安装即可 Picgo-Core 1）我这里不推荐使用图形化的picgo，占用内存。建议使用nodejs安装picgo，安装nodejs之后，再安装picgo。 1 2 3 4 5 # 通过node安装picgo（前提node环境已经安装好） npm install picgo -g # 配置文件所在的位置 # 用户家目录下的.picgo/config.json 2）把picgo所在的路径添加到系统环境变量，方便使用。 3）在typora设置中，图像选择【上传图片】，上传服务选择 【costom command】,命令选择picgo所在的位置，不过需要在最后面加上 小写字母 u，如： 1 picgo u 关于picgo的更多信息请参考：https://picgo.github.io/PicGo-Core-Doc/ 图床服务 smms 1）注册账号 smms注册账户拥有5g的空间，对于文章上传图片来说，应该是够用了，如果不够大不了再注册个账户而已。 官网：https://sm.ms/ 备用地址：https://smms.app 注册账户之后，进入控制台查看api token，记下来，稍后使用。 2）配置picgo 首先确定好是否配置了环境变量，如果没有配置，请在picgo所在的路径打开终端。 1 2 3 4 5 6 7 8 9 10 11 12 # 1. 查看picgo版本 picgo -v # 2. 设置使用的图床服务 # 键盘上下键选择使用的图床服务，如smms，回车确认 picgo use # 3. 设置使用的图床配置，如上传的路径，token等 picgo set uploader # 继续选择smms，输入api token，输入的时候密码看不见。 # 接着输入smms备用域名，如smms.">
+<meta name="twitter:description" content="前言 之前使用gitee当作图床，typora能渲染，但是博客里无法渲染，可能是有防盗链，所以换成了smms图床，换了之后就可以了。 前置条件 NodeJs">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -313,20 +313,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -515,18 +501,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -562,7 +536,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -574,6 +548,19 @@
 
         <div class="article-details">
             <h2 class="article-title">picgo自动上传图片到图床（优化版）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
         </div>
     </a>
 </article>
@@ -613,19 +600,6 @@
 
         <div class="article-details">
             <h2 class="article-title">OBS使用经验</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826190828/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">firefox个性化配置</h2>
         </div>
     </a>
 </article>
@@ -700,8 +674,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

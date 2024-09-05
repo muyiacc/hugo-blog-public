@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="官网：https://rclone.org/ 安装 Windows 新增配置 要实现后续操作，第一次使用rclone首先需要增加远程存储配置 新增一个远程配置，这是一个交互式的命令，执行后按照提示操作即可 1 rclone config Windows平台的rclone配置文件夹位置：C:\\Users&lt;your_user_name&gt;\\AppData\\Roaming\\rclone 挂载 将远程存储挂载到本地文件夹 案例1：将坚果云挂载 E:\\jianguoyun（该目录需要不存在） 前台挂载 1 rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun 后台挂载 1 start /B rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun 开机自启动 新建文本文件 rclone_mount_jianguoyun.bat，输入以下内容 1 2 @echo off start /B rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun Win+R，输入shell:startup打开启动文件夹，将该文件放入此文件夹 取消挂载 案例2：挂载alist到本地 前台挂载 1 rclone mount --buffer-size 4M --vfs-cache-mode writes alist: E:\\alist 后台挂载 1 start /B rclone mount --buffer-size 4M --vfs-cache-mode writes alist: E:\\alist 同步（谨慎使用） 单向同步（谨慎使用） 注意：这可能导致数据丢失，首先使用 --dry-run or the --interactive/-i测试">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="官网：https://rclone.org/ 安装 Windows 新增配置 要实现后续操作，第一次使用rclone首先需要增加远程存储配置 新增一个远程配置，这">
 <title>RClone-Windows篇，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2407018/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="RClone-Windows篇，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一">
-<meta property='og:description' content="官网：https://rclone.org/ 安装 Windows 新增配置 要实现后续操作，第一次使用rclone首先需要增加远程存储配置 新增一个远程配置，这是一个交互式的命令，执行后按照提示操作即可 1 rclone config Windows平台的rclone配置文件夹位置：C:\\Users&lt;your_user_name&gt;\\AppData\\Roaming\\rclone 挂载 将远程存储挂载到本地文件夹 案例1：将坚果云挂载 E:\\jianguoyun（该目录需要不存在） 前台挂载 1 rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun 后台挂载 1 start /B rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun 开机自启动 新建文本文件 rclone_mount_jianguoyun.bat，输入以下内容 1 2 @echo off start /B rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun Win+R，输入shell:startup打开启动文件夹，将该文件放入此文件夹 取消挂载 案例2：挂载alist到本地 前台挂载 1 rclone mount --buffer-size 4M --vfs-cache-mode writes alist: E:\\alist 后台挂载 1 start /B rclone mount --buffer-size 4M --vfs-cache-mode writes alist: E:\\alist 同步（谨慎使用） 单向同步（谨慎使用） 注意：这可能导致数据丢失，首先使用 --dry-run or the --interactive/-i测试">
+<meta property='og:description' content="官网：https://rclone.org/ 安装 Windows 新增配置 要实现后续操作，第一次使用rclone首先需要增加远程存储配置 新增一个远程配置，这">
 <meta property='og:url' content='https://blog.seektao.cc/p/2407018/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='rclone' /><meta property='article:published_time' content='2024-07-17T15:07:48&#43;08:00'/><meta property='article:modified_time' content='2024-07-17T15:07:48&#43;08:00'/>
 <meta name="twitter:title" content="RClone-Windows篇，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一">
-<meta name="twitter:description" content="官网：https://rclone.org/ 安装 Windows 新增配置 要实现后续操作，第一次使用rclone首先需要增加远程存储配置 新增一个远程配置，这是一个交互式的命令，执行后按照提示操作即可 1 rclone config Windows平台的rclone配置文件夹位置：C:\\Users&lt;your_user_name&gt;\\AppData\\Roaming\\rclone 挂载 将远程存储挂载到本地文件夹 案例1：将坚果云挂载 E:\\jianguoyun（该目录需要不存在） 前台挂载 1 rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun 后台挂载 1 start /B rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun 开机自启动 新建文本文件 rclone_mount_jianguoyun.bat，输入以下内容 1 2 @echo off start /B rclone mount --buffer-size 4M --vfs-cache-mode writes jianguoyun: E:\\jianguoyun Win+R，输入shell:startup打开启动文件夹，将该文件放入此文件夹 取消挂载 案例2：挂载alist到本地 前台挂载 1 rclone mount --buffer-size 4M --vfs-cache-mode writes alist: E:\\alist 后台挂载 1 start /B rclone mount --buffer-size 4M --vfs-cache-mode writes alist: E:\\alist 同步（谨慎使用） 单向同步（谨慎使用） 注意：这可能导致数据丢失，首先使用 --dry-run or the --interactive/-i测试">
+<meta name="twitter:description" content="官网：https://rclone.org/ 安装 Windows 新增配置 要实现后续操作，第一次使用rclone首先需要增加远程存储配置 新增一个远程配置，这">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -321,20 +321,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -578,18 +564,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -625,7 +599,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -763,8 +737,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

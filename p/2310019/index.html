@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="ssl证书格式的转换 需求 把 ssl 证书，以 pem 结尾的证书改成 key、crt结尾。 因为我是使用的 npm（nginx proxy manager）生成的ssl证书，下载下来的证书格式全部为 pem 结尾，现在其他地方需要用到ssl证书，但不是 pem 结尾，而是要求格式为 private.key、public.crt，这前者是私钥，后者是公钥。 npm下载的证书的文件有 1 cert1.pem chain1.pem fullchain1.pem privkey1.pem 它们的含义分别为： cert1.pem：这是服务器证书，也称为公钥证书或端点证书。当客户端请求与服务器建立SSL/TLS连接时，服务器会将此证书发送给客户端以验证身份和建立安全连接。 chain1.pem：这是证书链（CA Bundle），其中包括根证书和中间证书。证书链用于构建完整的证书信任链，以验证服务器证书的真实性。 fullchain1.pem：这是服务器证书和证书链的组合。它包括服务器证书和中间证书链，但不包括根证书，因为客户端应该已经具有根证书的信任。 privkey1.pem：这是私钥文件，它是与服务器证书配对使用的秘密密钥。私钥文件必须保持机密，不应共享或泄露给其他人，以确保安全连接的保密性 我需要做的就是将privkey1.pem转化成privkey.key，将cert1.pem转化成public.crt 根据这个情况，linux系统终端有openssl工具，以下为转换步骤 解决办法 将cert1.pem转化成public.crt 1 openssl x509 -in cert1.pem -out public.crt 将privkey1.pem转化成privkey.key 尝试一： 1 openssl rsa -in privkey1.pem -out private.key 尝试二： 如果出现了错误，具体原因为 加密算法不是 RSA，除此RSA外，还有 EC、DSA等， 使用EC密钥算法，最后成功 1 2 3 4 openssl ec -in privkey1.pem -out private.key read EC key writing EC key ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="ssl证书格式的转换 需求 把 ssl 证书，以 pem 结尾的证书改成 key、crt结尾。 因为我是使用的 npm（nginx proxy manager）生成的ssl证书，">
 <title>ssl证书格式的转换</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/2310019/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="ssl证书格式的转换">
-<meta property='og:description' content="ssl证书格式的转换 需求 把 ssl 证书，以 pem 结尾的证书改成 key、crt结尾。 因为我是使用的 npm（nginx proxy manager）生成的ssl证书，下载下来的证书格式全部为 pem 结尾，现在其他地方需要用到ssl证书，但不是 pem 结尾，而是要求格式为 private.key、public.crt，这前者是私钥，后者是公钥。 npm下载的证书的文件有 1 cert1.pem chain1.pem fullchain1.pem privkey1.pem 它们的含义分别为： cert1.pem：这是服务器证书，也称为公钥证书或端点证书。当客户端请求与服务器建立SSL/TLS连接时，服务器会将此证书发送给客户端以验证身份和建立安全连接。 chain1.pem：这是证书链（CA Bundle），其中包括根证书和中间证书。证书链用于构建完整的证书信任链，以验证服务器证书的真实性。 fullchain1.pem：这是服务器证书和证书链的组合。它包括服务器证书和中间证书链，但不包括根证书，因为客户端应该已经具有根证书的信任。 privkey1.pem：这是私钥文件，它是与服务器证书配对使用的秘密密钥。私钥文件必须保持机密，不应共享或泄露给其他人，以确保安全连接的保密性 我需要做的就是将privkey1.pem转化成privkey.key，将cert1.pem转化成public.crt 根据这个情况，linux系统终端有openssl工具，以下为转换步骤 解决办法 将cert1.pem转化成public.crt 1 openssl x509 -in cert1.pem -out public.crt 将privkey1.pem转化成privkey.key 尝试一： 1 openssl rsa -in privkey1.pem -out private.key 尝试二： 如果出现了错误，具体原因为 加密算法不是 RSA，除此RSA外，还有 EC、DSA等， 使用EC密钥算法，最后成功 1 2 3 4 openssl ec -in privkey1.pem -out private.key read EC key writing EC key ">
+<meta property='og:description' content="ssl证书格式的转换 需求 把 ssl 证书，以 pem 结尾的证书改成 key、crt结尾。 因为我是使用的 npm（nginx proxy manager）生成的ssl证书，">
 <meta property='og:url' content='https://blog.seektao.cc/p/2310019/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ssl' /><meta property='article:published_time' content='2023-10-19T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-10-19T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="ssl证书格式的转换">
-<meta name="twitter:description" content="ssl证书格式的转换 需求 把 ssl 证书，以 pem 结尾的证书改成 key、crt结尾。 因为我是使用的 npm（nginx proxy manager）生成的ssl证书，下载下来的证书格式全部为 pem 结尾，现在其他地方需要用到ssl证书，但不是 pem 结尾，而是要求格式为 private.key、public.crt，这前者是私钥，后者是公钥。 npm下载的证书的文件有 1 cert1.pem chain1.pem fullchain1.pem privkey1.pem 它们的含义分别为： cert1.pem：这是服务器证书，也称为公钥证书或端点证书。当客户端请求与服务器建立SSL/TLS连接时，服务器会将此证书发送给客户端以验证身份和建立安全连接。 chain1.pem：这是证书链（CA Bundle），其中包括根证书和中间证书。证书链用于构建完整的证书信任链，以验证服务器证书的真实性。 fullchain1.pem：这是服务器证书和证书链的组合。它包括服务器证书和中间证书链，但不包括根证书，因为客户端应该已经具有根证书的信任。 privkey1.pem：这是私钥文件，它是与服务器证书配对使用的秘密密钥。私钥文件必须保持机密，不应共享或泄露给其他人，以确保安全连接的保密性 我需要做的就是将privkey1.pem转化成privkey.key，将cert1.pem转化成public.crt 根据这个情况，linux系统终端有openssl工具，以下为转换步骤 解决办法 将cert1.pem转化成public.crt 1 openssl x509 -in cert1.pem -out public.crt 将privkey1.pem转化成privkey.key 尝试一： 1 openssl rsa -in privkey1.pem -out private.key 尝试二： 如果出现了错误，具体原因为 加密算法不是 RSA，除此RSA外，还有 EC、DSA等， 使用EC密钥算法，最后成功 1 2 3 4 openssl ec -in privkey1.pem -out private.key read EC key writing EC key ">
+<meta name="twitter:description" content="ssl证书格式的转换 需求 把 ssl 证书，以 pem 结尾的证书改成 key、crt结尾。 因为我是使用的 npm（nginx proxy manager）生成的ssl证书，">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -271,20 +271,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -379,18 +365,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -426,7 +400,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -471,12 +445,12 @@
             
                 
 <article class="">
-    <a href="/p/240904150928/">
+    <a href="/p/240905211706/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">outline，开源的文档知识库</h2>
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
         </div>
     </a>
 </article>
@@ -484,12 +458,12 @@
             
                 
 <article class="">
-    <a href="/p/240902180979/">
+    <a href="/p/240904150928/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">玩客云刷机安装armbian系统</h2>
+            <h2 class="article-title">outline，开源的文档知识库</h2>
         </div>
     </a>
 </article>
@@ -564,8 +538,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 

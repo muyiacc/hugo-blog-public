@@ -5,7 +5,7 @@
         <link>https://blog.seektao.cc/tags/archlinux/</link>
         <description>Recent content in Archlinux on Seektao | 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>zh-cn</language>
         <copyright>Seektao | 寻道之旅</copyright>
         <lastBuildDate>Sun, 01 Oct 2023 14:07:10 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/archlinux/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>archlinux自动挂载windows的不同盘符（驱动器）</title>

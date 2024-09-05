@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写的域名邮箱Pmail。 官方介绍：PMail是一个追求极简部署流程、极致资源占用的个人域名邮箱服务器。单文件运行，包含完整的收发邮件服务和Web端邮件管理功能。只需一台服务器、一个域名、一行代码、一分钟部署时间，你就能够搭建出一个自己的域名邮箱。 GitHub地址：https://github.com/Jinnrry/PMail/ 以下为界面截图： 准备工作 服务器，开放了25号端口的服务器，没有开放则无法发信。 域名 nginx 反代服务器 nginx proxy manager（可选，但建议），与nginx二选一 docker或者docker-compose 部署 提示：文章篇幅较长 docker-compose 如果服务器80，443端口没有被占用，搭建过程则较为简单。如果80，443端口被其他应用占用，搭建过程则较为繁琐。 本次80，443端口被nginx proxy manager占用，所以采用映射其他端口搭建 本次教程采用docker-compose方式安装，方便管理配置文件和升级。其余方式请参考官方教程 在你喜欢的目录下，新建 pamail 文件夹，在 pamil文件夹下，新建 docker-compose.yml文件，如： 1 2 3 mkdir -r ~/opt/pmail &amp;&amp; cd ~/opt/pmail docker network create pmail_network vim docker-compose.yml 文件内容如下 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 version: &#39;3.">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写">
 <title>强烈推荐，一个内存占用极低的自建域名邮箱Pmail</title>
 
 <link rel='canonical' href='https://blog.seektao.cc/p/pmail/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="强烈推荐，一个内存占用极低的自建域名邮箱Pmail">
-<meta property='og:description' content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写的域名邮箱Pmail。 官方介绍：PMail是一个追求极简部署流程、极致资源占用的个人域名邮箱服务器。单文件运行，包含完整的收发邮件服务和Web端邮件管理功能。只需一台服务器、一个域名、一行代码、一分钟部署时间，你就能够搭建出一个自己的域名邮箱。 GitHub地址：https://github.com/Jinnrry/PMail/ 以下为界面截图： 准备工作 服务器，开放了25号端口的服务器，没有开放则无法发信。 域名 nginx 反代服务器 nginx proxy manager（可选，但建议），与nginx二选一 docker或者docker-compose 部署 提示：文章篇幅较长 docker-compose 如果服务器80，443端口没有被占用，搭建过程则较为简单。如果80，443端口被其他应用占用，搭建过程则较为繁琐。 本次80，443端口被nginx proxy manager占用，所以采用映射其他端口搭建 本次教程采用docker-compose方式安装，方便管理配置文件和升级。其余方式请参考官方教程 在你喜欢的目录下，新建 pamail 文件夹，在 pamil文件夹下，新建 docker-compose.yml文件，如： 1 2 3 mkdir -r ~/opt/pmail &amp;&amp; cd ~/opt/pmail docker network create pmail_network vim docker-compose.yml 文件内容如下 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 version: &#39;3.">
+<meta property='og:description' content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写">
 <meta property='og:url' content='https://blog.seektao.cc/p/pmail/'>
 <meta property='og:site_name' content='Seektao | 寻道之旅'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='mail' /><meta property='article:tag' content='pmail' /><meta property='article:published_time' content='2023-10-23T14:07:10&#43;08:00'/><meta property='article:modified_time' content='2023-10-23T14:07:10&#43;08:00'/>
 <meta name="twitter:title" content="强烈推荐，一个内存占用极低的自建域名邮箱Pmail">
-<meta name="twitter:description" content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写的域名邮箱Pmail。 官方介绍：PMail是一个追求极简部署流程、极致资源占用的个人域名邮箱服务器。单文件运行，包含完整的收发邮件服务和Web端邮件管理功能。只需一台服务器、一个域名、一行代码、一分钟部署时间，你就能够搭建出一个自己的域名邮箱。 GitHub地址：https://github.com/Jinnrry/PMail/ 以下为界面截图： 准备工作 服务器，开放了25号端口的服务器，没有开放则无法发信。 域名 nginx 反代服务器 nginx proxy manager（可选，但建议），与nginx二选一 docker或者docker-compose 部署 提示：文章篇幅较长 docker-compose 如果服务器80，443端口没有被占用，搭建过程则较为简单。如果80，443端口被其他应用占用，搭建过程则较为繁琐。 本次80，443端口被nginx proxy manager占用，所以采用映射其他端口搭建 本次教程采用docker-compose方式安装，方便管理配置文件和升级。其余方式请参考官方教程 在你喜欢的目录下，新建 pamail 文件夹，在 pamil文件夹下，新建 docker-compose.yml文件，如： 1 2 3 mkdir -r ~/opt/pmail &amp;&amp; cd ~/opt/pmail docker network create pmail_network vim docker-compose.yml 文件内容如下 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 version: &#39;3.">
+<meta name="twitter:description" content="由于 PMail 后续更新，本文也将修改，适应最新版本 前言 最近想自建一个域名邮箱，开源的邮箱服务内存占用太高，对于个人使用不太友好，接着找到一个由 Golang 编写">
   
 
 
@@ -43,7 +43,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -218,7 +218,7 @@
 
 
 
-                        <span>Dark Mode</span>
+                        <span>暗色模式</span>
                     </li>
                 
             </ol>
@@ -243,7 +243,7 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
@@ -307,20 +307,6 @@
             </div>
         
 
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
         
     </footer>
     
@@ -793,18 +779,6 @@
     </section>
 
 
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>CC BY-NC-ND</span>
-    </section>
     </footer>
 
 
@@ -840,7 +814,7 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
@@ -852,6 +826,19 @@
 
         <div class="article-details">
             <h2 class="article-title">PMail配置SMTP，POP客户端</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/240905211706/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">博客更新：新增模块 hugo-notice</h2>
         </div>
     </a>
 </article>
@@ -891,19 +878,6 @@
 
         <div class="article-details">
             <h2 class="article-title">OBS使用经验</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/240826190828/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">firefox个性化配置</h2>
         </div>
     </a>
 </article>
@@ -978,8 +952,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
