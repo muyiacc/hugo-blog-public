@@ -390,11 +390,32 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="手动安装-linuxmacos">手动安装-Linux/macOS
-</h3><ul>
-<li>创建 g 家目录（推荐<code>~/.g</code>目录）</li>
-<li>下载<a class="link" href="https://github.com/voidint/g/releases"  target="_blank" rel="noopener"
-    >release</a>的二进制压缩包，并解压至 g 家目录下的 bin 子目录中（即<code>~/.g/bin</code>目录）。</li>
-<li>将所需的环境变量写入<code>~/.g/env</code>文件
+</h3><p>创建 g 家目录（推荐<code>~/.g</code>目录）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir -p ~/.g <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>mkdir -p ~/.g/bin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>下载 <a class="link" href="https://github.com/voidint/g/releases"  target="_blank" rel="noopener"
+    >release</a> 的二进制压缩包，并解压至 g 家目录下的 bin 子目录中（即<code>~/.g/bin</code>目录）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">wget https://github.com/voidint/g/releases/download/v1.7.0/g1.7.0.linux-amd64.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tar -zxvf g1.7.0.linux-amd64.tar.gz -C ~/.g/bin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将所需的环境变量写入<code>~/.g/env</code>文件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -406,7 +427,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ cat &gt;~/.g/env <span class="s">&lt;&lt;&#39;EOF&#39;
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat &gt;~/.g/env <span class="s">&lt;&lt;&#39;EOF&#39;
 </span></span></span><span class="line"><span class="cl"><span class="s">#!/bin/sh
 </span></span></span><span class="line"><span class="cl"><span class="s"># g shell setup
 </span></span></span><span class="line"><span class="cl"><span class="s">export GOROOT=&#34;${HOME}/.g/go&#34;
@@ -415,9 +436,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<p>将<code>~/.g/env</code>导入到 shell 环境配置文件（如<code>~/.bashrc</code>、<code>~/.zshrc</code>&hellip;）</p>
+</div><p>将<code>~/.g/env</code>导入到 shell 环境配置文件（如<code>~/.bashrc</code>、<code>~/.zshrc</code>&hellip;）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -428,7 +447,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ cat &gt;&gt;~/.bashrc <span class="s">&lt;&lt;&#39;EOF&#39;
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat &gt;&gt;~/.bashrc <span class="s">&lt;&lt;&#39;EOF&#39;
 </span></span></span><span class="line"><span class="cl"><span class="s"># g shell setup
 </span></span></span><span class="line"><span class="cl"><span class="s">if [ -f &#34;${HOME}/.g/env&#34; ]; then
 </span></span></span><span class="line"><span class="cl"><span class="s">    . &#34;${HOME}/.g/env&#34;
@@ -436,13 +455,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>启用环境变量</p>
+</div><p>刷新环境变量</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">source</span> ~/.bashrc <span class="c1"># 或source ~/.zshrc</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc <span class="c1"># 或source ~/.zshrc</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="手动安装-windows">手动安装-Windows
@@ -454,15 +473,15 @@
 <li>将 <code>~/.g/bin</code>添加到系统环境变量</li>
 <li>添加<code>GOROOT</code>环境变量</li>
 </ul>
-<p>如果需要修改 g 的安装目录，需要添加几个环境变量</p>
+<h2 id="使用">使用
+</h2><p>如果需要修改 g 的安装目录，需要添加几个环境变量</p>
 <ul>
 <li>G_EXPERIMENTAL=true，开启实验特性支持，请参考：<a class="link" href="https://github.com/voidint/g/blob/master/README_CN.md#faq"  target="_blank" rel="noopener"
     >FAQ</a></li>
 <li>G_HOME，指向g的安装目录</li>
 <li>GOROOT，指向go的目录</li>
 </ul>
-<h2 id="使用">使用
-</h2><p>查询当前可供安装的<code>stable</code>状态的 go 版本</p>
+<p>查询当前可供安装的<code>stable</code>状态的 go 版本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -471,13 +490,13 @@
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">g ls-remote stable
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>安装目标 go 版本<code>1.20.5</code></p>
+</div><p>安装目标 go 版本<code>1.22.4</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">g install 1.14.7
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">g install 1.22.4
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>查询已安装的 go 版本</p>
