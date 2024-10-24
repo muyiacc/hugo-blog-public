@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Proxy on Seektao | 寻道之旅</title>
+        <title>Proxy on 寻道之旅</title>
         <link>https://blog.seektao.cc/tags/proxy/</link>
-        <description>Recent content in Proxy on Seektao | 寻道之旅</description>
+        <description>Recent content in Proxy on 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Seektao | 寻道之旅</copyright>
+        <copyright>寻道之旅</copyright>
         <lastBuildDate>Sun, 10 Sep 2023 14:07:10 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/proxy/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>web端的v2ray工具v2raya</title>
         <link>https://blog.seektao.cc/p/2309009/</link>

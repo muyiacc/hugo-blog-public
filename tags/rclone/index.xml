@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Rclone on Seektao | 寻道之旅</title>
+        <title>Rclone on 寻道之旅</title>
         <link>https://blog.seektao.cc/tags/rclone/</link>
-        <description>Recent content in Rclone on Seektao | 寻道之旅</description>
+        <description>Recent content in Rclone on 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Seektao | 寻道之旅</copyright>
+        <copyright>寻道之旅</copyright>
         <lastBuildDate>Sat, 20 Jul 2024 15:07:50 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/rclone/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>RClone，一个命令行程序，管理超过70个云存储产品，可帮助你实现文件备份，云数据镜像，数据迁移，本地存储，云储存合二为一</title>
         <link>https://blog.seektao.cc/p/2407020/</link>

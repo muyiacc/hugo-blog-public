@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Aria2 on Seektao | 寻道之旅</title>
+        <title>Aria2 on 寻道之旅</title>
         <link>https://blog.seektao.cc/tags/aria2/</link>
-        <description>Recent content in Aria2 on Seektao | 寻道之旅</description>
+        <description>Recent content in Aria2 on 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Seektao | 寻道之旅</copyright>
+        <copyright>寻道之旅</copyright>
         <lastBuildDate>Fri, 01 Dec 2023 14:07:10 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/aria2/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>aria2下载工具安装，并安装前端界面webui-aria2</title>
         <link>https://blog.seektao.cc/p/2312001/</link>

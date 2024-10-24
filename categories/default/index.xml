@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Default on Seektao | 寻道之旅</title>
+        <title>Default on 寻道之旅</title>
         <link>https://blog.seektao.cc/categories/default/</link>
-        <description>Recent content in Default on Seektao | 寻道之旅</description>
+        <description>Recent content in Default on 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Seektao | 寻道之旅</copyright>
+        <copyright>寻道之旅</copyright>
         <lastBuildDate>Sun, 13 Oct 2024 17:51:36 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/categories/default/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>MPV播放器入门指南-脚本-第二期：粘贴播放&#43;MPV播放视频平台的视频</title>
         <link>https://blog.seektao.cc/p/241013175136/</link>
@@ -7863,25 +7863,24 @@ Python Script to add OpenGapps, Magisk, libhoudini translation library and libnd
 </description>
         </item>
         <item>
-        <title>镜像源大汇总</title>
-        <link>https://blog.seektao.cc/p/mirror-list/</link>
+        <title>镜像源大汇总，强烈推荐！</title>
+        <link>https://blog.seektao.cc/p/mirror/</link>
         <pubDate>Sun, 29 Oct 2023 14:07:29 +0800</pubDate>
         
-        <guid>https://blog.seektao.cc/p/mirror-list/</guid>
+        <guid>https://blog.seektao.cc/p/mirror/</guid>
         <description>&lt;h2 id=&#34;概述&#34;&gt;概述
 &lt;/h2&gt;&lt;p&gt;本文档包含了各个常用镜像服务及对应镜像站&lt;/p&gt;
 &lt;p&gt;各个镜像源的帮助文档：&lt;/p&gt;
 &lt;p&gt;清华：&lt;a class=&#34;link&#34; href=&#34;https://mirror.tuna.tsinghua.edu.cn/help&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://mirror.tuna.tsinghua.edu.cn/help&lt;/a&gt;
 阿里云：&lt;a class=&#34;link&#34; href=&#34;https://developer.aliyun.com/mirror/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://developer.aliyun.com/mirror/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;中科大：&lt;a class=&#34;link&#34; href=&#34;https://mirrors.ustc.edu.cn/help/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://developer.aliyun.com/mirror/&lt;/a&gt;
+中科大：&lt;a class=&#34;link&#34; href=&#34;https://mirrors.ustc.edu.cn/help/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://mirrors.ustc.edu.cn/help/&lt;/a&gt;
 华为云：&lt;a class=&#34;link&#34; href=&#34;https://mirrors.huaweicloud.com/home&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://mirrors.huaweicloud.com/home&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;系统软件源&#34;&gt;系统软件源
-&lt;/h2&gt;&lt;p&gt;新增&lt;/p&gt;
-&lt;h3 id=&#34;debian&#34;&gt;Debian
+&lt;/h2&gt;&lt;h3 id=&#34;debian&#34;&gt;Debian
 &lt;/h3&gt;&lt;p&gt;查看系统发行版本&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

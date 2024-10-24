@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Free on Seektao | 寻道之旅</title>
+        <title>Free on 寻道之旅</title>
         <link>https://blog.seektao.cc/categories/free/</link>
-        <description>Recent content in Free on Seektao | 寻道之旅</description>
+        <description>Recent content in Free on 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Seektao | 寻道之旅</copyright>
+        <copyright>寻道之旅</copyright>
         <lastBuildDate>Sat, 22 Jun 2024 00:06:14 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/categories/free/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>免费虚拟主机Serv00，使用部署各种服务教程</title>
         <link>https://blog.seektao.cc/p/free-virtual-host-serv00-1/</link>

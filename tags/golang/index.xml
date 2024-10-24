@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Golang on Seektao | 寻道之旅</title>
+        <title>Golang on 寻道之旅</title>
         <link>https://blog.seektao.cc/tags/golang/</link>
-        <description>Recent content in Golang on Seektao | 寻道之旅</description>
+        <description>Recent content in Golang on 寻道之旅</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Seektao | 寻道之旅</copyright>
+        <copyright>寻道之旅</copyright>
         <lastBuildDate>Thu, 14 Sep 2023 14:07:10 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/golang/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>基于Golang编写的开源博客系统sonic，内存占用极低！！替代halo</title>
         <link>https://blog.seektao.cc/p/2309013/</link>
