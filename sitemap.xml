@@ -3,24 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.seektao.cc/</loc>
-    <lastmod>2025-02-12T13:27:19+08:00</lastmod>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/categories/</loc>
-    <lastmod>2025-02-12T13:27:19+08:00</lastmod>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/categories/default/</loc>
-    <lastmod>2025-02-12T13:27:19+08:00</lastmod>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/llm/</loc>
-    <lastmod>2025-02-12T13:27:19+08:00</lastmod>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/p/250212132719/</loc>
-    <lastmod>2025-02-12T13:27:19+08:00</lastmod>
+    <loc>https://blog.seektao.cc/tags/ollama/</loc>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/p/250213152941/</loc>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/post/</loc>
-    <lastmod>2025-02-12T13:27:19+08:00</lastmod>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/tags/</loc>
+    <lastmod>2025-02-13T15:29:41+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/categories/proxy/</loc>
+    <lastmod>2025-02-13T11:33:55+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/tags/serv00/</loc>
+    <lastmod>2025-02-13T11:33:55+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/p/250213113355/</loc>
+    <lastmod>2025-02-13T11:33:55+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.seektao.cc/p/250212132719/</loc>
     <lastmod>2025-02-12T13:27:19+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/categories/backend/</loc>
@@ -359,9 +374,6 @@
     <loc>https://blog.seektao.cc/p/240909024137/</loc>
     <lastmod>2024-09-09T02:41:37+08:00</lastmod>
   </url><url>
-    <loc>https://blog.seektao.cc/categories/proxy/</loc>
-    <lastmod>2024-09-09T02:41:37+08:00</lastmod>
-  </url><url>
     <loc>https://blog.seektao.cc/tags/v2ray/</loc>
     <lastmod>2024-09-09T02:41:37+08:00</lastmod>
   </url><url>
@@ -648,9 +660,6 @@
     <lastmod>2024-06-22T16:06:01+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/categories/free/</loc>
-    <lastmod>2024-06-22T00:06:14+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.seektao.cc/tags/serv00/</loc>
     <lastmod>2024-06-22T00:06:14+08:00</lastmod>
   </url><url>
     <loc>https://blog.seektao.cc/p/free-virtual-host-serv00-1/</loc>

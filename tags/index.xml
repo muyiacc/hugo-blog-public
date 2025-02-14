@@ -7,12 +7,28 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>寻道之旅</copyright>
-        <lastBuildDate>Wed, 12 Feb 2025 13:27:19 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Feb 2025 15:29:41 +0800</lastBuildDate><atom:link href="https://blog.seektao.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Llm</title>
         <link>https://blog.seektao.cc/tags/llm/</link>
-        <pubDate>Wed, 12 Feb 2025 13:27:19 +0800</pubDate>
+        <pubDate>Thu, 13 Feb 2025 15:29:41 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/tags/llm/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ollama</title>
+        <link>https://blog.seektao.cc/tags/ollama/</link>
+        <pubDate>Thu, 13 Feb 2025 15:29:41 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/ollama/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Serv00</title>
+        <link>https://blog.seektao.cc/tags/serv00/</link>
+        <pubDate>Thu, 13 Feb 2025 11:33:55 +0800</pubDate>
+        
+        <guid>https://blog.seektao.cc/tags/serv00/</guid>
         <description></description>
         </item>
         <item>
@@ -717,14 +733,6 @@
         <pubDate>Sun, 23 Jun 2024 13:06:24 +0800</pubDate>
         
         <guid>https://blog.seektao.cc/tags/keyboard/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Serv00</title>
-        <link>https://blog.seektao.cc/tags/serv00/</link>
-        <pubDate>Sat, 22 Jun 2024 00:06:14 +0800</pubDate>
-        
-        <guid>https://blog.seektao.cc/tags/serv00/</guid>
         <description></description>
         </item>
         <item>

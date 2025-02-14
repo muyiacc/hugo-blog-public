@@ -765,9 +765,7 @@
 </h2><p>非 Docker Hub镜像源</p>
 <h3 id="清华-3">清华
 </h3><h4 id="debianubunturaspbian-用户">Debian/Ubuntu/Raspbian 用户
-</h4><p>以下内容根据 <a class="link" href="https://docs.docker.com/engine/install/debian/"  target="_blank" rel="noopener"
-    >官方文档</a> 修改而来。</p>
-<p>如果你过去安装过 docker，先删掉：</p>
+</h4><p>如果你过去安装过 docker，先删掉：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -788,9 +786,10 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>信任 Docker 的 GPG 公钥并添加仓库：</p>
-<blockquote>
-<p>如果为Ubuntu、Raspbian，请查看 <a class="link" href="https://mirror.tuna.tsinghua.edu.cn/help/docker-ce/"  target="_blank" rel="noopener"
+<p>详细内容请查看 <a class="link" href="https://mirror.tuna.tsinghua.edu.cn/help/docker-ce/"  target="_blank" rel="noopener"
     >https://mirror.tuna.tsinghua.edu.cn/help/docker-ce/</a></p>
+<blockquote>
+<p>Debian</p>
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -816,6 +815,29 @@
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="s2">&#34;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian \
 </span></span></span><span class="line"><span class="cl"><span class="s2">  &#34;</span><span class="k">$(</span>. /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&#34;</span><span class="k">)</span><span class="s2">&#34; stable&#34;</span> <span class="p">|</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Ubuntu</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">install -m <span class="m">0755</span> -d /etc/apt/keyrings
+</span></span><span class="line"><span class="cl">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+</span></span><span class="line"><span class="cl">sudo chmod a+r /etc/apt/keyrings/docker.gpg
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="s2">&#34;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
+</span></span></span><span class="line"><span class="cl"><span class="s2">  &#34;</span><span class="k">$(</span>. /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&#34;</span><span class="k">)</span><span class="s2">&#34; stable&#34;</span> <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果提示</p>
@@ -927,6 +949,19 @@
             
                 
 <article class="">
+    <a href="/p/250213152941/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ollama本地部署大模型</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/p/250212132719/">
         
         
@@ -972,19 +1007,6 @@
 
         <div class="article-details">
             <h2 class="article-title">acme.sh国内服务器安装</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/250117160936/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">ArchLinux使用Hyprland安装的软件</h2>
         </div>
     </a>
 </article>
