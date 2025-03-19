@@ -39,8 +39,14 @@
 &lt;/ul&gt;
 &lt;p&gt;官方 GitHub 仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/LuckyPuppy514/external-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/LuckyPuppy514/external-player&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;脚本在线安装：&lt;a class=&#34;link&#34; href=&#34;https://greasyfork.org/zh-CN/scripts/518677-external-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://greasyfork.org/zh-CN/scripts/518677-external-player&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;安装油猴插件：&lt;a class=&#34;link&#34; href=&#34;https://www.tampermonkey.net/index.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.tampermonkey.net/index.php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装脚本：&lt;a class=&#34;link&#34; href=&#34;https://greasyfork.org/zh-CN/scripts/518677-external-player&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://greasyfork.org/zh-CN/scripts/518677-external-player&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装 URL Scheme Handler&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;url-scheme-handler&#34;&gt;URL Scheme Handler
 &lt;/h2&gt;&lt;p&gt;为 Windows 应用添加自定义 URL Scheme 以便从浏览器调用&lt;/p&gt;
 &lt;p&gt;项目地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/LuckyPuppy514/url-scheme-handler&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -50,8 +56,8 @@
 &lt;li&gt;scheme-handler.exe：&lt;a class=&#34;link&#34; href=&#34;https://github.com/LuckyPuppy514/url-scheme-handler/releases/download/v1.0.4/url-scheme-handler.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;v1.0.4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;油猴插件&#34;&gt;油猴插件
-&lt;/h3&gt;&lt;p&gt;地址：&lt;a class=&#34;link&#34; href=&#34;https://www.tampermonkey.net/index.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;油猴插件&#34;&gt;油猴插件
+&lt;/h2&gt;&lt;p&gt;地址：&lt;a class=&#34;link&#34; href=&#34;https://www.tampermonkey.net/index.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.tampermonkey.net/index.php&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
