@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Nginx 先写好nginx配置文件， /etc/nginx/sites-available/movie 1 2 3 4 5 6 7 8 9 10 11 12 server { listen 80; server_name domain.com; location / { proxy_pass http://127.0.0.1:80; # 替换为你的应用程序地址 proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; } } 再使用 certbot 的n">
-<title>Certbot申请域名的多种方式</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Scala 与 Java 兼容关系 JDK 3 2.13 2.12 2.11 22 (ea) 3.3.4* 2.13.12 2.12.19 21 (LTS) 3.3.1 2.13.11 2.12.18 17 (LTS) 3.0.0 2.13.6 2.12.15 11 (LTS) 3.0.0 2.13.0 2.12.4 2.11.12 8 (LTS) 3.0.0 2.13.0 2.12.0 2.11.0 参考网址：docs.scala-lang.org.cn 构建工具">
+<title>Spark、Scala、Java版本对应关系</title>
 
-<link rel='canonical' href='https://blog.seektao.cc/p/2404001/'>
+<link rel='canonical' href='https://blog.seektao.cc/p/250311155615/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Certbot申请域名的多种方式">
-<meta property='og:description' content="Nginx 先写好nginx配置文件， /etc/nginx/sites-available/movie 1 2 3 4 5 6 7 8 9 10 11 12 server { listen 80; server_name domain.com; location / { proxy_pass http://127.0.0.1:80; # 替换为你的应用程序地址 proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; } } 再使用 certbot 的n">
-<meta property='og:url' content='https://blog.seektao.cc/p/2404001/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Spark、Scala、Java版本对应关系">
+<meta property='og:description' content="Scala 与 Java 兼容关系 JDK 3 2.13 2.12 2.11 22 (ea) 3.3.4* 2.13.12 2.12.19 21 (LTS) 3.3.1 2.13.11 2.12.18 17 (LTS) 3.0.0 2.13.6 2.12.15 11 (LTS) 3.0.0 2.13.0 2.12.4 2.11.12 8 (LTS) 3.0.0 2.13.0 2.12.0 2.11.0 参考网址：docs.scala-lang.org.cn 构建工具">
+<meta property='og:url' content='https://blog.seektao.cc/p/250311155615/'>
 <meta property='og:site_name' content='寻道之旅'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='certbot' /><meta property='article:published_time' content='2024-04-01T15:07:04&#43;08:00'/><meta property='article:modified_time' content='2024-04-01T15:07:04&#43;08:00'/>
-<meta name="twitter:title" content="Certbot申请域名的多种方式">
-<meta name="twitter:description" content="Nginx 先写好nginx配置文件， /etc/nginx/sites-available/movie 1 2 3 4 5 6 7 8 9 10 11 12 server { listen 80; server_name domain.com; location / { proxy_pass http://127.0.0.1:80; # 替换为你的应用程序地址 proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header X-Forwarded-Proto $scheme; } } 再使用 certbot 的n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-11T15:56:15&#43;08:00'/><meta property='article:modified_time' content='2025-03-11T15:56:15&#43;08:00'/>
+<meta name="twitter:title" content="Spark、Scala、Java版本对应关系">
+<meta name="twitter:description" content="Scala 与 Java 兼容关系 JDK 3 2.13 2.12 2.11 22 (ea) 3.3.4* 2.13.12 2.12.19 21 (LTS) 3.3.1 2.13.11 2.12.18 17 (LTS) 3.0.0 2.13.6 2.12.15 11 (LTS) 3.0.0 2.13.0 2.12.4 2.11.12 8 (LTS) 3.0.0 2.13.0 2.12.0 2.11.0 参考网址：docs.scala-lang.org.cn 构建工具">
   
 
 
@@ -245,7 +245,47 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#scala-与-java-兼容关系">Scala 与 Java 兼容关系</a></li>
+    <li><a href="#构建工具兼容性表">构建工具兼容性表</a></li>
+    <li><a href="#spark-与-scala-兼容关系">Spark 与 Scala 兼容关系</a></li>
+    <li><a href="#总结">总结</a></li>
+    <li><a href="#下载地址">下载地址</a>
+      <ol>
+        <li><a href="#scala">Scala</a></li>
+        <li><a href="#spark">Spark</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -255,8 +295,8 @@
     
     <header class="article-category">
         
-            <a href="/categories/default/" >
-                Default
+            <a href="/categories/bigdata/" >
+                Bigdata
             </a>
         
     </header>
@@ -264,7 +304,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/2404001/">Certbot申请域名的多种方式</a>
+            <a href="/p/250311155615/">Spark、Scala、Java版本对应关系</a>
         </h2>
     
         
@@ -286,7 +326,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 01, 2024</time>
+                <time class="article-time--published">Mar 11, 2025</time>
             </div>
         
 
@@ -302,92 +342,279 @@
     <section class="article-content">
     
     
-    <h1 id="nginx">Nginx
-</h1><p>先写好nginx配置文件，</p>
-<blockquote>
-<p>/etc/nginx/sites-available/movie</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">server <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    listen 80<span class="p">;</span>
-</span></span><span class="line"><span class="cl">    server_name domain.com<span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    location / <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        proxy_pass http://127.0.0.1:80<span class="p">;</span>  <span class="c1"># 替换为你的应用程序地址</span>
-</span></span><span class="line"><span class="cl">        proxy_set_header Host <span class="nv">$host</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        proxy_set_header X-Real-IP <span class="nv">$remote_addr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-For <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-Proto <span class="nv">$scheme</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再使用 certbot 的nginx插件申请</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">certbot --nginx -d domain.com
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <h2 id="scala-与-java-兼容关系">Scala 与 Java 兼容关系
+</h2><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>JDK</th>
+<th>3</th>
+<th>2.13</th>
+<th>2.12</th>
+<th>2.11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22 (ea)</td>
+<td>3.3.4*</td>
+<td>2.13.12</td>
+<td>2.12.19</td>
+<td></td>
+</tr>
+<tr>
+<td>21 (LTS)</td>
+<td>3.3.1</td>
+<td>2.13.11</td>
+<td>2.12.18</td>
+<td></td>
+</tr>
+<tr>
+<td>17 (LTS)</td>
+<td>3.0.0</td>
+<td>2.13.6</td>
+<td>2.12.15</td>
+<td></td>
+</tr>
+<tr>
+<td>11 (LTS)</td>
+<td>3.0.0</td>
+<td>2.13.0</td>
+<td>2.12.4</td>
+<td>2.11.12</td>
+</tr>
+<tr>
+<td>8 (LTS)</td>
+<td>3.0.0</td>
+<td>2.13.0</td>
+<td>2.12.0</td>
+<td>2.11.0</td>
+</tr>
+</tbody>
+</table></div>
+<p>参考网址：<a class="link" href="https://docs.scala-lang.org.cn/overviews/jdk-compatibility/overview.html#jdk-17-compatibility-notes"  target="_blank" rel="noopener"
+    >docs.scala-lang.org.cn</a></p>
+<h2 id="构建工具兼容性表">构建工具兼容性表
+</h2><p>最低工作版本</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>JDK</th>
+<th>sbt</th>
+<th>mill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21 (LTS)</td>
+<td>1.9.0</td>
+<td>0.11.5</td>
+</tr>
+<tr>
+<td>17 (LTS)</td>
+<td>1.6.0</td>
+<td>0.7.0</td>
+</tr>
+<tr>
+<td>11 (LTS)</td>
+<td>1.1.0</td>
+<td>0.1.5</td>
+</tr>
+<tr>
+<td>8 (LTS)</td>
+<td>1.0.0</td>
+<td>0.1.0</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="spark-与-scala-兼容关系">Spark 与 Scala 兼容关系
+</h2><p>如何寻找？</p>
+<ul>
+<li>方式一</li>
+</ul>
+<p>通过 Spark GitHub 仓库，选择 <code>Tags</code>，找到对应的<code>spark</code>版本，查看<code>pom.xml</code>文件，搜索 <code>scala.version</code> 找到 <code>scala</code> 版本</p>
+<p>仓库地址：<a class="link" href="https://github.com/apache/spark"  target="_blank" rel="noopener"
+    >https://github.com/apache/spark</a></p>
+<ul>
+<li>方式二</li>
+</ul>
+<p>通过 mvnrepository 搜索 <code>spark-core</code>找到 spark 对应依赖的 scala 版本</p>
+<p>mvnrepository地址：<a class="link" href="https://mvnrepository.com/artifact/org.apache.spark/spark-core"  target="_blank" rel="noopener"
+    >https://mvnrepository.com/artifact/org.apache.spark/spark-core</a></p>
+<p>这里整理了一些</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Spark</th>
+<th>Scala</th>
+<th>发布时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.5.5</td>
+<td>2.12.18</td>
+<td>2025-02-27 09:11</td>
+</tr>
+<tr>
+<td>3.5.0</td>
+<td>2.12.18</td>
+<td>2023-09-13 02:08</td>
+</tr>
+<tr>
+<td>3.4.4</td>
+<td>2.12.17</td>
+<td>2024-10-25 08:10</td>
+</tr>
+<tr>
+<td>3.4.0</td>
+<td>2.12.17</td>
+<td>2023-04-13 17:54</td>
+</tr>
+<tr>
+<td>3.3.4</td>
+<td>2.12.15</td>
+<td>2022-06-17 11:11</td>
+</tr>
+<tr>
+<td>3.3.1</td>
+<td>2.12.15</td>
+<td>2022-10-25 07:33</td>
+</tr>
+<tr>
+<td>3.3.0</td>
+<td>2.12.15</td>
+<td>2022-06-17 11:11</td>
+</tr>
+<tr>
+<td>3.2.4</td>
+<td>2.12.15</td>
+<td>2023-04-13 13:46</td>
+</tr>
+<tr>
+<td>3.2.0</td>
+<td>2.12.15</td>
+<td>2021-10-13 09:09</td>
+</tr>
+<tr>
+<td>3.1.3</td>
+<td>2.12.10</td>
+<td>2022-06-17 11:12</td>
+</tr>
+<tr>
+<td>3.1.1</td>
+<td>2.12.10</td>
+<td>2021-03-02 11:01</td>
+</tr>
+<tr>
+<td>3.0.3</td>
+<td>2.12.10</td>
+<td>2022-06-17 11:12</td>
+</tr>
+<tr>
+<td>3.0.0</td>
+<td>2.12.10</td>
+<td>2020-06-16 09:19</td>
+</tr>
+<tr>
+<td>2.4.8</td>
+<td>2.11.12</td>
+<td>2022-06-17 11:13</td>
+</tr>
+<tr>
+<td>2.4.0</td>
+<td>2.11.12</td>
+<td>2018-11-02 04:28</td>
+</tr>
+<tr>
+<td>2.3.4</td>
+<td>2.11.8</td>
+<td>2019-09-09 09:19</td>
+</tr>
+<tr>
+<td>2.3.0</td>
+<td>2.11.8</td>
+<td>2018-05-04 15:42</td>
+</tr>
+<tr>
+<td>2.2.3</td>
+<td>2.11.8</td>
+<td>2019-01-12 18:28</td>
+</tr>
+<tr>
+<td>2.2.0</td>
+<td>2.11.8</td>
+<td>2018-05-04 15:31</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="总结">总结
+</h2><p>Spark、Java、Scala兼容的最低版本</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Spark</th>
+<th>Java</th>
+<th>Scala2.12.x</th>
+<th>Scala2.13.x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.5.0</td>
+<td>21</td>
+<td>2.12.18</td>
+<td>2.13.11</td>
+</tr>
+<tr>
+<td>3.2.0</td>
+<td>17</td>
+<td>2.12.15</td>
+<td>2.13.6</td>
+</tr>
+<tr>
+<td>3.0.0</td>
+<td>11</td>
+<td>2.12.4</td>
+<td>2.13.0</td>
+</tr>
+<tr>
+<td>3.0.0</td>
+<td>8</td>
+<td>2.12.0</td>
+<td>2.13.0</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="下载地址">下载地址
+</h2><h3 id="scala">Scala
+</h3><p>Scala历史版本下载地址：<a class="link" href="https://scala-lang.org.cn/download/all.html"  target="_blank" rel="noopener"
+    >https://scala-lang.org.cn/download/all.html</a></p>
+<ul>
+<li><code>2.12.15</code>：<a class="link" href="https://scala-lang.org/download/2.12.15.html"  target="_blank" rel="noopener"
+    >https://scala-lang.org/download/2.12.15.html</a></li>
+<li><code>2.12.18</code>：<a class="link" href="https://scala-lang.org/download/2.12.18.html"  target="_blank" rel="noopener"
+    >https://scala-lang.org/download/2.12.18.html</a></li>
+<li><code>2.13.11</code>：<a class="link" href="https://scala-lang.org/download/2.13.11.html"  target="_blank" rel="noopener"
+    >https://scala-lang.org/download/2.13.11.html</a></li>
+</ul>
+<h3 id="spark">Spark
+</h3><p>所有版本：<a class="link" href="https://archive.apache.org/dist/spark/"  target="_blank" rel="noopener"
+    >https://archive.apache.org/dist/spark/</a></p>
+<ul>
+<li><code>3.3.1</code>：</li>
+</ul>
+
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/certbot/">Certbot</a>
-        
-    </section>
-
 
     <section>
         页面浏览量<span id="vercount_value_page_pv">Loading</span>
     </section>
 </footer>
 
-    
-        <link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
-            ><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
-                defer
-                >
-            </script><script>
-    window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
-            delimiters: [
-                { left: "$$", right: "$$", display: true },
-                { left: "$", right: "$", display: false },
-                { left: "\\(", right: "\\)", display: false },
-                { left: "\\[", right: "\\]", display: true }
-            ],
-            ignoredClasses: ["gist"]
-        });})
-</script>
     
 </article>
 
@@ -402,12 +629,12 @@
             
                 
 <article class="">
-    <a href="/p/250311102821/">
+    <a href="/p/250314214412/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">VSCode美化终端显示，第一行显示路径，第二行输入命令</h2>
+            <h2 class="article-title">datax安装</h2>
         </div>
     </a>
 </article>
@@ -415,12 +642,12 @@
             
                 
 <article class="">
-    <a href="/p/250310190914/">
+    <a href="/p/250311194638/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">cloudflare_temp_email，自建域名临时邮箱</h2>
+            <h2 class="article-title">VSCode开发Spark插件</h2>
         </div>
     </a>
 </article>
@@ -428,12 +655,12 @@
             
                 
 <article class="">
-    <a href="/p/250302230144/">
+    <a href="/p/250311175624/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Ollama可被网络空间扫描找到</h2>
+            <h2 class="article-title">Spark开发中遇到的疑难杂症</h2>
         </div>
     </a>
 </article>
@@ -441,12 +668,12 @@
             
                 
 <article class="">
-    <a href="/p/250301220946/">
+    <a href="/p/250310005241/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">2025-03-01开启站点统计</h2>
+            <h2 class="article-title">Hadoop之yarn</h2>
         </div>
     </a>
 </article>
@@ -454,12 +681,12 @@
             
                 
 <article class="">
-    <a href="/p/250228175305/">
+    <a href="/p/250309192241/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">VMware Workstation 17 Pro许可证</h2>
+            <h2 class="article-title">Hadoop高可用配置</h2>
         </div>
     </a>
 </article>
