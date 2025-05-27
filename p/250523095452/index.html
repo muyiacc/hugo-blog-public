@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="获取所有容器id 1 sudo docker ps | awk {&#39;print $1&#39;} | sed -n &#39;2,$ p&#39; sudo docker ps 获取容器状态 awk {&lsquo;print $1&rsquo;} 查看第一列 sed -n &lsquo;2,$ p&rsquo; 查看从第2行到最后一行 1 docker ps -aq 查看所有容器状态 1 2 3 4 5">
-<title>Docker常用命令</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
+<title>AI画图提示词，draw prompt</title>
 
-<link rel='canonical' href='https://blog.seektao.cc/p/docker-command/'>
+<link rel='canonical' href='https://blog.seektao.cc/p/250523095452/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Docker常用命令">
-<meta property='og:description' content="获取所有容器id 1 sudo docker ps | awk {&#39;print $1&#39;} | sed -n &#39;2,$ p&#39; sudo docker ps 获取容器状态 awk {&lsquo;print $1&rsquo;} 查看第一列 sed -n &lsquo;2,$ p&rsquo; 查看从第2行到最后一行 1 docker ps -aq 查看所有容器状态 1 2 3 4 5">
-<meta property='og:url' content='https://blog.seektao.cc/p/docker-command/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="AI画图提示词，draw prompt">
+<meta property='og:description' content="">
+<meta property='og:url' content='https://blog.seektao.cc/p/250523095452/'>
 <meta property='og:site_name' content='寻道之旅'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='command' /><meta property='article:published_time' content='2024-05-01T13:05:46&#43;08:00'/><meta property='article:modified_time' content='2024-05-01T13:05:46&#43;08:00'/>
-<meta name="twitter:title" content="Docker常用命令">
-<meta name="twitter:description" content="获取所有容器id 1 sudo docker ps | awk {&#39;print $1&#39;} | sed -n &#39;2,$ p&#39; sudo docker ps 获取容器状态 awk {&lsquo;print $1&rsquo;} 查看第一列 sed -n &lsquo;2,$ p&rsquo; 查看从第2行到最后一行 1 docker ps -aq 查看所有容器状态 1 2 3 4 5">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='prompt' /><meta property='article:published_time' content='2025-05-23T09:54:52&#43;08:00'/><meta property='article:modified_time' content='2025-05-23T09:54:52&#43;08:00'/>
+<meta name="twitter:title" content="AI画图提示词，draw prompt">
+<meta name="twitter:description" content="">
   
 
 
@@ -245,45 +245,7 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li>
-      <ol>
-        <li><a href="#获取所有容器id">获取所有容器id</a></li>
-        <li><a href="#查看所有容器状态">查看所有容器状态</a></li>
-        <li><a href="#停止所有容器谨慎使用">停止所有容器（谨慎使用）</a></li>
-        <li><a href="#查看容器ip">查看容器ip</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
     <article class="main-article">
@@ -293,8 +255,8 @@
     
     <header class="article-category">
         
-            <a href="/categories/devops/" >
-                Devops
+            <a href="/categories/llm/" >
+                Llm
             </a>
         
     </header>
@@ -302,7 +264,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/docker-command/">Docker常用命令</a>
+            <a href="/p/250523095452/">AI画图提示词，draw prompt</a>
         </h2>
     
         
@@ -324,7 +286,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 01, 2024</time>
+                <time class="article-time--published">May 23, 2025</time>
             </div>
         
 
@@ -340,69 +302,7 @@
     <section class="article-content">
     
     
-    <h3 id="获取所有容器id">获取所有容器id
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo docker ps <span class="p">|</span> awk <span class="o">{</span><span class="s1">&#39;print $1&#39;</span><span class="o">}</span> <span class="p">|</span> sed -n <span class="s1">&#39;2,$ p&#39;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>sudo docker ps    获取容器状态</p>
-<p>awk {&lsquo;print $1&rsquo;}  查看第一列</p>
-<p>sed -n &lsquo;2,$ p&rsquo;    查看从第2行到最后一行</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker ps -aq
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="查看所有容器状态">查看所有容器状态
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 使用docker自带命令</span>
-</span></span><span class="line"><span class="cl">sudo docker stats -a
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 使用获取所有id的方式</span>
-</span></span><span class="line"><span class="cl">sudo docker ps <span class="p">|</span> awk <span class="o">{</span><span class="s1">&#39;print $1&#39;</span><span class="o">}</span> <span class="p">|</span> sed -n <span class="s1">&#39;2,$ p&#39;</span> <span class="p">|</span> xargs sudo docker stats
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>xargs 反向传参</p>
-</blockquote>
-<h3 id="停止所有容器谨慎使用">停止所有容器（谨慎使用）
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 使用获取所有id的方式</span>
-</span></span><span class="line"><span class="cl">sudo docker ps <span class="p">|</span> awk <span class="o">{</span><span class="s1">&#39;print $1&#39;</span><span class="o">}</span> <span class="p">|</span> sed -n <span class="s1">&#39;2,$ p&#39;</span> <span class="p">|</span> xargs sudo docker rm
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="查看容器ip">查看容器ip
-</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker inspect &lt;container_id<span class="p">|</span>container_name&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    
 </section>
 
 
@@ -410,7 +310,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/command/">Command</a>
+            <a href="/tags/prompt/">Prompt</a>
         
     </section>
 
@@ -420,30 +320,6 @@
     </section>
 </footer>
 
-    
-        <link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
-            ><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
-                defer
-                >
-            </script><script>
-    window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
-            delimiters: [
-                { left: "$$", right: "$$", display: true },
-                { left: "$", right: "$", display: false },
-                { left: "\\(", right: "\\)", display: false },
-                { left: "\\[", right: "\\]", display: true }
-            ],
-            ignoredClasses: ["gist"]
-        });})
-</script>
     
 </article>
 
@@ -458,12 +334,12 @@
             
                 
 <article class="">
-    <a href="/p/250108223700/">
+    <a href="/p/250310185432/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">docker安装aria2-pro</h2>
+            <h2 class="article-title">Open-WebUI，一个用户友好界面友好的大模型客户端</h2>
         </div>
     </a>
 </article>
@@ -471,12 +347,12 @@
             
                 
 <article class="">
-    <a href="/p/2406005/">
+    <a href="/p/250302234645/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">部署自己的Docker Hub镜像站，附Docker Hub镜像地址</h2>
+            <h2 class="article-title">使用deepseek-r1和kimi&#43;PPT助手生成PPT演示文档</h2>
         </div>
     </a>
 </article>
@@ -484,12 +360,12 @@
             
                 
 <article class="">
-    <a href="/p/2403002/">
+    <a href="/p/250216162555/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Docker容器和主机互相连接的三种情景</h2>
+            <h2 class="article-title">大模型仓库huggingface下载指南</h2>
         </div>
     </a>
 </article>
@@ -497,12 +373,25 @@
             
                 
 <article class="">
-    <a href="/p/2311003/">
+    <a href="/p/250213152941/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Docker安装</h2>
+            <h2 class="article-title">ollama本地部署大模型</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/250212132719/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">llm-models，语言大模型服务提供商支持的模型列表</h2>
         </div>
     </a>
 </article>
